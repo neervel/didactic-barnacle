@@ -1,0 +1,33 @@
+.hero
+    padding-top: 73px
+    padding-bottom: 148px
+    
+    &-title 
+        max-width: 870px
+        margin: 0 auto
+        margin-bottom: 0 !important
+
+    
+    @media screen and ( max-width: $xl )
+        &-title
+            max-width: 790px
+
+    @media screen and ( max-width: $lg )
+        padding-top: 70px
+        padding-bottom: 120px
+
+        &-title
+            max-width: 648px
+
+    @media screen and ( max-width: $md )
+        padding-top: 60px
+        padding-bottom: 70px
+        &-title
+            max-width: 450px
+    
+    @media screen and ( max-width: $sm )
+        padding-top: 50px
+        padding-bottom: 75px
+        
+        &-title
+            max-width: 280px
