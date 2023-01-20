@@ -1,0 +1,92 @@
+
+*
+  color: $base-black
+  box-sizing: border-box
+  font-family: 'U001'
+
+.button
+  display: inline-block
+  border: none
+  color: $base-white
+  padding: 17px 25px
+  border-radius: 30px
+  font-size: 16px
+  font-weight: bold
+  box-shadow: $box-shadow-2
+  cursor: pointer
+  background: $accent
+  text-align: center
+
+  @media screen and ( max-width: $lg )
+    padding: 17px 53px
+  
+  &.square
+    padding: 13px 25px
+    border-radius: 3px
+    box-shadow: none
+    background: transparent
+    color: $base-black
+
+    @media screen and ( max-width: $xl )
+      padding: 13px 15px
+
+    &:hover
+      box-shadow: $box-shadow-1
+      color: $base-white
+
+  &:hover
+    background: $base-gradient
+
+  &:active
+    background: $extra-1
+
+a
+  text-decoration: none
+
+.h1
+  text-align: center
+  text-transform: uppercase
+  font-size: 40px
+  line-height: 1.25
+  margin-bottom: 65px
+  & .color
+    background: $base-gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+  @media screen and ( max-width: $xl )
+    font-size: 36px
+    margin-bottom: 55px
+  
+  @media screen and ( max-width: $lg )
+    font-size: 32px
+    margin-bottom: 50px
+
+  @media screen and ( max-width: $md )
+    font-size: 26px
+  
+  @media screen and ( max-width: $sm )
+    font-size: 20px
+    margin-bottom: 30px
+
+.content
+  height: 150vh
+  background: $bg-gradient, url('./assets/images/bg-img.svg')
+  background-position: right bottom
+  background-repeat: no-repeat
+
+.container
+  width: 1290px
+  margin: 0 auto
+
+  @media screen and (max-width: $xl)
+    width: 904px
+  
+  @media screen and (max-width: $lg)
+    width: 648px
+  
+  @media screen and (max-width: $md)
+    width: 460px
+  
+  @media screen and (max-width: $sm)
+    width: 90%
