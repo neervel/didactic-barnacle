@@ -54,6 +54,10 @@ a
   font-size: 40px
   line-height: 1.25
   margin-bottom: 65px
+  & .color
+    background: $base-gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
   @media screen and ( max-width: $xl )
     font-size: 36px
@@ -73,6 +77,8 @@ a
 .content
   height: 150vh
   background: $bg-gradient, url('./assets/images/bg-img.svg')
+  background-position: right bottom
+  background-repeat: no-repeat
 
 .container
   width: 1290px
