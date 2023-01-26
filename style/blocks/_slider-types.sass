@@ -6,7 +6,6 @@
     height: 580px
     margin: 0 auto
     position: relative
-    background: url('./assets/images/slider-bg.png')
     background-size: contain
     background-repeat: no-repeat
     background-position: center
@@ -14,27 +13,14 @@
     &::before
         content: ''
         position: absolute
-        width: 1354px
-        height: 550px
-        left: 14px
-        bottom: 16px
-        background-image: url('./assets/images/slider-bg-left-sm.png')
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-image: url('./assets/images/slider-bg.png')
         background-size: contain
         background-repeat: no-repeat
         background-position: bottom left
-        opacity: 1
-
-    &.left
-        &::before
-            animation: change-bg .4s forwards
-    
-    &.center
-        &::before
-            animation: change-bg-r .4s forwards
-    
-    &.right 
-        &::before
-            animation: change-bg-h .4s forwards
 
 
     &-card
@@ -127,14 +113,15 @@
         & a.button
             margin-left: 10px
 
-    &-range 
+    &-range
+        pointer-events: none
         width: calc(100% - 80px)
         position: absolute
         top: 50%
         transform: translateY(-50%)
         left: 40px
         z-index: 9
-         -webkit-appearance: none
+        -webkit-appearance: none
         appearance: none
         background: transparent
 
@@ -157,12 +144,14 @@
             &.right
                 left: calc(100% - 87px)
 
-        &::-webkit-slider-thumb 
+        &::-webkit-slider-thumb
+            pointer-events: all
             -webkit-appearance: none
             appearance: none
-
-            background-color: none
-            height: 80px
+            background-color: transparent
+            
+            cursor: pointer
+            height: 100px
             width: 94px
 
 .v-enter-active,
@@ -183,30 +172,6 @@
 .slide-fade-r-leave-active 
     animation: slide-fade-r  0.3s
 
-@keyframes change-bg
-    0% 
-        opacity: 1
-    25%
-        opacity: 0
-    50%
-        background-image: url('./assets/images/slider-bg-left.png')
-        opacity: 0
-    100% 
-        background-image: url('./assets/images/slider-bg-left.png')
-        opacity: 1
-
-@keyframes change-bg-r
-    0% 
-        opacity: 0
-    100% 
-        background-image: url('./assets/images/slider-bg-left-sm.png')
-        opacity: 1
-
-@keyframes change-bg-h
-    0% 
-        opacity: 1
-    100% 
-        opacity: 0
 
 
 @keyframes slide-fade 
@@ -253,3 +218,28 @@
 
 
 
+.bg-slider
+    position: absolute
+    top: 18px
+    left: 13px
+    display: flex
+    transition: .3s
+
+    & .right 
+        margin-left: -1px
+
+    & .center
+        width: 380px
+        height: 551px
+        background: linear-gradient(90deg, #9C549C 0%, #DD6DA5 100%)
+        transition: .3s
+
+    &.left
+        & .center
+            width: 977px
+
+    &.right
+        opacity: 0
+
+        & .center
+            width: 50px

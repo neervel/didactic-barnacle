@@ -50,29 +50,42 @@
 				<h1 class="h1 hero-title">
 					<span class="color">Супрастинекс®</span> – Препарат от аллергии последнего поколения 
 				</h1>
-			</div>
+			</div>			
 			<div class="sliders" id="sliders">
-				<div class="slider-types" :class="{'right': sliderPosition === 0, 'center': sliderPosition === 1, 'left': sliderPosition === 2}">
-					<input class="slider-types-range" v-model.number="sliderPosition" type="range" min="0" max="2">
-					<div class="slider-types-range__thumb" :class="{'left': sliderPosition === 0, 'right': sliderPosition === 2}">
+				<div class="slider-types">					
+					<div class="bg-slider" :class="{'right': currentPosition === 0, 'center': currentPosition === 1, 'left': currentPosition === 2}">
+						<div class="left">
+							<svg width="189" height="551" viewBox="0 0 189 551" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M147.098 14.95C152.464 5.69616 162.352 0 173.049 0H189V264.5V551H173.049C162.352 551 152.464 545.304 147.098 536.05L4.72774 290.55C-0.669783 281.243 -0.669783 269.757 4.72774 260.45L147.098 14.95Z" fill="#9C549C"/>
+							</svg>						
+						</div>
+						<div class="center"></div>
+						<div class="right">
+							<svg width="189" height="551" viewBox="0 0 189 551" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 0H15.9505C26.6478 0 36.5359 5.69618 41.9023 14.95L184.272 260.45C189.67 269.757 189.67 281.243 184.272 290.55L41.9023 536.05C36.5359 545.304 26.6478 551 15.9505 551H0L0.00183105 283L0 0Z" fill="#DD6DA5"/>
+							</svg>						
+						</div>
+					</div>		
+					<input @change="handleRangeChange" class="slider-types-range" v-model.number="sliderPosition" type="range" min="0" max="1300">
+					<div class="slider-types-range__thumb" :class="{'left': currentPosition === 0, 'right': currentPosition === 2}">
 						<img src="./assets/icons/swiper.svg" alt="ползунок слайдера">
 					</div>
-					<div class="slider-types-card left" :class="{'full': sliderPosition === 2, 'hide': sliderPosition === 0}">
+					<div @click="handleSlideClick('left')" class="slider-types-card left" :class="{'full': currentPosition === 2, 'hide': currentPosition === 0}">
 						<transition name="slide-fade">
-							<div v-if="sliderPosition !== 0" class="slider-types-card__main left">
+							<div v-if="currentPosition !== 0" class="slider-types-card__main left">
 								<picture class="slider-types-card__img">
 									<img class="main-image" src="./assets/images/types_left_1440.png" alt="Таблетки для взрослых">
 								</picture>
-								<h4 class="slider-types__title white">Таблетки для взрослых</h4>
+								<h2 class="slider-types__title white">Таблетки для взрослых</h2>
 								<div class="slider-types-buttons">
 									<button class="slider-types__btn button black">Открыть инструкцию</button>
-									<a v-if="sliderPosition === 2" href="#" class="slider-types__btn button black border">Подробнее</a>
+									<a v-if="currentPosition === 2" href="#" class="slider-types__btn button black border">Подробнее</a>
 								</div>
 							</div>
 						</transition>
 						<div class="slider-types-card__info">
 							<transition name="slide-fade">
-								<div v-show="sliderPosition === 2" class="slider-types-card__info-inner">
+								<div v-show="currentPosition === 2" class="slider-types-card__info-inner">
 									<div class="slider-types-card__info-item">
 										<img src="./assets/icons/info-left-1.svg" class="slider-types-card__info-img">
 										<span class="slider-types-card__info-text white">1 таблетка от симптомов аллергии на 24 часа<sup class="white">1</sup></span>
@@ -89,10 +102,10 @@
 							</transition>
 						</div>
 					</div>	
-					<div class="slider-types-card right" :class="{'full': sliderPosition === 0, 'hide': sliderPosition === 2}">
+					<div @click="handleSlideClick('right')" class="slider-types-card right" :class="{'full': currentPosition === 0, 'hide': currentPosition === 2}">
 						<div class="slider-types-card__info left">
 							<transition name="slide-fade-r">
-								<div v-show="sliderPosition === 0" class="slider-types-card__info-inner">
+								<div v-show="currentPosition === 0" class="slider-types-card__info-inner">
 									<div class="slider-types-card__info-item">
 										<img src="./assets/icons/info-right-1.svg" class="slider-types-card__info-img">
 										<span class="slider-types-card__info-text">Форма, специально созданная для детей</span>
@@ -109,14 +122,14 @@
 							</transition>
 						</div>
 						<transition name="slide-fade-r">
-							<div v-if="sliderPosition !== 2" class="slider-types-card__main right">
+							<div v-if="currentPosition !== 2" class="slider-types-card__main right">
 								<picture>
 									<img class="main-image" src="./assets/images/types_right_1440.png" alt="Капли для детей" srcset="">
 								</picture>
-								<h4 class="slider-types__title">Капли для детей</h4>
+								<h2 class="slider-types__title">Капли для детей</h4>
 								<div class="slider-types-buttons">
 									<button class="slider-types__btn button">Открыть инструкцию</button>
-									<a v-if="sliderPosition === 0" href="#" class="slider-types__btn button border">Подробнее</a>
+									<a v-if="currentPosition === 0" href="#" class="slider-types__btn button border">Подробнее</a>
 								</div>
 							</div>
 						</transition>
@@ -125,7 +138,7 @@
 				<div class="container">
 					
 					<div class="slider-about">
-
+						<h2 class="h2 slider-about__title white">Супрастинекс® – всё,<br>что важно пациенту с аллергией</h2>
 					</div>
 				</div>
 			</div>
