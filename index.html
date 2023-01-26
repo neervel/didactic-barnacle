@@ -31,7 +31,7 @@
 							<a href="#" class="button square">Все об аллергии</a>
 						</li>
 						<li class="header-nav__list-item">
-							<a href="#" class="button">Где купить</a>
+							<a href="#" class="button buy">Где купить</a>
 						</li>
 					</ul>
 				</nav>
@@ -40,28 +40,100 @@
 					<div></div>
 					<div></div>
 				</div>
-
-				<!-- <button class="header-nav__toggle js-menu-open">
-					<img src="./assets/icons/menu.svg" alt="Открыть меню">
-				</button>
-				<button class="header-nav__toggle js-menu-close hide">
-					<img src="./assets/icons/cross.svg" alt="Закрыть меню">
-				</button> -->
 			</div>
 		</div>
 	</header>
 
 	<main>
-		<article class="hero">
-			<h1 class="h1 hero-title">
-				<span class="color">Супрастинекс®</span> – Препарат от аллергии последнего поколения 
-			</h1>
-		</article>
-		<article class="content">
-			<div class="container"></div>
+		<article>
+			<div class="hero">
+				<h1 class="h1 hero-title">
+					<span class="color">Супрастинекс®</span> – Препарат от аллергии последнего поколения 
+				</h1>
+			</div>
+			<div class="sliders" id="sliders">
+				<div class="slider-types" :class="{'right': sliderPosition === 0, 'center': sliderPosition === 1, 'left': sliderPosition === 2}">
+					<input class="slider-types-range" v-model.number="sliderPosition" type="range" min="0" max="2">
+					<div class="slider-types-range__thumb" :class="{'left': sliderPosition === 0, 'right': sliderPosition === 2}">
+						<img src="./assets/icons/swiper.svg" alt="ползунок слайдера">
+					</div>
+					<div class="slider-types-card left" :class="{'full': sliderPosition === 2, 'hide': sliderPosition === 0}">
+						<transition name="slide-fade">
+							<div v-if="sliderPosition !== 0" class="slider-types-card__main left">
+								<picture class="slider-types-card__img">
+									<img class="main-image" src="./assets/images/types_left_1440.png" alt="Таблетки для взрослых">
+								</picture>
+								<h4 class="slider-types__title white">Таблетки для взрослых</h4>
+								<div class="slider-types-buttons">
+									<button class="slider-types__btn button black">Открыть инструкцию</button>
+									<a v-if="sliderPosition === 2" href="#" class="slider-types__btn button black border">Подробнее</a>
+								</div>
+							</div>
+						</transition>
+						<div class="slider-types-card__info">
+							<transition name="slide-fade">
+								<div v-show="sliderPosition === 2" class="slider-types-card__info-inner">
+									<div class="slider-types-card__info-item">
+										<img src="./assets/icons/info-left-1.svg" class="slider-types-card__info-img">
+										<span class="slider-types-card__info-text white">1 таблетка от симптомов аллергии на 24 часа<sup class="white">1</sup></span>
+									</div>
+									<div class="slider-types-card__info-item">
+										<img src="./assets/icons/info-left-2.svg" class="slider-types-card__info-img">
+										<span class="slider-types-card__info-text white">Практически не вызывает седации* </span>
+									</div>
+									<div class="slider-types-card__info-item">
+										<img src="./assets/icons/info-left-3.svg" class="slider-types-card__info-img">
+										<span class="slider-types-card__info-text white">Подходит для длительного приема в течение всего сезона<sup class="white">2</sup></span>
+									</div>
+								</div>
+							</transition>
+						</div>
+					</div>	
+					<div class="slider-types-card right" :class="{'full': sliderPosition === 0, 'hide': sliderPosition === 2}">
+						<div class="slider-types-card__info left">
+							<transition name="slide-fade-r">
+								<div v-show="sliderPosition === 0" class="slider-types-card__info-inner">
+									<div class="slider-types-card__info-item">
+										<img src="./assets/icons/info-right-1.svg" class="slider-types-card__info-img">
+										<span class="slider-types-card__info-text">Форма, специально созданная для детей</span>
+									</div>
+									<div class="slider-types-card__info-item">
+										<img src="./assets/icons/info-right-2.svg" class="slider-types-card__info-img">
+										<span class="slider-types-card__info-text">Не содержит лактозу, сахар, красители и ароматизаторы<sup class="white">1</sup></span>
+									</div>
+									<div class="slider-types-card__info-item">
+										<img src="./assets/icons/info-right-3.svg" class="slider-types-card__info-img">
+										<span class="slider-types-card__info-text">Встроенная<br>пипетка–дозатор</span>
+									</div>
+								</div>
+							</transition>
+						</div>
+						<transition name="slide-fade-r">
+							<div v-if="sliderPosition !== 2" class="slider-types-card__main right">
+								<picture>
+									<img class="main-image" src="./assets/images/types_right_1440.png" alt="Капли для детей" srcset="">
+								</picture>
+								<h4 class="slider-types__title">Капли для детей</h4>
+								<div class="slider-types-buttons">
+									<button class="slider-types__btn button">Открыть инструкцию</button>
+									<a v-if="sliderPosition === 0" href="#" class="slider-types__btn button border">Подробнее</a>
+								</div>
+							</div>
+						</transition>
+					</div>							
+				</div>
+				<div class="container">
+					
+					<div class="slider-about">
+
+					</div>
+				</div>
+			</div>
+			
 		</article>
 	</main>
 
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="./index.js"></script>
 </body>
 

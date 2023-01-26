@@ -1,0 +1,255 @@
+.slider-types
+    position: absolute
+    left: 0
+    top: -90px
+    width: 1380px
+    height: 580px
+    margin: 0 auto
+    position: relative
+    background: url('./assets/images/slider-bg.png')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+    &::before
+        content: ''
+        position: absolute
+        width: 1354px
+        height: 550px
+        left: 14px
+        bottom: 16px
+        background-image: url('./assets/images/slider-bg-left-sm.png')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: bottom left
+        opacity: 1
+
+    &.left
+        &::before
+            animation: change-bg .4s forwards
+    
+    &.center
+        &::before
+            animation: change-bg-r .4s forwards
+    
+    &.right 
+        &::before
+            animation: change-bg-h .4s forwards
+
+
+    &-card
+        width: 100%
+        height: 580px
+        display: flex
+        align-items: center
+        transition: .3s
+
+        &__info
+            position: relative
+            z-index: 8
+            width: 50%
+            display: flex
+            align-items: center
+
+            &.left
+                justify-content: flex-end
+
+            &-item
+                display: flex
+                align-items: center
+                font-size: 22px
+                font-weight: bold
+
+                &:not(:last-child)
+                    margin-bottom: 30px
+
+            &-text
+                max-width: 330px
+
+
+            &-img
+                height: 56px
+                width: 64px
+                margin-right: 30px
+
+        &__main 
+            position: relative
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: end
+            padding-bottom: 100px
+            height: 100%
+            width: 50%
+            z-index: 8
+
+            &.left 
+                padding-left: 70px
+
+            &.right
+                padding-right: 70px
+
+            & img 
+                margin-bottom: 34px
+
+        &.left
+            color: $base-white
+
+            & .main-image
+                height: 194px
+                width: 380px
+        
+        &.right
+            position: absolute
+            left: 0
+            top: 0
+
+            &::after
+                right: 0
+                top: 0
+                transition: .3s
+
+            & .main-image
+                height: 291px
+                width: 227px
+
+        &.hide
+            z-index: -1
+    
+    &-buttons
+        position: relative
+        z-index: 10
+        display: flex
+        justify-content: center
+        width: auto
+        white-space: nowrap
+
+        & a.button
+            margin-left: 10px
+
+    &-range 
+        width: calc(100% - 80px)
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 40px
+        z-index: 9
+         -webkit-appearance: none
+        appearance: none
+        background: transparent
+
+        &__thumb
+            user-select: none
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            transition: .3s
+            height: 80px
+            width: 94px
+
+            & img 
+                height: 100%
+                width: 100%
+
+            &.left
+                left: 87px
+            &.right
+                left: calc(100% - 87px)
+
+        &::-webkit-slider-thumb 
+            -webkit-appearance: none
+            appearance: none
+
+            background-color: none
+            height: 80px
+            width: 94px
+
+.v-enter-active,
+.v-leave-active 
+  transition: opacity 0.5s ease
+
+.v-enter-from,
+.v-leave-to
+  opacity: 0
+
+.slide-fade-enter-active
+    animation: slide-fade-reverse 0.3s
+.slide-fade-leave-active 
+    animation: slide-fade 0.3s
+
+.slide-fade-r-enter-active
+    animation: slide-fade-r-reverse 0.3s
+.slide-fade-r-leave-active 
+    animation: slide-fade-r  0.3s
+
+@keyframes change-bg
+    0% 
+        opacity: 1
+    25%
+        opacity: 0
+    50%
+        background-image: url('./assets/images/slider-bg-left.png')
+        opacity: 0
+    100% 
+        background-image: url('./assets/images/slider-bg-left.png')
+        opacity: 1
+
+@keyframes change-bg-r
+    0% 
+        opacity: 0
+    100% 
+        background-image: url('./assets/images/slider-bg-left-sm.png')
+        opacity: 1
+
+@keyframes change-bg-h
+    0% 
+        opacity: 1
+    100% 
+        opacity: 0
+
+
+@keyframes slide-fade 
+    0% 
+        transform: translateX(0)
+        opacity: 1
+    99%
+        transform: translateX(-40px)
+    100% 
+        opacity: 0
+        z-index: -1
+
+@keyframes slide-fade-reverse
+    0% 
+        transform: translateX(-40px)
+        opacity: 0
+        z-index: 1
+    99%
+        transform: translateX(0)
+    100% 
+        opacity: 1
+
+@keyframes slide-fade-r
+    0% 
+        transform: translateX(0)
+        opacity: 1
+
+    99%
+        transform: translateX(40px)
+    100% 
+        opacity: 0
+        z-index: -1
+
+@keyframes slide-fade-r-reverse
+    0% 
+        transform: translateX(40px)
+        opacity: 0
+        z-index: 1
+    99%
+        transform: translateX(0)
+    100% 
+        opacity: 1
+    
+
+
+

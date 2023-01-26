@@ -1,0 +1,25 @@
+<svg width="74" height="66" viewBox="0 0 74 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.05701 34.4034L17.5198 62.8388C18.1583 63.9417 19.3383 64.6211 20.6153 64.6211H53.5409C54.8179 64.6211 55.9979 63.9417 56.6365 62.8388L73.0992 34.4034C73.7378 33.3005 73.7378 31.9417 73.0992 30.8388L56.6365 2.40336C55.9979 1.30049 54.8179 0.621094 53.5409 0.621096L20.6153 0.621094C19.3383 0.621091 18.1583 1.30049 17.5198 2.40336L1.05701 30.8388C0.418497 31.9417 0.418497 33.3005 1.05701 34.4034Z" fill="white"/>
+<path d="M49.6552 22H26C24.8954 22 24 22.8954 24 24V42C24 43.1046 24.8954 44 26 44H49.6552C50.7597 44 51.6552 43.1046 51.6552 42V33.7908V27.1582V24C51.6552 22.8954 50.7597 22 49.6552 22Z" stroke="#9D3D97" stroke-width="2" stroke-linecap="round"/>
+<mask id="path-3-inside-1_1576_17816" fill="white">
+<path d="M29 19C29 18.4477 29.4477 18 30 18H33C33.5523 18 34 18.4477 34 19V21H29V19Z"/>
+</mask>
+<path d="M29 19C29 18.4477 29.4477 18 30 18H33C33.5523 18 34 18.4477 34 19V21H29V19Z" stroke="#9D3D97" stroke-width="3" mask="url(#path-3-inside-1_1576_17816)"/>
+<mask id="path-4-inside-2_1576_17816" fill="white">
+<path d="M42 19C42 18.4477 42.4477 18 43 18H46C46.5523 18 47 18.4477 47 19V21H42V19Z"/>
+</mask>
+<path d="M42 19C42 18.4477 42.4477 18 43 18H46C46.5523 18 47 18.4477 47 19V21H42V19Z" stroke="#9D3D97" stroke-width="3" mask="url(#path-4-inside-2_1576_17816)"/>
+<rect x="29" y="27" width="4" height="4" fill="#EC519E" stroke="#EC519E" stroke-width="2"/>
+<rect x="29" y="35" width="4" height="4" fill="#EC519E" stroke="#EC519E" stroke-width="2"/>
+<rect x="36" y="27" width="4" height="4" fill="#EC519E" stroke="#EC519E" stroke-width="2"/>
+<rect x="36" y="35" width="4" height="4" fill="#EC519E" stroke="#EC519E" stroke-width="2"/>
+<rect x="43" y="27" width="4" height="4" fill="#EC519E" stroke="#EC519E" stroke-width="2"/>
+<rect x="43" y="35" width="4" height="4" fill="#EC519E" stroke="#EC519E" stroke-width="2"/>
+<path d="M62.3495 39.5851L65.6195 33.9202C66.1268 33.0414 66.1268 31.9586 65.6195 31.0798L52.5395 8.42025C52.0322 7.5414 51.0946 7 50.08 7L23.92 7C22.9054 7 21.9678 7.54139 21.4605 8.42025L8.38048 31.0798C7.87317 31.9586 7.87317 33.0414 8.38048 33.9202L21.4605 56.5798C21.9678 57.4586 22.9054 58 23.92 58H50.08C51.0946 58 52.0322 57.4586 52.5395 56.5798L55.8095 50.9149" stroke="url(#paint0_linear_1576_17816)" stroke-width="3" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_1576_17816" x1="37" y1="7" x2="37" y2="58" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DA5DB0"/>
+<stop offset="1" stop-color="#924292"/>
+</linearGradient>
+</defs>
+</svg>

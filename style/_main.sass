@@ -1,38 +1,86 @@
-
 *
   color: $base-black
   box-sizing: border-box
   font-family: 'U001'
 
+.white
+  color: $base-white
+
 .button
   display: inline-block
   border: none
-  color: $base-white
-  padding: 17px 25px
   border-radius: 30px
   font-size: 16px
   font-weight: bold
-  box-shadow: $box-shadow-2
   cursor: pointer
-  background: $accent
   text-align: center
-
+  color: $base-white
+  background-color: $accent
+  padding: 17px 45px
+    
   @media screen and ( max-width: $lg )
-    padding: 17px 53px
+    padding: 14px 35px
   
+  @media screen and ( max-width: $md )
+    padding: 14px 20px
+
   &.square
-    padding: 13px 25px
     border-radius: 3px
-    box-shadow: none
-    background: transparent
+    background-color: transparent
+    padding: 13px 25px 12px
     color: $base-black
 
-    @media screen and ( max-width: $xl )
-      padding: 13px 15px
+    @media screen and ( max-width: $lg )
+      padding: 17px auto 18px
 
     &:hover
-      box-shadow: $box-shadow-1
       color: $base-white
+
+  &.buy
+    padding: 17px 25px
+
+    @media screen and ( max-width: $lg )
+      padding: 17px 53px
+  
+  &.black
+    background-color: $base-white
+    color: $base-black
+
+    &.border
+      border-color: $base-white
+      color: $base-white
+      height: 52px
+      
+      &:hover
+        color: $base-black
+
+      &:active
+        color: $base-white
+
+    &:hover
+      background: $extra-3
+
+    &:active
+      color: $base-white
+      background: $extra-1
+    
+  &.border
+    padding: 17px 45px
+    border: 1px solid $accent
+    background-color: transparent
+    color: $accent
+    height: 52px
+
+    &:hover, &:active
+      color: $base-white
+      border-color: transparent
+
+    @media screen and ( max-width: $lg )
+      padding: 14px 81px
+    
+    @media screen and ( max-width: $md )
+      padding: 14px 20px
+
 
   &:hover
     background: $base-gradient
@@ -68,6 +116,38 @@ a
   @media screen and ( max-width: $sm )
     font-size: 20px
     margin-bottom: 30px
+
+.h1
+  text-align: center
+  text-transform: uppercase
+  font-size: 40px
+  line-height: 1.25
+  margin-top: 150px
+  margin-bottom: 65px
+  & .color
+    background: $base-gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+  @media screen and ( max-width: $xl )
+    font-size: 36px
+    margin-top: 130px
+    margin-bottom: 55px
+  
+  @media screen and ( max-width: $lg )
+    font-size: 32px
+    margin-top: 90px
+    margin-bottom: 50px
+
+  @media screen and ( max-width: $md )
+    font-size: 26px
+    margin-top: 70px
+  
+  @media screen and ( max-width: $sm )
+    font-size: 20px
+    margin-top: 50px
+    margin-bottom: 30px
+  
 
 .content
   height: 150vh

@@ -9,3 +9,16 @@ const toggleDropdown = () => {
 toggleMenu.addEventListener('click', () => {
     toggleDropdown()
 })
+
+
+const { createApp } = Vue
+
+createApp(
+    {
+        data() {
+            return {
+                sliderPosition: 1,
+            }
+        }
+    }
+).mount('#sliders')
