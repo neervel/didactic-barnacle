@@ -1,11 +1,10 @@
 .slider-types
     position: absolute
-    left: 0
     top: -90px
-    width: 1380px
+    left: 50%
+    transform: translateX(-50%)
+    width: 1370px
     height: 580px
-    margin: 0 auto
-    position: relative
     background-size: contain
     background-repeat: no-repeat
     background-position: center
@@ -25,7 +24,7 @@
 
     &-card
         width: 100%
-        height: 580px
+        height: 100%
         display: flex
         align-items: center
         transition: .3s
@@ -38,6 +37,11 @@
             align-items: center
 
             &.left
+                padding-top: 20px
+                padding-left: 35px
+
+            &.right
+                padding-right: 20px
                 justify-content: flex-end
 
             &-item
@@ -48,15 +52,24 @@
 
                 &:not(:last-child)
                     margin-bottom: 30px
+            
+                &.right
+                    &:not(:last-child)
+                        margin-bottom: 20px
+
 
             &-text
-                max-width: 330px
+                max-width: 340px
 
 
             &-img
-                height: 56px
-                width: 64px
+                height: 66px
+                width: 74px
                 margin-right: 30px
+
+                &.right
+                    height: 75px
+                    width: 85px
 
         &__main 
             position: relative
@@ -64,24 +77,29 @@
             flex-direction: column
             align-items: center
             justify-content: end
-            padding-bottom: 100px
+            padding-bottom: 120px
             height: 100%
             width: 50%
             z-index: 8
 
             &.left 
-                padding-left: 70px
+                padding-left: 30px
 
             &.right
-                padding-right: 70px
+                padding-right: 30px
 
-            & img 
-                margin-bottom: 34px
+            & .main-image
+                margin-bottom: 50px
+
+                & img 
+                    width: 100%
+                    height: 100%
 
         &.left
             color: $base-white
 
             & .main-image
+                margin-right: 40px
                 height: 194px
                 width: 380px
         
@@ -96,11 +114,17 @@
                 transition: .3s
 
             & .main-image
+                margin-right: 40px
                 height: 291px
                 width: 227px
 
         &.hide
             z-index: -1
+
+    &__title
+        font-size: 28px
+        margin: 0
+        margin-bottom: 15px
     
     &-buttons
         position: relative
@@ -124,6 +148,9 @@
         -webkit-appearance: none
         appearance: none
         background: transparent
+
+        &:focus
+            outline: none
 
         &__thumb
             user-select: none
@@ -154,13 +181,382 @@
             height: 100px
             width: 94px
 
-.v-enter-active,
-.v-leave-active 
-  transition: opacity 0.5s ease
+    &__animated
+        position: absolute
+        top: 50px
+        right: 150px
 
-.v-enter-from,
-.v-leave-to
-  opacity: 0
+        & .circle
+            transform-box: fill-box
+            transform-origin: center
+            animation: round 20s infinite linear
+
+    @media ( max-width: $xl )
+        top: -60px
+        width: 958px
+        height: 400px
+
+        &:before
+            background-image: url('./assets/images/slider-bg-1024.png')
+
+        &-card
+            &__main
+                width: 45%
+                padding-bottom: 50px
+
+                & .main-image
+                    margin-bottom: 20px
+
+                &.left
+                    padding-left: 50px
+                    & .main-image
+                        margin-right: 0
+                        height: 129px
+                        width: 253px
+
+                &.right
+                    padding-right: 50px
+
+                    & .main-image
+                        margin-right: 0
+                        height: 211px
+                        width: 164px
+
+            &__info
+                width: 55%
+
+                &.left
+                    padding-left: 0
+                    padding-bottom: 50px
+
+                &.right
+                    padding-right: 0
+                    padding-bottom: 50px
+                    
+
+                &-item
+                    font-size: 20px
+
+                &-text 
+                    max-width: 290px
+
+                &-img 
+                    margin-right: 20px
+
+        &-range
+            width: calc(100% - 50px)
+            left: 25px
+
+            &__thumb
+                height: 53px
+                width: 62px
+
+                &.left
+                    left: 60px
+                
+                &.right
+                    left: (calc(100% - 60px))
+
+            &::-webkit-slider-thumb
+                height: 53px
+                width: 62px
+        &-buttons 
+            flex-direction: column
+
+            & a.button
+                margin-left: 0
+                margin-top: 10px
+
+        &__animated
+            height: 120px
+            width: 120px
+            top: 15px
+            right: 75px
+
+    @media (max-width: $lg)
+        height: 373px
+        width: 808px
+
+        &:before
+            background-image: url('./assets/images/slider-bg-768.png')
+
+        &-card 
+            
+            &.full &__main
+                padding-bottom: 25px
+
+            &__main
+                &.left
+                    padding-left: 100px
+
+                    & .main-image
+                        margin-bottom: 18px
+                        height: 129px
+                        width: 253px
+                
+                &.right
+                    padding-right: 100px
+
+                    & .main-image
+                        height: 166px
+                        width: 129px
+
+            &__info
+                &.left
+                    padding-top: 80px
+                    padding-left: 15px
+                &.right
+                    padding-top: 80px
+
+                &-img
+                    height: 53px
+                    width: 60px
+
+                    &.right
+                        height: 60px
+                        width: 67px
+
+                &-text
+                    font-size: 18px
+                    max-width: 230px
+
+                &-item 
+                    &:not(:last-child)
+                        margin-bottom: 20px
+
+        &__title
+            font-size: 24px
+
+        &-range
+            width: calc(100% - 60px)
+            left: 30px
+    
+    @media (max-width: $md)
+        top: -40px
+        width: 476px
+        height: 1458px
+
+        &:before
+            background-image: url('./assets/images/slider-bg-540.png')
+
+        &-card
+            flex-direction: column
+            height: auto
+
+            &.right
+                position: static
+                flex-direction: column-reverse
+                margin-top: 180px
+            &__main
+                width: auto
+                margin-bottom: 40px
+
+                &.left
+                    padding-top: 82px
+                    padding-bottom: 0
+                    padding-left: 0
+                
+                &.right
+                    padding-right: 0
+                    padding-bottom: 0
+
+                & .main-image
+                    &.left
+                        height: 134px
+                        width: 262px
+                        margin-bottom: 25px
+                    &.right
+                        height: 180px
+                        width: 140px
+                        margin-bottom: 25px
+            &__info
+                width: auto
+
+                &.left
+                    padding-top: 0
+                    padding-bottom: 0
+                    padding-left: 0
+
+                    & .slider-types-card__info-item:last-child
+                        & .slider-types-card__info-text
+                            max-width: 230px
+                
+                &.right
+                    padding-top: 0
+                    padding-bottom: 0
+
+                    & .slider-types-card__info-item:first-child
+                        & .slider-types-card__info-text
+                            max-width: 230px
+                
+                &-text 
+                    max-width: 280px
+        &__title
+            order: -1
+            margin-bottom: 30px
+
+        &-buttons 
+            flex-direction: row
+
+            & a.button 
+                margin-top: 0
+                margin-left: 10px
+
+        &-range
+            display: none
+            &__thumb
+                display: none
+        
+        &__animated 
+            top: 50px
+            right: 0
+            height: 130px
+            width: 130px
+
+    @media (max-width: $sm)
+        width: 329px
+        height: 1332px
+
+        &:before 
+            background-image: url('./assets/images/slider-bg-320.png')
+
+        &-card 
+            &.right 
+                margin-top: 120px
+                
+            &__main 
+                width: 100%
+                margin-bottom: 30px
+
+                &.left
+                    padding-top: 44px
+
+                    & .main-image
+                        height: 117px
+                        width: 230px
+                        margin-bottom: 15px
+
+                &.right 
+                    & .main-image
+                        height: 166px
+                        width: 129px
+                    
+            &__info
+                &-text 
+                    font-size: 16px
+                    max-width: 212px
+
+                &-img 
+                    height: 51px
+                    width: 58px
+                    margin-right: 10px
+
+                    &.right
+                        height: 57px
+                        width: 64px
+
+                &.left
+                    & .slider-types-card__info-item:last-child
+                        & .slider-types-card__info-text
+                            max-width: 200px
+
+                &.right
+                    padding-left: 5px
+                    & .slider-types-card__info-item:first-child
+                        & .slider-types-card__info-text
+                            max-width: 200px
+
+        &__title
+            font-size: 18px
+            margin-bottom: 22px
+
+        &-buttons
+            flex-direction: column
+            width: 230px
+
+            & a.button 
+                margin-top: 10px
+                margin-left: 0
+.bg-slider
+    position: absolute
+    height: 550px
+    top: 19px
+    left: 13px
+    display: flex
+    transition: .3s
+    
+    & svg 
+        height: 100%
+        width: auto
+
+    & .right 
+        height: 100%
+        width: auto
+        margin-left: -1px
+    
+    & .left
+        height: 100%
+        width: auto
+
+    & .center
+        width: 380px
+        height: 100%
+        background: linear-gradient(90deg, #9C549C 0%, #DD6DA5 100%)
+        transition: .3s
+        margin-left: -1px
+
+    &.left        
+        & .center
+            width: 970px
+
+    &.right
+        opacity: 0
+
+        & .center
+            width: 50px
+
+    @media (max-width: $xl)
+        height: 380px
+        top: 10px
+        left: 8px
+
+        & .center
+            width: 270px
+
+        &.left
+            & .center
+                width: 682px
+
+    @media (max-width: $lg)
+        height: 360px
+        top: 7px
+        left: 4px
+
+        & .center
+            width: 200px
+
+        &.left
+            & .center
+                width: 555px
+
+    @media ( max-width: $md )
+        height: 460px
+        transform: rotate(90deg)
+        top: 135px
+        left: -128px
+
+        & .center 
+            width: 415px
+
+    @media ( max-width: $sm )
+        height: 321px
+        top: 159px
+        left: -162px
+
+        & .center
+            width: 435px
+
+// transitions
 
 .slide-fade-enter-active
     animation: slide-fade-reverse 0.3s
@@ -172,7 +568,7 @@
 .slide-fade-r-leave-active 
     animation: slide-fade-r  0.3s
 
-
+// animations
 
 @keyframes slide-fade 
     0% 
@@ -214,32 +610,10 @@
         transform: translateX(0)
     100% 
         opacity: 1
-    
 
 
-
-.bg-slider
-    position: absolute
-    top: 18px
-    left: 13px
-    display: flex
-    transition: .3s
-
-    & .right 
-        margin-left: -1px
-
-    & .center
-        width: 380px
-        height: 551px
-        background: linear-gradient(90deg, #9C549C 0%, #DD6DA5 100%)
-        transition: .3s
-
-    &.left
-        & .center
-            width: 977px
-
-    &.right
-        opacity: 0
-
-        & .center
-            width: 50px
+@keyframes round
+    0% 
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(360deg)

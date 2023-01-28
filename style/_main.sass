@@ -3,6 +3,9 @@
   box-sizing: border-box
   font-family: 'U001'
 
+main
+  overflow-x: hidden
+
 .white
   color: $base-white
 
@@ -50,6 +53,13 @@
       border-color: $base-white
       color: $base-white
       height: 52px
+
+      @media ( max-width: $lg )
+        padding: 14px 81px
+        height: 46px
+    
+      @media ( max-width: $md )
+        padding: 14px 20px
       
       &:hover
         color: $base-black
@@ -77,6 +87,7 @@
 
     @media ( max-width: $lg )
       padding: 14px 81px
+      height: 46px
     
     @media ( max-width: $md )
       padding: 14px 20px
@@ -97,6 +108,7 @@ a
   font-size: 40px
   line-height: 1.25
   margin-bottom: 65px
+
   & .color
     background: $base-gradient
     -webkit-background-clip: text

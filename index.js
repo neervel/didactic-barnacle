@@ -17,12 +17,15 @@ createApp(
     {
         data() {
             return {
-                sliderPosition: 650,
-                lastRangePosition: 650,
+                sliderPosition: 0,
+                lastRangePosition: 0,
                 currentPosition: 1,
-                maxRange: 1300,
-                midRange: 650,
+                midRange: 0,
             }
+        },
+
+        created() {
+            this.sliderPosition = this.lastRangePosition = this.midRange = parseInt(this.maxRange / 2)
         },
 
         methods: {
@@ -49,6 +52,8 @@ createApp(
             },
 
             handleSlideClick(side) {
+                if (window.innerWidth < 768) return
+                
                 if (side === 'left' && this.currentPosition !== 2) {
                     while(this.sliderPosition < this.maxRange) {
                         this.sliderPosition++
@@ -62,6 +67,24 @@ createApp(
                     this.currentPosition--
                     this.lastRangePosition = 0
                 }
+            }
+        },
+
+        computed: {
+            maxRange() {
+                const wWidth = window.innerWidth
+
+                if (wWidth >= 1440) {
+                    return 1300
+                } else if (wWidth < 1440 && wWidth >= 1024) {
+                    return 908
+                } else if (wWidth < 1024 && wWidth >= 768) {
+                    return 748
+                }
+            },
+
+            innerWidth() {
+                return window.innerWidth
             }
         }
     }
