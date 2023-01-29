@@ -1,3 +1,142 @@
 .slider-about
     &__title
         margin-top: 60px
+
+    &-container
+        position: relative
+        height: 555px
+        width: 1351px
+        margin: 0 auto
+
+    &-bar
+        position: relative
+        height: 100%
+
+        &__img 
+            position: absolute
+            top: 43px
+            left: 279px
+            height: 492px
+            width: 308px
+
+            & img 
+                height: 100%
+                width: 100%
+
+        &__round 
+            position: absolute
+            top: 50%
+            left: 300px
+            transform: translateY(-50%)
+            height: 462px
+            width: 295px
+            
+            & img 
+                height: 100%
+                width: 100%
+
+    &-slider
+        position: absolute
+        top: 50%
+        right: 100px
+        transform: translateY(-50%)
+        width: 520px
+        outline: 8px solid rgba($base-white, .42)
+        background-color: $base-white
+        border-radius: 10px
+        box-shadow: $box-shadow-box
+
+    &-slide
+        padding: 35px
+        height: auto
+
+    &-tslider
+        height: 100%
+        width: 100%
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 9
+    
+        &-slide 
+            position: relative
+        
+        &-card 
+            position: absolute
+            display: flex
+            align-items: center
+
+            &__title 
+                color: $base-white
+            &__img 
+                & svg 
+                    height: 100%
+                    width: 100%
+
+
+            &:nth-child(1)
+                top: 0
+                left: 473px
+            
+            &:nth-child(2)
+                top: 83px
+                left: 560px
+
+            &:nth-child(3)
+                position: absolute
+                top: 223px
+                left: 610px
+
+            &:nth-child(4)
+                top: 404px
+                left: 560px
+
+            &:nth-child(5)
+                bottom: 0
+                left: 473px
+
+            &.small &__img
+                height: 45px
+                width: 45px
+                margin-right: 20px
+            &.small &__title 
+                font-size: 20px
+                opacity: .6
+            &.medium &__img 
+                height: 66px
+                width: 66px
+                margin-right: 25px
+            &.medium &__title
+                font-size: 24px
+                opacity: .7
+            &.active &__img
+                height: 90px
+                width: 90px
+            &.active &__title
+                display: none
+
+    &__mouse 
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        height: 64px
+        width: 30px
+        
+        & svg 
+            height: 100%
+            width: 100%
+
+        & .wheel
+            animation: mouse-drag 5s infinite
+
+
+@keyframes mouse-drag
+    0%
+        transform: translateY(0)
+    20%
+        transform: translateY(5px)
+    40%
+        transform: translateY(0)
+    100%
+        transform: translateY(0)

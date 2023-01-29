@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Test</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="./style.css">
 </head>
 
@@ -51,8 +52,8 @@
 					<span class="color">Супрастинекс®</span> – Препарат от аллергии последнего поколения 
 				</h1>
 			</div>			
-			<div class="sliders" id="sliders">
-				<div class="slider-types">					
+			<div class="sliders">
+				<div class="slider-types" id="slider">					
 					<div class="bg-slider" :class="{'right': currentPosition === 0, 'center': currentPosition === 1, 'left': currentPosition === 2}">
 						<div class="left">
 							<svg width="189" height="551" viewBox="0 0 189 551" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,10 +167,171 @@
 						</transition>
 					</div>							
 				</div>
-				<div class="container">
-					
-					<div class="slider-about">
-						<h2 class="h2 slider-about__title white">Супрастинекс® – всё,<br>что важно пациенту с аллергией</h2>
+				<div class="slider-about">
+					<h2 class="h2 slider-about__title white">Супрастинекс® – всё,<br>что важно пациенту с аллергией</h2>
+					<div class="slider-about-container">
+						<div class="slider-about-bar">
+							<picture class="slider-about-bar__img">
+								<img src="./assets/images/slider-about-1440.png" alt="Супрастинекс">
+							</picture>
+							<picture class="slider-about-bar__round">
+								<img src="./assets/images/slider-about-bar-1440.png">
+							</picture>
+						</div>
+						<div class="slider-about__mouse">
+							<svg width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="1" y="14" width="28" height="49" rx="13" fill="#E898C0"/>
+								<rect x="0.5" y="13.5" width="29" height="50" rx="13.5" stroke="white" stroke-opacity="0.5"/>
+								<rect class="wheel" x="11" y="19" width="8" height="19" rx="4" fill="white" fill-opacity="0.9"/>
+								<path d="M13 3.5L15 1L17 3.5" stroke="white" stroke-opacity="0.9" stroke-linecap="round"/>
+								<path d="M17 7L15 9.5L13 7" stroke="white" stroke-opacity="0.9" stroke-linecap="round"/>
+							</svg>								
+						</div>
+						<div class="swiper slider-about-tslider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide slider-about-tslider-slide">
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/price.svg" alt="Справедливая цена" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Справедливая цена</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/innovations.svg" alt="Про эффективность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про эффективность</h3>
+									</div>
+									<div class="slider-about-tslider-card active">
+										<img src="./assets/icons/effective.svg" alt="Про инновационность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про инновационность</h3>
+									</div>
+
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/safety.svg" alt="Про безопасность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про безопасность</h3>
+									</div>
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/sleep.svg" alt="Низкая вероятность сонливости" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Низкая вероятность сонливости</h3>
+									</div>
+								</div>
+
+								<div class="swiper-slide slider-about-tslider-slide">
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/innovations.svg" alt="Про эффективность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про эффективность</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/effective.svg" alt="Про инновационность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про инновационность</h3>
+									</div>
+									<div class="slider-about-tslider-card active">
+										<img src="./assets/icons/safety.svg" alt="Про безопасность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про безопасность</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/sleep.svg" alt="Низкая вероятность сонливости" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Низкая вероятность сонливости</h3>
+									</div>
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/price.svg" alt="Справедливая цена" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Справедливая цена</h3>
+									</div>
+								</div>
+								<div class="swiper-slide slider-about-tslider-slide">
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/effective.svg" alt="Про инновационность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про инновационность</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/safety.svg" alt="Про безопасность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про безопасность</h3>
+									</div>
+									<div class="slider-about-tslider-card active">
+										<img src="./assets/icons/sleep.svg" alt="Низкая вероятность сонливости" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Низкая вероятность сонливости</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/price.svg" alt="Справедливая цена" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Справедливая цена</h3>
+									</div>
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/innovations.svg" alt="Про эффективность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про эффективность</h3>
+									</div>
+								</div>
+
+								<div class="swiper-slide slider-about-tslider-slide">
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/safety.svg" alt="Про безопасность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про безопасность</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/sleep.svg" alt="Низкая вероятность сонливости" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Низкая вероятность сонливости</h3>
+									</div>
+									<div class="slider-about-tslider-card active">
+										<img src="./assets/icons/price.svg" alt="Справедливая цена" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Справедливая цена</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/innovations.svg" alt="Про эффективность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про эффективность</h3>
+									</div>
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/effective.svg" alt="Про инновационность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про инновационность</h3>
+									</div>
+								</div>
+
+								<div class="swiper-slide slider-about-tslider-slide">
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/sleep.svg" alt="Низкая вероятность сонливости" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Низкая вероятность сонливости</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/price.svg" alt="Справедливая цена" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Справедливая цена</h3>
+									</div>
+									<div class="slider-about-tslider-card active">
+										<img src="./assets/icons/innovations.svg" alt="Про эффективность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про эффективность</h3>
+									</div>
+									<div class="slider-about-tslider-card medium">
+										<img src="./assets/icons/effective.svg" alt="Про инновационность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про инновационность</h3>
+									</div>
+
+									<div class="slider-about-tslider-card small">
+										<img src="./assets/icons/safety.svg" alt="Про безопасность" class="slider-about-tslider-card__img">
+										<h3 class="slider-about-tslider-card__title">Про безопасность</h3>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="swiper slider-about-slider">
+							<div class="swiper-wrapper">
+								<div class="slider-about-slide swiper-slide">
+									<h3 class="slider-about-slide__title">Про инновационность</h3>
+									<p class="slider-about-slide__text">Нобелевская премия за разработку<br>методов выделения стереоизомеров<sup>4</sup></p>
+								</div>
+								<div class="slider-about-slide swiper-slide">
+									<h3 class="slider-about-slide__title">Про безопасность</h3>
+									<p class="slider-about-slide__text">Высокий профиль безопасности, подходит<br>для детей с 2х лет<sup>1</sup>
+									<p class="slider-about-slide__text">Не взаимодействует с другими<br>лекарствами и подходит для длительного<br>приема1</p>
+									</div>
+									<div class="slider-about-slide swiper-slide">
+										<h3 class="slider-about-slide__title">Низкая вероятность сонливости</h3>
+										<p class="slider-about-slide__text">Позволяет сохранить концентрацию в течение дня*</p>
+									</div>
+									<div class="slider-about-slide swiper-slide">
+										<h3 class="slider-about-slide__title">Справедливая цена</h3>
+										<p class="slider-about-slide__text">Препарат последнего поколения<br>за доступную цену</p>
+									</div>
+									<div class="slider-about-slide swiper-slide">
+										<h3 class="slider-about-slide__title">Про эффективность</h3>
+										<p class="slider-about-slide__text">1 таблетка помогает защищать организм<br>от действия аллергенов на 24 часа<sup>1</sup></p>
+									</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -178,7 +340,7 @@
 	</main>
 
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<script src="./index.js"></script>
+	<script src="./index.js" type="module"></script>
 </body>
 
 </html>
