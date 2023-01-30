@@ -1,6 +1,6 @@
 .slider-about
     &__title
-        margin-top: 60px
+        margin-top: 0
 
     &-container
         position: relative
@@ -26,10 +26,10 @@
 
         &__bar
             position: absolute
-            top: 43px
+            top: 20px
             left: 279px
-            height: 492px
-            width: 308px
+            height: 506px
+            width: 310px
             
             & img 
                 height: 100%
@@ -49,6 +49,16 @@
     &-slide
         padding: 35px
         height: auto
+
+        &__title 
+            font-size: 26px
+            margin-bottom: 10px
+
+        &__text
+            font-size: 20px
+    
+    &-button 
+        display: none
 
     &-tslider
         height: 100%
@@ -130,6 +140,261 @@
         & .wheel
             animation: mouse-drag 5s infinite
 
+    @media ( max-width: $xl )
+        &-container
+            width: 860px
+
+        &-circle 
+            &__img 
+                left: -50px
+                height: 248px
+                width: 334px
+            &__bar
+                left: 100px
+                height: 509px
+                width: 305px
+                top: 24px
+        
+        &-slider 
+            width: 325px
+            left: 525px
+        
+        &-slide 
+            padding: 30px
+
+            &__title 
+                font-size: 24px
+            
+            &__text
+                font-size: 18px
+
+        &-tslider 
+            &-card 
+                &:nth-child(1)
+                    top: 7px
+                    left: 280px
+                
+                &:nth-child(2)
+                    top: 88px
+                    left: 367px
+
+                &:nth-child(3)
+                    position: absolute
+                    top: 239px
+                    left: 407px
+
+                &:nth-child(4)
+                    top: 410px
+                    left: 367px
+
+                &:nth-child(5)
+                    bottom: 0px
+                    left: 280px
+
+                &.small &__img
+                    margin-right: 15px
+                &.medium &__img 
+                    margin-right: 20px
+
+        &__mouse
+            display: none
+
+    @media ( max-width: $lg )
+        &-container 
+            height: 483px
+            width: 645px
+
+        &-circle 
+            &__img 
+                left: -32px
+                height: 172px
+                width: 232px
+                top: 52%
+
+            &__bar
+                left: -24px
+                height: 523px
+                width: 309px
+                top: 0
+
+        &-slider
+            top: 54%
+            width: 303px
+            left: 330px
+            outline-width: 3px
+
+        &-slide 
+            padding: 20px 25px
+
+            &__title 
+                font-size: 20px
+                margin-bottom: 6px
+            &__text
+                font-size: 16px
+        
+
+        &-tslider 
+            &-card 
+                max-width: max-content
+                &:nth-child(1)
+                    top: 37px
+                    left: 139px
+                
+                &:nth-child(2)
+                    top: 100px
+                    left: 206px
+
+                &:nth-child(3)
+                    position: absolute
+                    top: 214px
+                    left: 222px
+
+                &:nth-child(4)
+                    top: 356px
+                    left: 207px
+
+                &:nth-child(5)
+                    bottom: -6px
+                    left:139px
+
+                &.small &__title 
+                    font-size: 16px
+                &.small &__img 
+                    margin-right: 10px
+                &.medium &__title
+                    font-size: 20px
+                    opacity: .7
+
+    @media ( max-width: $md )
+        &__title
+            max-width: 500px
+            margin: 0 auto
+        &-container
+            width: 480px
+            height: 460px
+        &-circle 
+            &__img 
+                left: 80px
+                top: 29px
+                transform: none
+                width: 278px
+                height: 206px
+            &__bar
+                top: 40px
+                left: 16px
+                width: 446px
+                height: 284px
+        &-slider 
+            transform: translateY(50%)
+            top: auto
+            bottom: 4%
+            left: 47px
+            width: 380px
+        &-slide 
+            text-align: center
+            padding: 20px 30px
+        &-tslider
+            &-card 
+                &__title
+                    display: none
+                &:nth-child(1)
+                    top: 114px
+                    left: 22px
+                
+                &:nth-child(2)
+                    top: 210px
+                    left: 65px
+
+                &:nth-child(3)
+                    position: absolute
+                    top: 255px
+                    left: 191px
+
+                &:nth-child(4)
+                    top: 211px
+                    left: 350px
+
+                &:nth-child(5)
+                    bottom: auto
+                    top: 114px
+                    left: 415px
+
+                &.small &__img
+                    margin-right: 0
+                &.medium &__img
+                    margin-right: 0
+        &-button 
+            top: auto
+            bottom: 4%
+            transform: translateY(50%)
+            display: block
+            position: absolute
+            height: 28px
+
+            &:after 
+                font-size: 28px
+                color: $base-white
+
+            &.swiper-button-next
+                right: 0
+            &.swiper-button-prev
+                left: 0
+
+    @media ( max-width: $sm )
+        &-container 
+            width: 285px
+            height: 430px
+        &-circle 
+            &__img 
+                height: 181px
+                width: 245px
+                top: 5px
+                left: 18px
+            &__bar
+                height: 184px
+                width: 309px
+                top: 90px
+                left: -14px
+        
+        &-tslider 
+            &-card 
+                &:nth-child(1)
+                    top: 165px
+                    left: 0px
+                
+                &:nth-child(2)
+                    top: 212px
+                    left: 44px
+
+                &:nth-child(3)
+                    position: absolute
+                    top: 222px
+                    left: 108px
+
+                &:nth-child(4)
+                    top: 212px
+                    left: 194px
+
+                &:nth-child(5)
+                    bottom: auto
+                    top: 165px
+                    left: 238px
+
+                &.medium &__img 
+                    height: 45px
+                    width: 45px
+                &.active &__img 
+                    height: 66px
+                    width: 66px
+
+        &-slider 
+            left: 22px
+            width: 240px
+        &-slide 
+            padding: 20px
+        
+        &-button 
+            width: 15px
 
 @keyframes mouse-drag
     0%

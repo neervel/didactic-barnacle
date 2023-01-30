@@ -35,9 +35,19 @@ const swiperText = new Swiper('.slider-about-tslider', {
     crossFade: true
   },
 
-  mousewheel: {
-    thresholdDelta: 20,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
+
+  breakpoints: {
+    768: {
+      mousewheel: {
+        thresholdDelta: 20,
+      },
+      navigation: false,
+    }
+  }
 })
 
 swiperText.on('slideChange', (s) => {
