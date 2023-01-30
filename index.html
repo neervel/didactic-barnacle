@@ -520,6 +520,54 @@
 					</div>
 				</div>
 			</div>
+			<div class="pharms">
+				<div class="pharms-container" id="pharms">
+					<h2 class="h2 pharms__title">Где купить?</h2>
+					<div class="pharms-items">
+						<a class="pharms-items-hex" href="#">
+							<span>Найти ближайшую аптеку</span>
+							<svg class="pharms-items-hex__search" width="29" height="30" viewBox="0 0 29 30" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<circle cx="11.5391" cy="11.5" r="10" stroke="#EC519E" stroke-width="3" />
+								<path d="M19.0391 20.5L26.0391 27.5" stroke="#EC519E" stroke-width="4"
+									stroke-linecap="round" />
+							</svg>
+						</a>
+						<a class="pharms-items-hex" href="#">
+							<img src="./assets/images/pharm-1.png" alt="Здравсити" class="pharms0items-hex__img">
+						</a>
+						<a class="pharms-items-hex" href="#">
+							<img clas src="./assets/images/pharm-2.png" alt="Ригла" class="pharms0items-hex__img">
+						</a>
+						<a class="pharms-items-hex" href="#">
+							<img src="./assets/images/pharm-3.png" alt="apteka.ru" class="pharms0items-hex__img">
+						</a>
+						<div v-if="!showMore" @click="showMore = true" class="pharms-items-hex more">
+							<span>Показать еще</span>
+						</div>
+						<transition-group name="slide-fade-down" mode="out-in">
+							<a v-if="showMore" class="pharms-items-hex" href="#">
+								<img src="./assets/images/pharm-4.png" alt="eapteka.ru" class="pharms0items-hex__img">
+							</a>
+							<a v-if="showMore" class="pharms-items-hex" href="#">
+								<img src="./assets/images/pharm-5.png" alt="Планета здоровья" class="pharms0items-hex__img">
+							</a>
+							<a v-if="showMore" class="pharms-items-hex" href="#">
+								<img src="./assets/images/pharm-6.png" alt="Апрель" class="pharms0items-hex__img">
+							</a>
+							<a v-if="showMore" class="pharms-items-hex" href="#">
+								<img src="./assets/images/pharm-7.png" alt="Аптека 36.6" class="pharms0items-hex__img">
+							</a>
+							<a v-if="showMore" class="pharms-items-hex" href="#">
+								<img src="./assets/images/pharm-8.png" alt="Аптеки Столички" class="pharms0items-hex__img">
+							</a>
+						</transition-group>
+						<div v-if="showMore" @click="showMore = false" class="pharms-items-hex more">
+							<span>Скрыть</span>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</article>
 	</main>

@@ -146,3 +146,17 @@ createApp({
     },
   },
 }).mount("#slider");
+
+createApp({
+  data() {
+    return {
+      showMore: true,
+    };
+  },
+
+  mounted() {
+    if (window.innerWidth < 768) {
+      this.showMore = false
+    }
+  }
+}).mount('#pharms')
