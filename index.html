@@ -248,7 +248,11 @@
 					<div class="slider-about-container">
 						<div class="slider-about-circle">
 							<picture class="slider-about-circle__img">
-								<img src="./assets/images/slider-about-1440.png" alt="Супрастинекс">
+								<source media="(min-width: 1440px)" srcset="./assets/images/slider-about-1440.png">
+								<source media="(min-width: 1024px)" srcset="./assets/images/slider-about-1024.png">
+								<source media="(min-width: 768px)" srcset="./assets/images/slider-about-768.png">
+								<source media="(min-width: 540px)" srcset="./assets/images/slider-about-540.png">
+								<img src="./assets/images/slider-about-320.png" alt="Супрастинекс" width="auto">
 							</picture>
 							<picture class="slider-about-circle__bar">
 								<source media="(min-width: 1440px)" srcset="./assets/images/slider-about-bar-1440.png">
@@ -256,7 +260,7 @@
 								<source media="(min-width: 768px)" srcset="./assets/images/slider-about-bar-768.png">
 								<source media="(min-width: 540px)" srcset="./assets/images/slider-about-bar-540.png">
 
-								<img src="./assets/images/slider-about-bar-320.png">
+								<img src="./assets/images/slider-about-bar-320.png" width="auto">
 							</picture>
 						</div>
 						<div class="slider-about__mouse">
