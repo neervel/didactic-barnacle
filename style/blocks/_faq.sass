@@ -1,0 +1,107 @@
+.faq 
+    &-container 
+        width: 1220px
+        margin: 0 auto
+    &-block 
+        padding-bottom: 150px
+    &-list 
+        &__item
+            padding: 30px 110px
+            &:nth-last-child(even)
+                background-color: $background
+            &-sum 
+                list-style-type: none
+                display: flex
+                align-items: center
+                justify-content: space-between
+                cursor: pointer
+                &:hover 
+                    & .faq-list__item-arrow
+
+                        & .bg
+                            fill: $accent
+                        & .arrow 
+                            stroke: $base-white
+            &-title 
+                font-size: 22px
+                font-weight: bold
+                max-width: calc(100% - 100px)
+            &-text 
+                font-size: 18px
+                line-height: 1.5
+                max-width: 700px
+                margin-top: 10px
+            
+            &[open]
+                & .faq-list__item-arrow
+                    transform: rotate(180deg)
+
+                    & .bg
+                        fill: $accent
+                    & .arrow 
+                        stroke: $base-white
+                    
+            &-arrow 
+                transition: .2s
+                transform: rotate(0deg)
+                height: 60px
+                width: 60px
+
+                & .bg
+                    fill: transparent
+                    transition: .3s
+                    stroke: $accent
+                    stroke-width: 2px
+                & .arrow 
+                    stroke: $accent
+                    transition: .3s
+    @media ( max-width: $xl )
+        &-container
+            width: 904px
+        &-block 
+            padding-bottom: 130px
+        &-list 
+            &__item 
+                padding: 20px 30px
+
+                &-title 
+                    font-size: 20px
+    @media ( max-width: $lg )
+        &-container
+            width: 650px
+        &-block 
+            padding-bottom: 90px
+        &-list 
+            &__item 
+                padding: 24px 30px
+
+    @media ( max-width: $md )
+        &-container
+            width: 90%
+        &-block 
+            padding-bottom: 70px
+        &-list 
+            &__item 
+                padding: 20px 30px
+
+                &-title 
+                    font-size: 18px
+                    max-width: calc(100% - 60px)
+                &-text 
+                    font-size: 16px
+
+                &-arrow
+                    height: 40px
+                    width: 40px
+    
+    @media ( max-width: $sm )
+        &-block 
+            padding-bottom: 50px
+        &-list 
+            &__item 
+                padding: 20px
+
+                &-title 
+                    font-size: 16px
+                &-text 
+                    font-size: 14px
