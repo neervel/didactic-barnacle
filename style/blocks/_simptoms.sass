@@ -1,0 +1,211 @@
+.simptoms
+    display: block
+
+    &-container
+        width: 1326px
+        margin: 0 auto
+        padding-bottom: 150px
+
+    &-content 
+        display: flex
+        align-items: center
+
+    &-items
+        display: flex
+        width: 733px
+        flex-direction: column
+
+        &-row 
+            display: flex
+            align-items: center
+            justify-content: center
+
+            &:not(:first-child)
+                margin-top: -15px
+
+            &:last-child
+                display: none
+                
+
+        &-hex 
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 244px
+            width: 244px
+            font-size: 22px
+            text-align: center
+            font-weight: bold
+            transition: .2s
+            
+            &.mobile 
+                display: none
+
+            &.extra
+                display: none
+                background-position: center
+                background-size: contain
+                background-repeat: no-repeat
+                background-image: url('./assets/images/hex-extra-bg.png')
+                
+                &::before, &::after
+                    display: none
+
+            &:before, &::after
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background-position: center
+                background-size: contain
+                background-repeat: no-repeat
+                transition: .2s
+
+            &:before 
+                background-image: url('./assets/images/hex-bg.png')
+                opacity: 1
+            &:after
+                background-image: url('./assets/images/hex-hover-bg.png')
+                opacity: 0
+                z-index: -1
+
+            &:hover 
+                &:before 
+                    opacity: 0
+                &::after
+                    opacity: 1
+
+            &:hover &__title
+                opacity: 0
+            &:hover &__text 
+                opacity: 1
+
+            &__title 
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                max-width: 200px
+                opacity: 1
+                transition: .3s
+                cursor: default
+            &__text
+                opacity: 0
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                color: $base-white
+                max-width: 200px
+                transition: .3s
+                cursor: default
+    &__img 
+        display: block
+        height: 353px
+        width: 591px
+        margin-top: 110px
+
+    @media ( max-width: $xl )
+        &-container 
+            width: 935px
+            padding-bottom: 122px
+        &-content 
+            position: relative
+        &-items 
+            width: 630px
+            &-hex 
+                height: 210px
+                width: 210px
+
+                &__title, &__text
+                    font-size: 20px
+                    max-width: 170px
+        &__img 
+            position: absolute
+            margin-top: 0
+            right: 16px
+            bottom: -6px
+            height: 228px
+            width: 383px
+
+    @media ( max-width: $lg )
+        &-container 
+            width: 648px
+            padding-bottom: 95px
+        &-content 
+            flex-direction: column
+        &-items 
+            margin-bottom: 19px
+            width: 100%
+            justify-content: center
+            &-hex 
+                &:nth-child(4)
+                    margin-left: 0
+        &__img 
+            position: static
+            height: 256px
+            width: 425px
+
+    @media ( max-width: $md )
+        &__title
+            max-width: 360px
+            margin: 0 auto
+            margin-top: 70px
+            margin-bottom: 50px
+        &-container
+            width: 480px
+            padding-bottom: 70px
+        
+        &-items 
+            margin-bottom: 30px
+
+            &-hex
+                height: 160px
+                width: 160px
+                &__title, &__text
+                    font-size: 14px
+                    max-width: 130px
+        &__img
+            height: 237px
+            width: 398px
+    
+    @media ( max-width: $sm )
+        &__title 
+            margin-top: 50px
+            margin-bottom: 30px
+        &-container
+            position: relative
+            width: 100%
+            padding-bottom: 40px
+        &-content 
+            justify-content: center
+            overflow-x: hidden
+            overflow-y: clip
+        &-items 
+            width: 445px
+            margin-bottom: 10px
+
+            &-row 
+                &:last-child
+                    display: flex
+
+            &-hex 
+                height: 150px
+                width: 150px
+                margin-left: -5px
+                margin-right: -5px
+
+                &.desktop
+                    display: none
+                &.mobile
+                    display: flex
+                &.extra
+                    display: flex
+                
+        &__img 
+            height: 141px
+            width: 238px
+
