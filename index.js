@@ -40,11 +40,12 @@ const swiperText = new Swiper('.slider-about-tslider', {
     prevEl: '.swiper-button-prev',
   },
 
+    mousewheel: {
+      thresholdDelta: 20,
+    },
+
   breakpoints: {
     768: {
-      mousewheel: {
-        thresholdDelta: 20,
-      },
       navigation: false,
     }
   }
@@ -53,6 +54,10 @@ const swiperText = new Swiper('.slider-about-tslider', {
 swiperText.on('slideChange', (s) => {
   swiperCards.slideTo(s.activeIndex)
 })
+
+if (window.innerWidth < 768) {
+  swiperText.mousewheel.disable()
+}
 
 const { createApp } = Vue;
 
