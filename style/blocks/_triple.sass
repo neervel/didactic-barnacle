@@ -1,0 +1,79 @@
+.triple
+    background: $bg-gradient
+    &-block
+        padding-top: 70px
+        margin-bottom: 50px
+    &__title 
+        margin-top: 0
+    &-content
+        display: flex
+        
+        &__img
+            height: 285px
+            width: 467px
+            margin: -23px
+            margin-right: 0
+
+        &-cards 
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-column-gap: 25px
+
+        &-card 
+            background-color: $base-white
+            border-radius: 10px
+            padding: 20px
+            height: 100%
+
+            &__icon 
+                height: 58px
+                width: 68px
+                margin-bottom: 12px
+
+            &__title
+                font-size: 20px
+                margin-bottom: 8px
+            &__text 
+                font-size: 18px
+    
+    @media ( max-width: $xl )
+        &-content
+            flex-direction: column
+            align-items: center
+
+            &__img
+                margin: 0
+                margin-bottom: 20px
+
+    @media (max-width: $lg)
+        &-content 
+            &__img
+                width: calc(100% + 62px)
+                height: auto
+                margin-bottom: 0
+            &-cards
+                grid-template-columns: 1fr
+                grid-row-gap: 20px
+
+            &-card
+                display: flex
+                flex-direction: row
+
+                &__icon
+                    margin-bottom: 0
+                    margin-right: 20px
+
+    @media ( max-width: $sm )
+        &-content
+            &__img
+                width: calc(100% + 30px)
+            &-card 
+                flex-direction: column
+                &__icon 
+                    margin-right: 0
+                    margin-bottom: 12px
+                &__title
+                    font-size: 18px
+                    margin-bottom: 6px
+                &__text
+                    font-size: 16px
