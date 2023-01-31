@@ -1,4 +1,5 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+const { createApp } = Vue;
 
 const toggleMenu = document.querySelector(".js-menu-toggle");
 const menu = document.querySelector(".js-menu-drodpown");
@@ -35,6 +36,10 @@ const swiperText = new Swiper('.slider-about-tslider', {
     crossFade: true
   },
 
+  autoplay: {
+    delay: 5000
+  },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -58,8 +63,6 @@ swiperText.on('slideChange', (s) => {
 if (window.innerWidth < 768) {
   swiperText.mousewheel.disable()
 }
-
-const { createApp } = Vue;
 
 createApp({
   data() {
