@@ -5,6 +5,7 @@ const toggleMenu = document.querySelector(".js-menu-toggle");
 const menu = document.querySelector(".js-menu-drodpown");
 
 const toggleDropdown = () => {
+  if (window.innerWidth >= 1024) return
   menu.classList.toggle("show");
   toggleMenu.classList.toggle("close");
 };
@@ -12,6 +13,18 @@ const toggleDropdown = () => {
 toggleMenu.addEventListener("click", () => {
   toggleDropdown();
 });
+
+document.querySelectorAll('.header-nav__list-item').forEach(el => {
+  if (el.classList.contains('sub')) return
+  el.addEventListener("click", () => {
+    toggleDropdown();
+  })
+})
+
+document.querySelector('#toggle-droprown').addEventListener('click', () => {
+  document.querySelector('#toggle-droprown').classList.toggle('open')
+})
+
 
 const swiperCards = new Swiper(".slider-about-slider", {
   loop: true,

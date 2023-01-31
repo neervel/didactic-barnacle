@@ -16,6 +16,34 @@
     display: flex
     align-items: center
     z-index: 20
+
+    &-dropdown
+      position: absolute
+      top: calc(100% + 15px)
+      left: 0
+      width: max-content
+      border-radius: 6px
+      box-shadow: 0px 0px 12px rgba(156, 154, 154, 0.19)
+      background: $base-white
+      visibility: hidden
+      opacity: 0
+      transform: translateY(-5px)
+      transition: .3s
+      list-style: none
+      padding: 25px
+
+      & li 
+        font-size: 16px
+        font-weight: bold
+        & a 
+          &:hover 
+            color: $accent
+          &:active
+            color: $extra-1
+        &:first-child
+          padding-bottom: 15px
+          margin-bottom: 15px
+          border-bottom: 1px solid $accent
     
     &__list
       display: flex
@@ -25,8 +53,32 @@
       margin: 0
 
       &-item
+        &.sub
+          position: relative
+          &.mobile
+            display: none
+          &:hover 
+            & .header-nav-dropdown
+              visibility: visible
+              transform: translateY(0)
+              opacity: 1
+            & .header-nav__list-arrow 
+              stroke: $base-white
+              transform: rotate(180deg)
+          & button
+            display: flex
+            align-items: center
+            &:hover 
+              & span 
+                color: $base-white 
         &:not(:last-child)
           margin-right: 25px
+      &-arrow 
+        height: 8px
+        width: 13px
+        margin-left: 10px
+        stroke: $base-black
+        transition: transform .3s
 
     &__toggle
       display: none
@@ -113,6 +165,35 @@
         opacity: 1
         transform: translateY(0rem)
 
+
+      &-dropdown
+        display: none
+        position: relative
+        top: 0
+        left: 0
+        width: 100%
+        opacity: 1
+        visibility: visible
+        transform: none
+        box-shadow: none
+        background: none
+        border-radius: 0
+        padding: 20px 0
+        margin: 0 20px
+        &::after
+          content: ''
+          position: absolute
+          left: 50%
+          top: 0
+          transform: translateX(-50%)
+          height: 1px
+          width: 90%
+          background-color: $base-white
+        & li
+          &:first-child
+            border-bottom: none
+            padding-bottom: 0
+            margin-bottom: 35px
       &__list
         flex-direction: column
         width: 100%
@@ -120,6 +201,36 @@
         &-item
           text-align: center
           width: 100%
+
+          &.sub 
+            display: none
+            &:hover 
+              & .header-nav__list-arrow 
+                stroke: $base-black
+                transform: rotate(0deg)
+            &.open
+              & .header-nav__list-arrow 
+                stroke: $base-white
+                transform: rotate(180deg)
+              & .header-nav-dropdown
+                display: block
+            &.mobile
+              display: flex
+              align-items: center
+              flex-direction: column
+              &.open
+                background: $bg-gradient
+                & * 
+                  color: $base-white
+              & a
+                color: $base-black
+              & .button 
+                background: none
+                display: flex
+                align-items: center
+                justify-content: center
+                &:hover, &:active
+                  background: none
 
           &:not(:last-child)
             margin-right: 0
@@ -130,6 +241,8 @@
 
           & .button.square
             width: 100%
+        &-arrow 
+          display: block
         
       &__toggle
         padding: 0

@@ -88,7 +88,12 @@
             font-size: 14px
             color: $base-white
 
+            &:nth-child(1)
+                margin-right: 80px
+
         &-info 
+            margin-right: 0
+            margin-left: auto
             & p 
                 &:not(:last-child)
                     margin-bottom: 6px
@@ -162,6 +167,8 @@
             grid-column-gap: 70px
             padding: 0 20px
             &__item
+                &:nth-child(1)
+                    margin-right: 0
                 &:nth-child(1),
                 &:nth-child(2),
                 &:nth-child(3)
