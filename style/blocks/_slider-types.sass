@@ -114,7 +114,6 @@
                 transition: .3s
 
             & .main-image
-                margin-right: 40px
                 height: 291px
                 width: 227px
 
@@ -149,10 +148,15 @@
         appearance: none
         background: transparent
 
+        &:hover 
+            & + .slider-types-range__thumb
+                & .bg
+                    fill: #f0bcd6
+
         &:focus
             outline: none
 
-        &__thumb
+        &__thumb  
             user-select: none
             position: absolute
             left: 50%
@@ -160,7 +164,13 @@
             transform: translate(-50%, -50%)
             transition: .3s
             height: 80px
-            width: 94px
+            width: 94px 
+            & svg 
+                height: 100%
+                width: 100%
+            & .bg
+                transition: .2s
+                fill: #E898C0
 
             & img 
                 height: 100%

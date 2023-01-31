@@ -5,14 +5,14 @@
         margin-bottom: 50px
     &__title 
         margin-bottom: 15px
-        color: $text-secondary
+        color: #58595B
 
     & ol 
         padding-left: 15px
 
     & li 
         font-size: 14px
-        color: $text-secondary
+        color: #58595B
         overflow-wrap: break-word
 
         &:nth-child(2),
@@ -22,10 +22,20 @@
             margin-bottom: 7px
 
     &-creator 
-        border-top: 1px solid $text-secondary
+        position: relative
         margin-top: 50px
         padding-top: 30px
         font-size: 14px
+
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            height: 1px
+            width: 1300px
+            background-color: #58595B
         & a 
             text-decoration: underline
 
@@ -37,6 +47,8 @@
             margin-bottom: 30px
         &-creator 
             margin-top: 30px
+            &::after
+                width: 903px
     @media (max-width: $lg)
         &-block
             padding: 25px 20px
@@ -45,11 +57,16 @@
         &-creator 
             padding-top: 15px
             margin-top: 25px
+            &::after
+                width: 650px
     @media (max-width: $md)
         &-block
             padding: 20px
         &__star 
             margin-bottom: 20px
+        &-creator
+            &::after
+                width: 100vw
     @media (max-width: $sm)
         &-block
             padding: 20px 0
