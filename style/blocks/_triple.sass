@@ -1,10 +1,13 @@
 .triple
     background: $bg-gradient
     &-block
-        padding-top: 70px
-        margin-bottom: 50px
+        padding-top: 150px
+        margin-bottom: 70px
     &__title 
+        max-width: 840px
+        margin: 0 auto
         margin-top: 0
+        margin-bottom: 65px
     &-content
         display: flex
         
@@ -37,6 +40,12 @@
                 font-size: 18px
     
     @media ( max-width: $xl )
+        &-block 
+            padding-top: 130px
+            margin-bottom: 60px
+        &__title 
+            max-width: 100%
+            margin-bottom: 55px
         &-content
             flex-direction: column
             align-items: center
@@ -46,6 +55,11 @@
                 margin-bottom: 20px
 
     @media (max-width: $lg)
+        &-block 
+            padding-top: 90px
+            margin-bottom: 50px
+        &__title 
+            margin-bottom: 55px
         &-content 
             &__img
                 width: calc(100% + 62px)
@@ -63,7 +77,19 @@
                     margin-bottom: 0
                     margin-right: 20px
 
+    @media (max-width: $md)
+        &-block 
+            padding-top: 70px
+            margin-bottom: 30px
+        &__title 
+            margin-bottom: 50px
+
     @media ( max-width: $sm )
+        &-block 
+            padding-top: 50px
+            margin-bottom: 20px
+        &__title 
+            margin-bottom: 30px
         &-content
             &__img
                 width: calc(100% + 30px)
