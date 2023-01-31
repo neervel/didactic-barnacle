@@ -37,7 +37,8 @@ const swiperText = new Swiper('.slider-about-tslider', {
   },
 
   autoplay: {
-    delay: 5000
+    delay: 5000,
+    pauseOnMouseEnter: true,
   },
 
   navigation: {
