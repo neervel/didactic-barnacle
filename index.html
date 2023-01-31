@@ -32,7 +32,7 @@
 							<a href="#" class="button square">Все об аллергии</a>
 						</li>
 						<li class="header-nav__list-item">
-							<a href="#" class="button buy">Где купить</a>
+							<a href="#pharms" class="button buy">Где купить</a>
 						</li>
 					</ul>
 				</nav>
@@ -527,7 +527,7 @@
 				<div class="pharms-container" id="pharms">
 					<h2 class="h2 pharms__title">Где купить?</h2>
 					<div class="pharms-items">
-						<a class="pharms-items-hex" href="#">
+						<a class="pharms-items-hex" href="https://uteka.ru/search/?query=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81&aq=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81&ac=text" target="_blank">
 							<span>Найти ближайшую аптеку</span>
 							<svg class="pharms-items-hex__search" width="29" height="30" viewBox="0 0 29 30" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -536,35 +536,35 @@
 									stroke-linecap="round" />
 							</svg>
 						</a>
-						<a class="pharms-items-hex" href="#">
-							<img src="./assets/images/pharm-1.png" alt="Здравсити" class="pharms0items-hex__img">
+						<a class="pharms-items-hex" href="https://zdravcity.ru/search/?what=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+							<img src="./assets/images/pharm-1.png" alt="Здравсити" class="pharms-items-hex__img">
 						</a>
-						<a class="pharms-items-hex" href="#">
-							<img clas src="./assets/images/pharm-2.png" alt="Ригла" class="pharms0items-hex__img">
+						<a class="pharms-items-hex" href="https://www.rigla.ru/search?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+							<img clas src="./assets/images/pharm-2.png" alt="Ригла" class="pharms-items-hex__img">
 						</a>
-						<a class="pharms-items-hex" href="#">
-							<img src="./assets/images/pharm-3.png" alt="apteka.ru" class="pharms0items-hex__img">
+						<a class="pharms-items-hex" href="https://www.rigla.ru/search?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+							<img src="./assets/images/pharm-3.png" alt="apteka.ru" class="pharms-items-hex__img">
 						</a>
 						<div v-if="!showMore" @click="showMore = true" class="pharms-items-hex more">
 							<span>Показать еще</span>
 						</div>
 						<transition-group name="slide-fade-down" mode="out-in">
-							<a v-if="showMore" class="pharms-items-hex" href="#">
-								<img src="./assets/images/pharm-4.png" alt="eapteka.ru" class="pharms0items-hex__img">
+							<a v-if="showMore" class="pharms-items-hex" href="https://www.eapteka.ru/search/?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+								<img src="./assets/images/pharm-4.png" alt="eapteka.ru" class="pharms-items-hex__img">
 							</a>
-							<a v-if="showMore" class="pharms-items-hex" href="#">
+							<a v-if="showMore" class="pharms-items-hex" href="https://planetazdorovo.ru/search/?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
 								<img src="./assets/images/pharm-5.png" alt="Планета здоровья"
-									class="pharms0items-hex__img">
+									class="pharms-items-hex__img">
 							</a>
-							<a v-if="showMore" class="pharms-items-hex" href="#">
-								<img src="./assets/images/pharm-6.png" alt="Апрель" class="pharms0items-hex__img">
+							<a v-if="showMore" class="pharms-items-hex" href="https://apteka-april.ru/search/%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+								<img src="./assets/images/pharm-6.png" alt="Апрель" class="pharms-items-hex__img">
 							</a>
-							<a v-if="showMore" class="pharms-items-hex" href="#">
-								<img src="./assets/images/pharm-7.png" alt="Аптека 36.6" class="pharms0items-hex__img">
+							<a v-if="showMore" class="pharms-items-hex" href="https://366.ru/search/?text=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+								<img src="./assets/images/pharm-7.png" alt="Аптека 36.6" class="pharms-items-hex__img">
 							</a>
-							<a v-if="showMore" class="pharms-items-hex" href="#">
+							<a v-if="showMore" class="pharms-items-hex" href="https://stolichki.ru/search?name=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
 								<img src="./assets/images/pharm-8.png" alt="Аптеки Столички"
-									class="pharms0items-hex__img">
+									class="pharms-items-hex__img">
 							</a>
 						</transition-group>
 						<div v-if="showMore" @click="showMore = false" class="pharms-items-hex more">
@@ -737,18 +737,12 @@
 			<div class="container">
 				<div class="footer-block">
 					<nav class="footer-nav">
-						<div class="footer-nav-block">
-							<a href="#" class="footer-nav__link">Главная</a>
-							<a href="#" class="footer-nav__link">Где купить?</a>
-						</div>
-						<div class="footer-nav-block">
-							<a href="#" class="footer-nav__link">Капли Супрастинекс® </a>
-							<a href="#" class="footer-nav__link">Инструкция Капли Супрастинекс® </a>
-						</div>
-						<div class="footer-nav-block">
-							<a href="#" class="footer-nav__link">Таблетки Супрастинекс® </a>
-							<a href="#" class="footer-nav__link">Инструкция Таблетки Супрастинекс® </a>
-						</div>
+						<a href="#" class="footer-nav__link">Где купить?</a>
+						<a href="#" class="footer-nav__link">Главная</a>
+						<a href="#" class="footer-nav__link">Капли Супрастинекс® </a>
+						<a href="#" class="footer-nav__link">Инструкция Капли Супрастинекс® </a>
+						<a href="#" class="footer-nav__link">Таблетки Супрастинекс® </a>
+						<a href="#" class="footer-nav__link">Инструкция Таблетки Супрастинекс® </a>
 					</nav>
 					<div class="footer-info">
 						<div class="footer-info-card">
@@ -766,8 +760,8 @@
 							</div>
 							<div class="footer-info-card-buttons">
 								<a href="mailto:pharmacovigilance@egis.ru"
-									class="button footer-info-card-buttons__item">E-mail: pharmacovigilance@egis.ru</a>
-								<a href="tel:+74953633966" class="button footer-info-card-buttons__item">Телефон: +7
+									class="button footer-info-card-buttons__item">pharmacovigilance@egis.ru</a>
+								<a href="tel:+74953633966" class="button footer-info-card-buttons__item">+7
 									(495) 363-39-66</a>
 								<a href="#" class="button footer-info-card-buttons__item">Заполнить форму на сайте</a>
 							</div>
@@ -795,27 +789,29 @@
 						препарата Супрастинекс® (рег. №: ЛСР-008568/10, ЛП-000225)
 					</p>
 					<h3 class="links__title">Источники:</h3>
-					<p id="link-1">
-						1. На основании инструкции по медицинскому применению препарата Супрастинекс® (рег. №:
-						ЛСР-008568/10, ЛП-000225)
-					</p>
-					<p id="link-2">
-						2. Т.Г. Федоскова, Антигистаминные препараты: мифы и реальность // Эффективная фармакотерапия –
-						2014 - № 5 - стр. 50-56
-					</p>
-					<p id="link-3">
-						3. На основании инструкции по медицинскому применению препарата Супрастинекс® (рег. №:
-						ЛСР-008568/10, ЛП-000225), Martin LB et al. Eosinophils in allergy: role in disease,
-						degranulation, and cytokines. Int Arch Allergy Immunol. 1996 Mar;109(3):207-15. doi:
-						10.1159/000237239. Адаптировано: на основании блокирования гистаминовых рецепторов, снижающие
-						активность гистамина как медиатора воспаления, а также на основании уменьшения активации
-						эозинофилов, активных участников патофизиологических осложнений различных аллергических
-						заболеваний
-					</p>
-					<p id="link-4">
-						4. MLA style: The Nobel Prize in Chemistry 2001. NobelPrize.org.
-						https://www.nobelprize.org/prizes/chemistry/2001/summary/
-					</p>
+					<ol>
+						<li id="link-1">
+							На основании инструкции по медицинскому применению препарата Супрастинекс® (рег. №:
+							ЛСР-008568/10, ЛП-000225)
+						</li>
+						<li id="link-2">
+							Т.Г. Федоскова, Антигистаминные препараты: мифы и реальность // Эффективная фармакотерапия –
+							2014 - № 5 - стр. 50-56
+						</li>
+						<li id="link-3">
+							На основании инструкции по медицинскому применению препарата Супрастинекс® (рег. №:
+							ЛСР-008568/10, ЛП-000225), Martin LB et al. Eosinophils in allergy: role in disease,
+							degranulation, and cytokines. Int Arch Allergy Immunol. 1996 Mar;109(3):207-15. doi:
+							10.1159/000237239. Адаптировано: на основании блокирования гистаминовых рецепторов, снижающие
+							активность гистамина как медиатора воспаления, а также на основании уменьшения активации
+							эозинофилов, активных участников патофизиологических осложнений различных аллергических
+							заболеваний
+						</li>
+						<li id="link-4">
+							MLA style: The Nobel Prize in Chemistry 2001. NobelPrize.org.
+							https://www.nobelprize.org/prizes/chemistry/2001/summary/
+						</li>
+					</ol>
 					<div class="links-creator">Страница разработана <a href="https://sokratus.com/" target="_blank">SOKRATUS.COM</a></div>
 				</div>
 			</div>
