@@ -10,11 +10,20 @@
             &:nth-child(even)
                 background-color: $background
             &-sum 
-                list-style-type: none
                 display: flex
                 align-items: center
                 justify-content: space-between
                 cursor: pointer
+                &.open
+                    & .faq-list__item-arrow
+                        transform: rotate(-180deg)
+
+                        & .bg
+                            fill: $accent
+                        & .arrow 
+                            stroke: $base-white
+                    & + .faq-list__item-text
+                        display: block
                 &:hover 
                     & .faq-list__item-arrow
 
@@ -27,22 +36,14 @@
                 font-weight: bold
                 max-width: calc(100% - 100px)
             &-text 
+                display: none
                 font-size: 18px
                 line-height: 1.5
                 max-width: 700px
                 margin-top: 10px
-            
-            &[open]
-                & .faq-list__item-arrow
-                    transform: rotate(180deg)
-
-                    & .bg
-                        fill: $accent
-                    & .arrow 
-                        stroke: $base-white
                     
             &-arrow 
-                transition: .2s
+                transition: .3s
                 transform: rotate(0deg)
                 height: 60px
                 width: 60px

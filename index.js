@@ -15,7 +15,7 @@ toggleMenu.addEventListener("click", () => {
 
 const swiperCards = new Swiper(".slider-about-slider", {
   loop: true,
-  effect: 'fade',
+  effect: "fade",
   autoHeight: true,
   spaceBetween: 50,
   speed: 500,
@@ -73,6 +73,7 @@ createApp({
       lastRangePosition: 0,
       currentPosition: 1,
       midRange: 0,
+      innerWidth: window.innerWidth
     };
   },
 
@@ -81,6 +82,10 @@ createApp({
       this.lastRangePosition =
       this.midRange =
         parseInt(this.maxRange / 2);
+    window.addEventListener('resize', () => {
+      this.innerWidth = window.innerWidth
+      console.log(this.innerWidth);
+    })
   },
 
   methods: {
@@ -115,7 +120,7 @@ createApp({
     },
 
     handleSlideClick(side) {
-      if (window.innerWidth < 768) return;
+      if (this.innerWidth < 768) return;
 
       if (side === "left" && this.currentPosition !== 2) {
         while (this.sliderPosition < this.maxRange) {
@@ -135,7 +140,7 @@ createApp({
 
   computed: {
     maxRange() {
-      const wWidth = window.innerWidth;
+      const wWidth = this.innerWidth;
 
       if (wWidth >= 1440) {
         return 1300;
@@ -144,10 +149,6 @@ createApp({
       } else if (wWidth < 1024 && wWidth >= 768) {
         return 748;
       }
-    },
-
-    innerWidth() {
-      return window.innerWidth;
     },
   },
 }).mount("#slider");
@@ -160,8 +161,16 @@ createApp({
   },
 
   mounted() {
-    if (window.innerWidth < 768) {
-      this.showMore = false
+    if (this.innerWidth < 768) {
+      this.showMore = false;
     }
-  }
-}).mount('#pharms')
+  },
+}).mount("#pharms");
+
+const faqElems = document.querySelectorAll('.faq-list__item-sum')
+
+faqElems.forEach((el, i) => {
+  el.addEventListener('click', () => {
+    el.classList.toggle('open')
+  })
+})
