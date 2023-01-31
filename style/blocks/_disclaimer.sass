@@ -1,0 +1,30 @@
+.disclaimer
+    padding-bottom: 70px
+    &__title 
+        font-size: 64px
+        text-align: center
+        max-width: 95%
+        margin: 0 auto
+        font-family: 'Roboto Condensed'
+        font-weight: normal
+        background: linear-gradient(180deg, #DA5DB0 0%, #924292 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+
+    @media ( max-width: $xl )
+        padding-bottom: 60px
+        &__title
+            font-size: 46px
+    @media ( max-width: $lg )
+        padding-bottom: 30px
+        &__title
+            font-size: 38px
+    @media ( max-width: $md )
+        padding-bottom: 20px
+        &__title
+            font-size: 32px
+    @media ( max-width: $sm )
+        &__title
+            font-size: 17px
