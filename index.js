@@ -25,6 +25,16 @@ document.querySelector('#toggle-droprown').addEventListener('click', () => {
   document.querySelector('#toggle-droprown').classList.toggle('open')
 })
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
 
 const swiperCards = new Swiper(".slider-about-slider", {
   loop: true,
@@ -97,7 +107,6 @@ createApp({
         parseInt(this.maxRange / 2);
     window.addEventListener('resize', () => {
       this.innerWidth = window.innerWidth
-      console.log(this.innerWidth);
     })
   },
 
