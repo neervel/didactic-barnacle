@@ -1,0 +1,90 @@
+@keyframes mouse-drag
+    0%
+        transform: translateY(0)
+    20%
+        transform: translateY(5px)
+    40%
+        transform: translateY(0)
+    100%
+        transform: translateY(0)
+
+@keyframes slide-fade 
+    0% 
+        transform: translateX(0)
+        opacity: 1
+    99%
+        transform: translateX(-40px)
+    100% 
+        opacity: 0
+        z-index: -1
+
+@keyframes slide-fade-reverse
+    0% 
+        transform: translateX(-40px)
+        opacity: 0
+        z-index: 1
+    99%
+        transform: translateX(0)
+    100% 
+        opacity: 1
+
+@keyframes slide-fade-r
+    0% 
+        transform: translateX(0)
+        opacity: 1
+
+    99%
+        transform: translateX(40px)
+    100% 
+        opacity: 0
+        z-index: -1
+
+@keyframes slide-fade-r-reverse
+    0% 
+        transform: translateX(40px)
+        opacity: 0
+        z-index: 1
+    99%
+        transform: translateX(0)
+    100% 
+        opacity: 1
+
+
+@keyframes round
+    0% 
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(360deg)
+
+@keyframes toggle-arrows
+    0%
+        transform: translateX(0px)
+    15%
+        transform: translateX(-5px)
+    30%
+        transform: translateX(0px)
+    50%
+        opacity: 1
+    65%
+        opacity: 0
+    80%
+        opacity: 1
+    100%
+        transform: translateX(0px)
+
+@keyframes toggle-arrows-r
+    0%
+        transform: translateX(0px)
+        opacity: 1
+    15%
+        opacity: 0
+    30%
+        opacity: 1
+    50%
+        transform: translateX(0px)
+    65%
+        transform: translateX(5px)
+    80%
+        transform: translateX(0px)
+    100%
+        transform: translateX(0px)

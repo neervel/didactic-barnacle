@@ -71,7 +71,7 @@
 					<span class="color">Супрастинекс®</span> – Препарат от аллергии последнего поколения
 				</h1>
 			</div>
-			<div class="sliders">
+			<div class="sliders section">
 				<div class="slider-types scroll" id="slider">
 					<div class="bg-slider"
 						:class="{'right': currentPosition === 0, 'center': currentPosition === 1, 'left': currentPosition === 2}">
@@ -113,7 +113,7 @@
 								<h2 class="slider-types__title white">Таблетки</h2>
 								<div class="slider-types-buttons">
 									<button class="slider-types__btn button black">Открыть инструкцию</button>
-									<a v-if="currentPosition === 2|| innerWidth < 768" href="#"
+									<a v-if="currentPosition === 2|| innerWidth < 768" href="./product-tablets.html"
 										class="slider-types__btn button black border">Подробнее</a>
 								</div>
 							</div>
@@ -179,7 +179,7 @@
 								<h2 class="slider-types__title">Капли для детей</h4>
 									<div class="slider-types-buttons">
 										<button class="slider-types__btn button">Открыть инструкцию</button>
-										<a v-if="currentPosition === 0 || innerWidth < 768" href="#"
+										<a v-if="currentPosition === 0 || innerWidth < 768" href="./product-drops.html"
 											class="slider-types__btn button border">Подробнее</a>
 									</div>
 									<transition name="slide-fade-r">
@@ -272,7 +272,7 @@
 						</transition>
 					</div>
 				</div>
-				<div class="slider-about section" id="about">
+				<div class="slider-about" id="about">
 					<h2 class="h2 slider-about__title white">Супрастинекс® – всё,<br>что важно пациенту с аллергией</h2>
 					<div class="slider-about-container">
 						<div class="slider-about-circle">
@@ -792,10 +792,10 @@
 				<div class="footer-block">
 					<nav class="footer-nav">
 						<a href="#pharms" class="footer-nav__link">Где купить?</a>
-						<a href="/" class="footer-nav__link">Главная</a>
-						<a href="#" class="footer-nav__link">Капли Супрастинекс® </a>
+						<a href="./" class="footer-nav__link">Главная</a>
+						<a href="./product-drops.html" class="footer-nav__link">Капли Супрастинекс® </a>
 						<a href="#" class="footer-nav__link">Инструкция Капли Супрастинекс® </a>
-						<a href="#" class="footer-nav__link">Таблетки Супрастинекс® </a>
+						<a href="./product-tablets.html" class="footer-nav__link">Таблетки Супрастинекс® </a>
 						<a href="#" class="footer-nav__link">Инструкция Таблетки Супрастинекс® </a>
 					</nav>
 					<div class="footer-info">
