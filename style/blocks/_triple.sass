@@ -6,21 +6,24 @@
         display: flex
         
         &__img
-            height: 285px
-            width: 467px
-            margin: -23px
-            margin-right: 0
+            height: 245px
+            width: 415px
+            margin-right: 22px
+            border-radius: 10px
+            box-shadow: 0px 0px 20px rgba(125, 64, 106, 0.69)
 
         &-cards 
-            display: grid
-            grid-template-columns: repeat(3, 1fr)
-            grid-column-gap: 25px
+            display: flex
+            justify-content: space-between
 
         &-card 
             background-color: $base-white
             border-radius: 10px
             padding: 20px
-            height: 100%
+            flex-basis: 33%
+            
+            &:not(:last-child)
+                margin-right: 20px
 
             &__icon 
                 height: 58px
@@ -36,47 +39,54 @@
     @media ( max-width: $xl )
         &__title 
             max-width: 100%
-            margin-bottom: 55px
         &-content
             flex-direction: column
             align-items: center
 
             &__img
-                margin: 0
-                margin-bottom: 20px
+                height: 253px
+                width: 427px
+                margin-right: 0
+                margin-bottom: 40px
+                border-radius: 25px
 
     @media (max-width: $lg)
         &__title 
             margin-bottom: 55px
         &-content 
             &__img
-                width: calc(100% + 62px)
+                width: 100%
                 height: auto
-                margin-bottom: 0
+                margin-bottom: 20px
             &-cards
-                grid-template-columns: 1fr
-                grid-row-gap: 20px
+                flex-direction: column
 
             &-card
                 display: flex
+                width: 100%
                 flex-direction: row
+                align-items: center
+
+                &:not(:last-child)
+                    margin-right: 0
+                    margin-bottom: 20px
 
                 &__icon
                     margin-bottom: 0
-                    margin-right: 20px
+                    margin-right: 15px
 
     @media (max-width: $md)
-        &__title 
-            margin-bottom: 50px
-
-    @media ( max-width: $sm )
-        &__title 
-            margin-bottom: 30px
         &-content
             &__img
-                width: calc(100% + 30px)
+                border-radius: 15px
+
+    @media ( max-width: $sm )
+        &-content
+            &__img
+                border-radius: 10px
             &-card 
                 flex-direction: column
+                align-items: start
                 &__icon 
                     margin-right: 0
                     margin-bottom: 12px
