@@ -1,0 +1,77 @@
+.product
+    &-container
+        position: relative
+        width: 1252px
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: center
+    &-card 
+        position: relative
+        height: 434px
+        width: 664px
+        background-image: url('./assets/product-drops/product-bg-1440.png')
+        background-size: contain
+        background-position: center
+        display: flex
+        flex-direction: column
+        justify-content: end
+        align-items: center
+        margin-top: 110px
+        padding-bottom: 44px
+    &__img 
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: -110px
+        height: 372px
+        width: 290px
+        margin-left: 20px
+    &__description 
+        font-size: 16px
+        margin-bottom: 30px
+    &-label 
+        position: absolute
+        display: flex
+        align-items: center
+
+        &.a
+            top: 75px
+            left: 115px
+        &.a &__text
+            max-width: 240px
+        &.b
+            top: 75px
+            right: 115px
+        &.b &__text
+            max-width: 240px
+        &.c
+            bottom: 165px
+            left: 0
+        &.c &__text
+            max-width: 240px
+        &.d
+            bottom: 165px
+            right: 60px
+        &.d &__text
+            max-width: 180px
+
+        &__img
+            margin-left: 30px
+        &__text 
+            text-align: right
+            font-size: 20px
+            font-weight: bold
+        &.left &__img 
+            margin-right: 30px
+        &.left &__text
+            text-align: left
+
+    &__animated 
+        position: absolute
+        top: 150px
+        right: 350px
+        & .circle 
+            transform-box: fill-box
+            transform-origin: center
+            animation: round 20s infinite
