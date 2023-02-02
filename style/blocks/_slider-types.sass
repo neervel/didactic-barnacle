@@ -151,7 +151,7 @@
         &:hover 
             & + .slider-types-range__thumb
                 & .bg
-                    fill: #f0bcd6
+                    fill: $extra-3
 
         &:focus
             outline: none
@@ -171,6 +171,12 @@
             & .bg
                 transition: .2s
                 fill: #E898C0
+            & .arr-r
+                transition: .2s
+                animation: toggle-arrows-r 5s infinite
+            & .arr-l
+                transition: .2s
+                animation: toggle-arrows 5s infinite
 
             & img 
                 height: 100%
@@ -178,8 +184,16 @@
 
             &.left
                 left: 87px
+                & .arr-r, & .arr-l
+                    animation: none
+                & .arr-l 
+                    opacity: 0
             &.right
                 left: calc(100% - 87px)
+                & .arr-r, & .arr-l
+                    animation: none
+                & .arr-r
+                    opacity: 0
 
         &::-webkit-slider-thumb
             pointer-events: all
@@ -627,3 +641,37 @@
         transform: rotate(0deg)
     100% 
         transform: rotate(360deg)
+
+@keyframes toggle-arrows
+    0%
+        transform: translateX(0px)
+    15%
+        transform: translateX(-5px)
+    30%
+        transform: translateX(0px)
+    50%
+        opacity: 1
+    65%
+        opacity: 0
+    80%
+        opacity: 1
+    100%
+        transform: translateX(0px)
+
+@keyframes toggle-arrows-r
+    0%
+        transform: translateX(0px)
+        opacity: 1
+    15%
+        opacity: 0
+    30%
+        opacity: 1
+    50%
+        transform: translateX(0px)
+    65%
+        transform: translateX(5px)
+    80%
+        transform: translateX(0px)
+    100%
+        transform: translateX(0px)
+        
