@@ -16,11 +16,25 @@ body
 .white
   color: $base-white
 
+.section
+  padding: 150px 0
+
+  @media (max-width: $xl)
+    padding: 130px 0
+  @media (max-width: $lg)
+    padding: 90px 0
+  @media (max-width: $md)
+    padding: 70px 0
+  @media (max-width: $sm)
+    padding: 50px 0
+     
+
+
 .button
   display: inline-block
   border: none
   border-radius: 30px
-  font-size: 16px
+  font-size: 18px
   font-weight: bold
   cursor: pointer
   text-align: center
@@ -143,7 +157,7 @@ a
   text-transform: uppercase
   font-size: 40px
   line-height: 1.25
-  margin-top: 150px
+  margin: 0 auto
   margin-bottom: 65px
   & .color
     background: $base-gradient
@@ -152,21 +166,17 @@ a
 
   @media ( max-width: $xl )
     font-size: 36px
-    margin-top: 130px
     margin-bottom: 55px
   
   @media ( max-width: $lg )
     font-size: 32px
-    margin-top: 90px
     margin-bottom: 50px
 
   @media ( max-width: $md )
     font-size: 26px
-    margin-top: 70px
   
   @media ( max-width: $sm )
     font-size: 20px
-    margin-top: 50px
     margin-bottom: 30px
 
 .scroll
