@@ -13,6 +13,7 @@
         background-image: url('./assets/product-drops/product-bg-1440.png')
         background-size: contain
         background-position: center
+        background-repeat: no-repeat
         display: flex
         flex-direction: column
         justify-content: end
@@ -58,12 +59,14 @@
 
         &__img
             margin-left: 30px
+            margin-right: 0
         &__text 
             text-align: right
             font-size: 20px
             font-weight: bold
         &.left &__img 
             margin-right: 30px
+            margin-left: 0
         &.left &__text
             text-align: left
 
@@ -71,7 +74,204 @@
         position: absolute
         top: 150px
         right: 350px
+        & path 
+            fill: $base-white
+        & circle 
+            stroke: $base-white
         & .circle 
             transform-box: fill-box
             transform-origin: center
-            animation: round 20s infinite
+            animation: round 20s infinite linear
+
+    @media ( max-width: $xl )
+        &-container 
+            width: 923px
+        &-card 
+            height: 373px
+            width: 530px
+            background-image: url('./assets/product-drops/product-bg-1024.png')
+            margin-top: 60px
+            padding-bottom: 48px
+        
+        &__img 
+            top: -55px
+            height: 272px
+            width: 210px
+            margin-left: 10px
+
+        &__description 
+            margin-bottom: 15px
+
+        &__animated 
+            top: 95px
+            right: 245px
+            height: 150px
+            width: 150px
+
+        &-label 
+            &.a
+                top: 20px
+                left: 75px
+            &.a &__text
+                max-width: 170px
+            &.b
+                top: 20px
+                right: 40px
+            &.b &__text
+                max-width: 200px
+            &.c
+                bottom: 145px
+                left: 35px
+            &.c &__text
+                max-width: 110px
+            &.d
+                bottom: 145px
+                right: 25px
+            &.d &__text
+                max-width: 110px
+
+            &__img
+                margin-left: 20px
+            &__text 
+                font-size: 18px
+            &.left &__img 
+                margin-right: 20px
+
+    @media (max-width: $lg) 
+        &-container 
+            width: 768px
+            height: 442px
+        &-card 
+            position: absolute
+            left: -95px
+            top: 105px
+            width: 502px
+            height: 304px
+            margin-top: 0
+            background-image: url('./assets/product-drops/product-bg-768.png')
+        &__img 
+            top: -110px
+            margin-left: 40px
+        &-label 
+            &__img 
+                height: 64px
+                width: 69px
+            &.a
+                top: 70px
+                left: 300px
+                flex-direction: row-reverse
+                justify-content: flex-end
+            &.a &__text
+                max-width: 280px
+                text-align: left
+            &.a &__img 
+                margin-left: 0
+                margin-right: 20px
+            &.b
+                top: 160px
+                right: auto
+                left: 350px
+            &.b &__text
+                max-width: 220px
+            &.c
+                bottom: 5px
+                left: 300px
+                flex-direction: row-reverse
+                justify-content: flex-end
+            &.c &__text
+                max-width: 200px
+                text-align: left
+            &.c &__img 
+                margin-left: 0
+                margin-right: 20px
+            &.d
+                bottom: 100px
+                right: auto
+                left: 350px
+            &.d &__text
+                max-width: 210px
+        &__animated 
+            top: -30px
+            right: 25px
+            height: 140px
+            width: 140px
+            & path
+                fill: $accent
+            & circle 
+                stroke: $accent
+
+    @media ( max-width: $md )
+        &-container 
+            width: 90%
+            height: auto 
+            flex-direction: column
+        &-card
+            position: relative
+            top: 0
+            left: 0
+            width: 460px
+            height: 322px
+            margin-top: 47px
+            background-image: url('./assets/product-drops/product-bg-540.png')
+            padding-bottom: 33px
+            margin-bottom: 30px
+        &__img
+            height: 228px
+            width: 176px
+            top: -47px
+            margin-left: 10px
+        &__description
+            margin-bottom: 20px
+        &__animated 
+            top: 94px
+            right: 50%
+            height: 145px
+            width: 145px
+            transform: translateX(200px)
+            & path
+                fill: $base-white
+            & circle 
+                stroke: $base-white
+        &-label 
+            position: static
+            width: 430px
+            margin-bottom: 10px
+            &.c
+                order: 1
+                margin-bottom: 0
+            &__text 
+                max-width: 100% !important
+                width: 290px
+                font-size: 16px
+
+    @media ( max-width: $sm )
+        &-container 
+            width: 100%
+            overflow: hidden
+            margin-bottom: -15px
+        &-card 
+            height: 257px
+            width: 367px
+            background-image: url('./assets/product-drops/product-bg-320.png')
+            margin-top: 42px
+            margin-bottom: 15px
+        &__img 
+            height: 171px
+            width: 131px
+            top: -42px
+        &-label 
+            width: 280px
+            
+            &__img 
+                margin-right: 10px !important
+                height: 61px
+                width: 66px
+            &__text
+                width: auto
+                font-size: 14px
+                width: 190px
+        &__animated
+            top: 56px
+            transform: translateX(141px)
+            height: 100px
+            width: 100px

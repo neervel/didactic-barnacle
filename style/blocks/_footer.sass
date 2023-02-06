@@ -1,40 +1,50 @@
 .footer
     background: $bg-gradient
+    &-container 
+        width: 1300px
+        margin: 0 auto
     &-block 
         padding: 70px 0
 
     &-nav 
-        display: grid
-        grid-template-columns: auto auto auto
-        grid-columns-gap: 73px
-        grid-row-gap: 10px
+        display: flex 
+        flex-wrap: wrap
         padding: 0 30px
-        margin-bottom: 50px
+        margin-bottom: 40px
+        max-width: 1000px
 
         &__link 
             color: $base-white
             font-size: 16px
+            line-height: 1.4
+            margin-bottom: 10px
 
+            &:nth-child(1)
+                order: 1
+                flex-basis: 100px
+                margin-right: 73px
             &:nth-child(2)
-                grid-column: 1
-                grid-row: 2
+                order: 4
+                flex-basis: 100px
+                margin-right: 73px
             &:nth-child(3)
-                grid-column: 2
-                grid-row: 1
+                order: 2
+                flex-basis: 270px
+                margin-right: 73px
             &:nth-child(4)
-                grid-column: 2
-                grid-row: 2
+                order: 5
+                flex-basis: 270px
+                margin-right: 73px
             &:nth-child(5)
-                grid-column: 3
-                grid-row: 1
+                order: 3
+                flex-basis: 300px
             &:nth-child(6)
-                grid-column: 3
-                grid-row: 2
+                order: 6
+                flex-basis: 300px
 
     &-info 
-        display: grid
-        grid-template-columns: 5fr 7.6fr
-        grid-gap: 30px
+        display: flex
+        justify-content: space-between
         margin-bottom: 50px
 
         &-card 
@@ -46,7 +56,9 @@
 
             &:first-child
                 flex-direction: column
-
+                width: 503px
+            &:last-child
+                width: 767px
             &-block 
                 flex-basis: 50%
                 padding-right: 30px
@@ -95,21 +107,23 @@
             margin-right: 0
             margin-left: auto
             & p 
+                line-height: 1.4
                 &:not(:last-child)
                     margin-bottom: 6px
 
     @media (max-width: $xl) 
+        &-container 
+            width: 908px
         &-block 
             padding: 50px 0
-        &-nav 
-            &-block 
-                margin: 0 30px
         &-info 
-            grid-template-columns: 3.5fr, 5.2fr
             &-card 
                 padding: 25px 30px
+                &:first-child
+                    width: 356px
                 &:last-child
                     flex-direction: column
+                    width: 520px
                 &-buttons 
                     margin-top: 30px
                 &__title
@@ -125,34 +139,47 @@
                 &:nth-child(2)
                     max-width: 151px
     @media ( max-width: $lg )
+        &-container 
+            width: 650px
         &-nav 
-            margin-bottom: 40px
+            margin-bottom: 30px
             padding: 0 20px
-            grid-template-columns: auto auto
-            grid-row-gap: 20px
+            max-width: 700px
 
             &__link
+                &:nth-child(1)
+                    order: 1
+                    flex-basis: 200px
+                &:nth-child(2)
+                    order: 3
+                    flex-basis: 200px
                 &:nth-child(3)
-                    grid-column: 1
-                    grid-row: 3
+                    order: 5
+                    flex-basis: 200px
                 &:nth-child(4)
-                    grid-column: 2
-                    grid-row: 1
+                    order: 2
+                    flex-basis: 300px
+                    margin-right: 0
                 &:nth-child(5)
-                    grid-column: 2
-                    grid-row: 2
+                    order: 4
+                    flex-basis: 300px
+                    margin-right: 0
                 &:nth-child(6)
-                    grid-column: 2
-                    grid-row: 3
+                    order: 6
+                    flex-basis: 300px
+                    margin-right: 0
         &-info 
             display: flex
             justify-content: space-between
             grid-gap: 0
             &-card
                 padding: 20px
-                width: 314px
                 height: fit-content
 
+                &:first-child,
+                &:last-child
+                    width: 314px
+                
                 &-buttons 
                     & .button 
                         padding: 15px
@@ -160,35 +187,53 @@
                 &__phone
                     font-size: 22px
                     margin-top: 30px
-        &-legal 
-            display: grid
-            grid-template-columns: 1fr 1fr
-            grid-row-gap: 6px
-            grid-column-gap: 70px
+        &-legal
             padding: 0 20px
-            &__item
+            flex-wrap: wrap
+            & > .footer-legal__item
                 &:nth-child(1)
                     margin-right: 0
-                &:nth-child(1),
-                &:nth-child(2),
-                &:nth-child(3)
-                    grid-column: 1
+                    flex-basis: 50%
+                &:nth-child(2)
+                    flex-basis: 50%
+                    order: 2
+                    margin-top: -60px
             &-info 
-                grid-row: 1/5
-                grid-column: 2
+                margin-left: 0
+                flex-basis: 50%
+                & p 
+                    &:not(:last-child)
+                        max-width: 200px
 
     @media ( max-width: $md)
+        &-container 
+            width: 90%
         &-nav 
-            margin-bottom: 30px
-            grid-template-columns: auto
+            margin-bottom: 20px
+            max-width: 100%
 
             &__link
-                &:nth-child(3),
-                &:nth-child(4),
-                &:nth-child(5),
+                &:nth-child(1)
+                    order: 1
+                    flex-basis: 100%
+                    margin-right: 0
+                &:nth-child(2)
+                    order: 2
+                    flex-basis: 100%
+                    margin-right: 0
+                &:nth-child(3)
+                    order: 3
+                    flex-basis: 100%
+                    margin-right: 0
+                &:nth-child(4)
+                    order: 4
+                    flex-basis: 100%
+                &:nth-child(5)
+                    order: 5
+                    flex-basis: 100%
                 &:nth-child(6)
-                    grid-column: 1
-                    grid-row: auto
+                    order: 6
+                    flex-basis: 100%
             
         &-info
             flex-direction: column
@@ -197,6 +242,10 @@
 
                 &:first-child
                     margin-bottom: 30px
+                    width: 100%
+                
+                &:last-child
+                    width: 100%
 
                 &__title 
                     font-size: 18px
@@ -206,21 +255,31 @@
                 &__phone
                     margin-top: 30px
                     font-size: 20px
-        &-legal 
-            grid-template-columns: 1fr
-            grid-row-gap: 20px
-            &__item
-                &:nth-child(1),
+        &-legal
+            flex-direction: column
+            &__item:nth-child(1)
+                max-width: 100%
+            & > .footer-legal__item
+                &:nth-child(1)
+                    margin-bottom: 30px
+                    flex-basis: 100%
+                    order: 1
                 &:nth-child(2)
-                    max-width: 100%
-            &-info
-                grid-column: 1
-                grid-row: 3
-                margin-left: 0
-                margin-right: auto
-    @media ( max-width: $md)
+                    flex-basis: 100%
+                    order: 2
+                    margin-top: 0
+                    margin-bottom: 30px
+            &-info 
+                order: 3
+                flex-basis: 100%
+                & p 
+                    &:not(:last-child)
+                        max-width: 100%
+    @media ( max-width: $sm)
         &-nav 
-            margin-bottom: 50px
+            margin-bottom: 30px
+            &__link 
+                margin-bottom: 20px
         &-info
             &-card 
                 &:first-child
