@@ -373,7 +373,7 @@
 					<div class="container">
 						<h2 class="h2 triple-video__title white">Узнайте больше о препарате Супрастинекс®</h2>
 						<div class="triple-video-block">
-							<div class="triple-video__item">
+							<div class="triple-video__item js-video" data-video="https://www.youtube.com/embed/40RJriYztG8">
 								<img src="./assets/images/video-cover-1.png" alt="Преимущества Супрастинекса®" class="triple-video__item-img">
 								<button class="triple-video__item-play">
 									<svg width="69" height="70" viewBox="0 0 69 70" fill="none"
@@ -383,10 +383,10 @@
 											d="M50.9885 34.4965L26.3735 21.7646C25.7079 21.4204 24.9141 21.9035 24.9141 22.6529V48.1167C24.9141 48.8661 25.7079 49.3492 26.3735 49.0049L50.9885 36.273C51.7093 35.9002 51.7093 34.8694 50.9885 34.4965Z"
 											fill="white" />
 									</svg>
-	
+
 								</button>
 							</div>
-							<div class="triple-video__item">
+							<div class="triple-video__item js-video" data-video="https://www.youtube.com/embed/40RJriYztG8">
 								<img src="./assets/images/video-cover-2.png" alt="Применение Супрастинекса® у детей" class="triple-video__item-img">
 								<button class="triple-video__item-play">
 									<svg width="69" height="70" viewBox="0 0 69 70" fill="none"
@@ -396,7 +396,7 @@
 											d="M50.9885 34.4965L26.3735 21.7646C25.7079 21.4204 24.9141 21.9035 24.9141 22.6529V48.1167C24.9141 48.8661 25.7079 49.3492 26.3735 49.0049L50.9885 36.273C51.7093 35.9002 51.7093 34.8694 50.9885 34.4965Z"
 											fill="white" />
 									</svg>
-	
+
 								</button>
 							</div>
 						</div>
@@ -711,6 +711,17 @@
 			</div>
 		</div>
 	</main>
+
+	<div class="video-popup hidden">
+		<div class="video-popup-block">
+			<iframe 
+				id="video-frame" 
+				src="" 
+				frameborder="0" 
+				allow="autoplay" 
+				allowfullscreen></iframe>
+		</div>
+	</div>
 
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="./index.js" type="module"></script>

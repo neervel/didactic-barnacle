@@ -597,7 +597,7 @@
 					<div class="triple-video section">
 						<h2 class="h2 triple-video__title white">Узнайте больше о препарате Супрастинекс®</h2>
 						<div class="triple-video-block">
-							<div class="triple-video__item js-video">
+							<div class="triple-video__item js-video" data-video="https://www.youtube.com/embed/40RJriYztG8">
 								<img src="./assets/images/video-cover-1.png" alt="Преимущества Супрастинекса®" class="triple-video__item-img">
 								<button class="triple-video__item-play">
 									<svg width="69" height="70" viewBox="0 0 69 70" fill="none"
@@ -610,7 +610,7 @@
 
 								</button>
 							</div>
-							<div class="triple-video__item js-video">
+							<div class="triple-video__item js-video" data-video="https://www.youtube.com/embed/40RJriYztG8">
 								<img src="./assets/images/video-cover-2.png" alt="Применение Супрастинекса® у детей" class="triple-video__item-img">
 								<button class="triple-video__item-play">
 									<svg width="69" height="70" viewBox="0 0 69 70" fill="none"
@@ -936,6 +936,17 @@
 			</div>
 		</div>
 	</main>
+
+	<div class="video-popup hidden">
+		<div class="video-popup-block">
+			<iframe 
+				id="video-frame" 
+				src="" 
+				frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+				allowfullscreen></iframe>
+		</div>
+	</div>
 
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="./index.js" type="module"></script>
