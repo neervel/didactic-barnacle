@@ -6,8 +6,11 @@
         color: $base-white
 
     &-items
+        position: relative
         display: flex
         flex-wrap: wrap
+        margin-top: -22px
+        margin-bottom: -30px
 
         &-hex 
             display: flex
@@ -62,7 +65,27 @@
                 height: auto
                 filter: grayscale(1)
                 transition: .2s
-
+        &-product
+            position: absolute
+            left: -120px
+            bottom: 20px
+            height: 243px
+            width: 243px
+            display: flex
+            align-items: center
+            justify-content: center
+            background-image: url('./assets/images/pharms-product-bg.svg')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            &__img
+                height: 82px
+                width: 150px
+                margin-left: 20px
+                &.drops
+                    height: 130px
+                    width: 110px
+                    margin-left: 20px
     @media ( max-width: $xl )
         width: 916px
         &-items 
@@ -92,6 +115,20 @@
 
                 & img 
                     width: 110px
+            &-product 
+                left: -100px
+                bottom: 15px
+                height: 190px
+                width: 190px
+                &__img
+                    width: 120px
+                    height: 70px
+                    margin-left: 25px
+
+                    &.drops
+                        height: 90px
+                        width: 77px
+
         
     @media ( max-width: $lg )
         width: 680px
@@ -124,6 +161,18 @@
 
                 & img 
                     width: 80px
+            &-product
+                left: -75px
+                bottom: 10px
+                height: 140px
+                width: 140px
+                &__img
+                    width: 90px
+                    height: 50px
+
+                    &.drops
+                        height: 80px
+                        width: 70px
 
     @media (max-width: $md)
         width: 495px
@@ -176,6 +225,8 @@
                 
                 & img 
                     width: 106px
+            &-product
+                display: none
 
     @media ( max-width: $sm )
         width: 300px

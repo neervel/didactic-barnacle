@@ -112,52 +112,55 @@ createApp({
 
   methods: {
     handleRangeChange(e) {
-      const newVal = e.target.value;
-
-      if (newVal - this.lastRangePosition >= 0) {
-        const rangeTarget =
-          this.currentPosition === 0 && newVal <= this.midRange
-            ? this.midRange
-            : this.maxRange;
-        while (this.sliderPosition < rangeTarget) {
-          this.sliderPosition++;
+      setTimeout(() => {
+        const newVal = e.target.value;
+  
+        if (newVal - this.lastRangePosition >= 0) {
+          const rangeTarget =
+            this.currentPosition === 0 && newVal <= this.midRange
+              ? this.midRange
+              : this.maxRange;
+          this.sliderPosition = rangeTarget
+          if (this.currentPosition === 0 && newVal > this.midRange)
+            this.currentPosition += 2;
+          else this.currentPosition++;
+          this.lastRangePosition = rangeTarget;
+        } else if (newVal - this.lastRangePosition < 0) {
+          const rangeTarget =
+            this.currentPosition === 2 && newVal > this.midRange
+              ? this.midRange
+              : 0;
+            this.sliderPosition = rangeTarget
+  
+          if (this.currentPosition === 2 && newVal <= this.midRange)
+            this.currentPosition -= 2;
+          else this.currentPosition--;
+          this.lastRangePosition = rangeTarget;
         }
-        if (this.currentPosition === 0 && newVal > this.midRange)
-          this.currentPosition += 2;
-        else this.currentPosition++;
-        this.lastRangePosition = rangeTarget;
-      } else if (newVal - this.lastRangePosition < 0) {
-        const rangeTarget =
-          this.currentPosition === 2 && newVal > this.midRange
-            ? this.midRange
-            : 0;
-        while (this.sliderPosition > rangeTarget) {
-          this.sliderPosition--;
-        }
-        if (this.currentPosition === 2 && newVal <= this.midRange)
-          this.currentPosition -= 2;
-        else this.currentPosition--;
-        this.lastRangePosition = rangeTarget;
-      }
+      }, 0)
     },
 
     handleSlideClick(side) {
       if (this.innerWidth < 768) return;
 
       if (side === "left" && this.currentPosition !== 2) {
-        while (this.sliderPosition < this.maxRange) {
-          this.sliderPosition++;
-        }
+        this.sliderPosition = this.maxRange
         this.currentPosition++;
         this.lastRangePosition = this.maxRange;
       } else if (side === "right" && this.currentPosition !== 0) {
-        while (this.sliderPosition > 0) {
-          this.sliderPosition--;
-        }
+        this.sliderPosition = 0
         this.currentPosition--;
         this.lastRangePosition = 0;
       }
     },
+
+    handleThumbClick() {
+      if (this.sliderPosition === 0 || this.sliderPosition === this.maxRange) {
+        this.sliderPosition = this.midRange
+        this.currentPosition = 1
+        this.lastRangePosition = this.sliderPosition
+      }
+    }
   },
 
   computed: {

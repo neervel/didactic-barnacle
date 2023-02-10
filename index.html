@@ -95,7 +95,7 @@
 							</svg>
 						</div>
 					</div>
-					<input @change="handleRangeChange" class="slider-types-range" v-model.number="sliderPosition"
+					<input @change="handleRangeChange" @click="handleThumbClick" class="slider-types-range" v-model.number="sliderPosition"
 						type="range" min="0" :max="maxRange">
 					<div class="slider-types-range__thumb"
 						:class="{'left': currentPosition === 0, 'right': currentPosition === 2}">

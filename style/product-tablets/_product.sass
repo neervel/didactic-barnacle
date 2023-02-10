@@ -77,6 +77,7 @@
             fill: $base-white
             &.round-path
                 fill: none
+                stroke: $base-white
         & circle 
             stroke: $base-white
         & .circle 
@@ -197,6 +198,8 @@
             left: 580px
             & path
                 fill: $accent
+                &.round-path
+                    stroke: $accent
             & circle 
                 stroke: $accent
 
@@ -225,10 +228,13 @@
         &__animated 
             top: 103px
             height: 84px
-            width: 84px
-            left: 73px
+            width: 84px    
+            left: 50%
+            transform: translateX(-170px)
             & path
                 fill: $base-white
+                &.round-path
+                    stroke: $base-white
             & circle 
                 stroke: $base-white
         &-label 
@@ -273,4 +279,4 @@
                 width: 190px
         &__animated
             top: 57px
-            left: 26px
+            transform: translateX(-130px)

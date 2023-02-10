@@ -13,17 +13,20 @@
         display: flex
         width: 733px
         flex-direction: column
-        margin-right: 120px
+        margin-right: 100px
 
         &-row 
             display: flex
             align-items: center
             justify-content: center
 
-            &:not(:first-child)
-                margin-top: -15px
-
-            &:last-child
+            &.b
+                margin-top: -20px
+                margin-left: -240px
+                & .simptoms-items-hex
+                    &.d 
+                        display: none
+            &.c, &.d
                 display: none
                 
 
@@ -91,6 +94,10 @@
                 opacity: 1
             &.no-hover:hover &__text 
                 opacity: 0
+            &.no-hover
+                &::before
+                    background-image: url('./assets/images/hex-bg-nh.png')
+                    
 
             &__title 
                 position: absolute
@@ -112,21 +119,11 @@
                 transition: .3s
                 cursor: default
     &__img 
-        display: block
-        height: 250px
-        width: 457px
-        margin-top: 100px
-        margin-right: 20px
-    
-    &__animated
         position: absolute
-        top: -30px
-        right: 60px
-
-        & .circle
-            transform-box: fill-box
-            transform-origin: center
-            animation: round 20s infinite linear
+        height: 160px
+        width: 292
+        right: 100px
+        bottom: 50px
 
 
     @media ( max-width: $xl )
@@ -134,7 +131,31 @@
             width: 935px
         &-content 
             position: relative
-            justify-content: start
+        &-items 
+            width: 630px
+            margin-right: 70px
+            &-hex 
+                height: 210px
+                width: 210px
+
+                &__title, &__text
+                    font-size: 20px
+                    max-width: 170px
+            &-row 
+                &.b
+                    margin-top: -25px
+        &__img 
+            position: absolute
+            right: -10px
+            bottom: 10px
+            height: 160px
+            width: 292px
+
+    @media ( max-width: $lg )
+        &-container 
+            width: 648px
+        &-content 
+            flex-direction: column
         &-items 
             width: 630px
             margin-right: 0
@@ -147,36 +168,34 @@
                     font-size: 20px
                     max-width: 170px
             &-row 
-                &:not(:first-child)
+                &.a
+                    & .simptoms-items-hex
+                        &.c
+                            display: none
+                &.b
+                    margin-left: 0
+                    width: 100%
+                    justify-content: space-between
+                    & .simptoms-items-hex
+                        &.d 
+                            display: flex
+                        &.b, &.c
+                            display: none
+                &.c 
+                    display: flex
                     margin-top: -25px
+                    & .simptoms-items-hex 
+                        &.a 
+                            display: none
+                            
         &__img 
             position: absolute
-            top: 60px
-            right: 0
-            height: 325px
-            width: 254px
-            margin-top: 0
-            margin-right: 0
-        &__animated 
-            height: 153px
-            width: 153px
-            right: -20px
-            top: -50px
-
-    @media ( max-width: $lg )
-        &-container 
-            width: 648px
-        &-content 
-            flex-direction: column
-        &-items 
-            margin-bottom: 19px
-            width: 100%
-            justify-content: center
-            &-hex 
-                &:nth-child(4)
-                    margin-left: 0
-        &__img 
-            display: none
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            height: 93px
+            width: 170px
+            margin-left: 10px
         &__animated
             display: none 
 
@@ -188,6 +207,7 @@
         
         &-items 
             margin-bottom: 30px
+            width: 480px
 
             &-hex
                 height: 160px
@@ -196,8 +216,8 @@
                     font-size: 14px
                     max-width: 130px
         &__img
-            height: 237px
-            width: 398px
+            height: 77px
+            width: 141px
     
     @media ( max-width: $sm )
         &-container
@@ -212,8 +232,26 @@
             margin-bottom: 10px
 
             &-row 
-                &:last-child
+                &.b
+                    justify-content: center
+                    margin-left: -70px
+                    & .simptoms-items-hex
+                        &.a
+                            display: none
+                &.c 
+                    & .simptoms-items-hex
+                        &.a
+                            display: flex
+                        &.c
+                            display: none
+                
+                &.d
                     display: flex
+                    justify-content: end
+                    margin-top: -25px
+                    & .simptoms-items-hex
+                        &.a
+                            display: none
 
             &-hex 
                 height: 150px
@@ -221,14 +259,9 @@
                 margin-left: -5px
                 margin-right: -5px
 
-                &.desktop
-                    display: none
-                &.mobile
-                    display: flex
                 &.extra
                     display: flex
                 
         &__img 
-            height: 141px
-            width: 238px
+            display: none
 
