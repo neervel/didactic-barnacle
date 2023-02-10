@@ -1,0 +1,86 @@
+.product
+    &-block
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-left: 100px
+        margin-top: -10px
+    &-left
+        position: relative
+        height: 432px
+        width: 593px
+        background-image: url('./assets/info/product-bg.svg')
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        display: flex
+        align-items: center
+        justify-content: center
+    &__img
+        display: block
+        height: 313px
+        width: 245px
+        margin-bottom: 50px
+        margin-right: 20px
+        &.tablets
+            width: 60%
+            height: auto
+            margin-right: 20px
+            margin-bottom: 0
+    &__name
+        position: absolute
+        left: -40px
+        top: 20px
+        height: 170px
+        width: 185px
+        background-image: url('./assets/info/product-name-bg.svg')
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        display: flex
+        align-items: center
+        justify-content: center
+        & h3
+            font-size: 18px
+            color: $base-white
+    &-right 
+        flex-basis: 50%
+    &__title
+        font-size: 28px
+        max-width: 400px
+        margin-bottom: 18px
+    &-links
+        display: flex
+        flex-direction: column
+        margin-bottom: 42px
+
+        &__item
+            font-size: 16px
+            font-weight: bold
+            padding: 8px 0
+            text-decoration: underline
+            text-decoration-color: rgba(#9D3D97, .4)
+            transition: .2s
+            text-underline-offset: 3px
+
+            &:hover
+                text-decoration-color: rgba(#9D3D97, 1)
+    &-buttons
+        display: flex
+        align-items: center
+        & .button
+            &:first-child
+                margin-right: 10px
+            &:last-child
+                display: flex
+                align-items: center
+                &:hover 
+                    & svg 
+                        & path 
+                            stroke: $base-white
+                        & .no-stroke
+                            stroke: none
+                            fill: $base-white
+                & svg 
+                    margin-left: 10px
+                
