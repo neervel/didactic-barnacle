@@ -128,46 +128,46 @@
                         <li class="menu-list__item">
                             <a href="#" class="button square">Противопоказания</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">С осторожностью</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Беременность и грудное вскармливание</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Способ применения и дозы</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Побочное действие</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Передозировка</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Взаимодействие с другими лекарственными средствами</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Особые указания</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Управление транспортом и т.п.</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Форма выпуска</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Срок годности</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Условия хранения</a>
                         </li>
-                        <li class="menu-list__item">
+                        <li class="menu-list__item" v-if="showMore">
                             <a href="#" class="button square">Условия отпуска</a>
                         </li>
-                        <li class="menu-list__item button square js-menu-more">
-                            Скрыть
-                            <span>+</span>
-                            <span>-</span>
+                        <li class="menu-list__item button square js-menu-more" @click="showMore = !showMore">
+                            {{ showMore ? 'Скрыть' : 'Больше' }}
+                            <span v-if="!showMore">+</span>
+                            <span v-if="showMore">-</span>
                         </li>
                     </ul>
                 </div>
@@ -234,7 +234,7 @@
 	</main>
 
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<script src="./index.js" type="module"></script>
+    <script src="./info.js"></script>
 </body>
 
 </html>
