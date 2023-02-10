@@ -28,26 +28,26 @@
 							<a href="#slider" class="button square">Формы выпуска</a>
 						</li>
 						<li class="header-nav__list-item sub">
-							<a href="#" class="button square">Инструкции</a>
+							<button class="button square">Инструкции</button>
 
 							<ul class="header-nav-dropdown">
-								<li><a href="#">Инструкция Капли</a></li>
-								<li><a href="#">Инструкция Раствор</a></li>
+								<li><a href="./info-drops.html">Инструкция Капли</a></li>
+								<li><a href="./info-tablets.html">Инструкция Таблетки</a></li>
 							</ul>
 						</li>
 						<li class="header-nav__list-item sub mobile" id="toggle-droprown">
-							<div class="button square">
+							<button class="button square">
 								<span>Инструкции</span>
 								<svg class="header-nav__list-arrow" width="13" height="8" viewBox="0 0 13 8" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path d="M1 2L6 7L11 2" stroke-width="2" stroke-linecap="round"
 										stroke-linejoin="round" />
 								</svg>
-							</div>
+							</button>
 
 							<ul class="header-nav-dropdown" id="dropdown">
-								<li><a href="#" class="header-nav__list-item">Инструкция Капли</a></li>
-								<li><a href="#" class="header-nav__list-item">Инструкция Раствор</a></li>
+								<li><a href="./info-drops.html" class="header-nav__list-item">Инструкция Капли</a></li>
+								<li><a href="./info-tablets.html" class="header-nav__list-item">Инструкция Таблетки</a></li>
 							</ul>
 						</li>
 						<li class="header-nav__list-item">
@@ -121,7 +121,7 @@
 								</picture>
 								<h2 class="slider-types__title white">Таблетки</h2>
 								<div class="slider-types-buttons">
-									<button class="slider-types__btn button black">Открыть инструкцию</button>
+									<a href="./info-tablets.html" class="slider-types__btn button black">Открыть инструкцию</a>
 									<a v-if="currentPosition === 2|| innerWidth < 768" href="./product-tablets.html"
 										class="slider-types__btn button black border">Подробнее</a>
 								</div>
@@ -187,7 +187,7 @@
 								</picture>
 								<h2 class="slider-types__title">Капли для детей</h4>
 									<div class="slider-types-buttons">
-										<button class="slider-types__btn button">Открыть инструкцию</button>
+										<a href="./info-drops.html" class="slider-types__btn button">Открыть инструкцию</a>
 										<a v-if="currentPosition === 0 || innerWidth < 768" href="./product-drops.html"
 											class="slider-types__btn button border">Подробнее</a>
 									</div>
@@ -858,9 +858,9 @@
 						<a href="./" class="footer-nav__link">Главная</a>
 						<a href="#pharms" class="footer-nav__link">Где купить?</a>
 						<a href="./product-drops.html" class="footer-nav__link">Капли Супрастинекс® </a>
-						<a href="#" class="footer-nav__link">Инструкция Капли Супрастинекс® </a>
+						<a href="./info-drops.html" class="footer-nav__link">Инструкция Капли Супрастинекс® </a>
 						<a href="./product-tablets.html" class="footer-nav__link">Таблетки Супрастинекс® </a>
-						<a href="#" class="footer-nav__link">Инструкция Таблетки Супрастинекс® </a>
+						<a href="./info-tablets.html" class="footer-nav__link">Инструкция Таблетки Супрастинекс® </a>
 					</nav>
 					<div class="footer-info">
 						<div class="footer-info-card">
