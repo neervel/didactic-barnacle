@@ -28,7 +28,7 @@
 							<a href="#slider" class="button square">Формы выпуска</a>
 						</li>
 						<li class="header-nav__list-item sub">
-							<a href="#" class="button square">Инструкции</a>						
+							<a href="#" class="button square">Инструкции</a>
 
 							<ul class="header-nav-dropdown">
 								<li><a href="#">Инструкция Капли</a></li>
@@ -37,15 +37,17 @@
 						</li>
 						<li class="header-nav__list-item sub mobile" id="toggle-droprown">
 							<div class="button square">
-								<span>Инструкции</span> 
-								<svg class="header-nav__list-arrow" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M1 2L6 7L11 2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>		
-							</div>						
+								<span>Инструкции</span>
+								<svg class="header-nav__list-arrow" width="13" height="8" viewBox="0 0 13 8" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 2L6 7L11 2" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</div>
 
 							<ul class="header-nav-dropdown" id="dropdown">
-								<li><a href="#" class="header-nav__list-item" >Инструкция Капли</a></li>
-								<li><a href="#" class="header-nav__list-item" >Инструкция Раствор</a></li>
+								<li><a href="#" class="header-nav__list-item">Инструкция Капли</a></li>
+								<li><a href="#" class="header-nav__list-item">Инструкция Раствор</a></li>
 							</ul>
 						</li>
 						<li class="header-nav__list-item">
@@ -95,15 +97,20 @@
 							</svg>
 						</div>
 					</div>
-					<input @change="handleRangeChange" @click="handleThumbClick" class="slider-types-range" v-model.number="sliderPosition"
-						type="range" min="0" :max="maxRange">
+					<input @change="handleRangeChange" @click="handleThumbClick" class="slider-types-range"
+						v-model.number="sliderPosition" type="range" min="0" :max="maxRange">
 					<div class="slider-types-range__thumb"
 						:class="{'left': currentPosition === 0, 'right': currentPosition === 2}">
 						<svg width="94" height="80" viewBox="0 0 94 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path class="bg" d="M4.01317 46.6885C1.54299 42.5716 1.54299 37.4284 4.01318 33.3115L20.2134 6.31148C22.5628 2.39585 26.7944 3.1952e-07 31.3608 3.73974e-07L62.6398 7.46972e-07C67.2062 8.01426e-07 71.4378 2.39591 73.7872 6.31161L89.987 33.3116C92.4571 37.4285 92.4571 42.5715 89.987 46.6884L73.7872 73.6884C71.4378 77.6041 67.2062 80 62.6398 80L31.3608 80C26.7944 80 22.5628 77.6041 20.2134 73.6885L4.01317 46.6885Z"/>
-							<path class="arr-l" d="M41 28L32.4387 39.8907C32.1788 40.2517 32.1886 40.741 32.4627 41.0913L41 52" stroke="white" stroke-width="2" stroke-linecap="round"/>
-							<path class="arr-r" d="M53 52L61.5613 40.1093C61.8212 39.7483 61.8114 39.259 61.5373 38.9087L53 28" stroke="white" stroke-width="2" stroke-linecap="round"/>
-						</svg>							
+							<path class="bg"
+								d="M4.01317 46.6885C1.54299 42.5716 1.54299 37.4284 4.01318 33.3115L20.2134 6.31148C22.5628 2.39585 26.7944 3.1952e-07 31.3608 3.73974e-07L62.6398 7.46972e-07C67.2062 8.01426e-07 71.4378 2.39591 73.7872 6.31161L89.987 33.3116C92.4571 37.4285 92.4571 42.5715 89.987 46.6884L73.7872 73.6884C71.4378 77.6041 67.2062 80 62.6398 80L31.3608 80C26.7944 80 22.5628 77.6041 20.2134 73.6885L4.01317 46.6885Z" />
+							<path class="arr-l"
+								d="M41 28L32.4387 39.8907C32.1788 40.2517 32.1886 40.741 32.4627 41.0913L41 52"
+								stroke="white" stroke-width="2" stroke-linecap="round" />
+							<path class="arr-r"
+								d="M53 52L61.5613 40.1093C61.8212 39.7483 61.8114 39.259 61.5373 38.9087L53 28"
+								stroke="white" stroke-width="2" stroke-linecap="round" />
+						</svg>
 					</div>
 					<div @click="handleSlideClick('left')" class="slider-types-card left"
 						:class="{'full': currentPosition === 2, 'hide': currentPosition === 0}">
@@ -185,8 +192,9 @@
 											class="slider-types__btn button border">Подробнее</a>
 									</div>
 									<transition name="slide-fade-r">
-										<svg v-if="currentPosition === 0 || innerWidth < 768" class="slider-types__animated" width="178" height="178" viewBox="0 0 178 178"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg v-if="currentPosition === 0 || innerWidth < 768"
+											class="slider-types__animated" width="178" height="178"
+											viewBox="0 0 178 178" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
 												d="M88.9687 99.4391L88.9687 103.834L69.5156 103.834L69.5156 100.084L78.7148 90.2204C79.6393 89.1917 80.3685 88.2868 80.9023 87.5055C81.4362 86.7113 81.8203 86.0016 82.0547 85.3766C82.3021 84.7386 82.4258 84.1331 82.4258 83.5602C82.4258 82.7008 82.2826 81.9652 81.9961 81.3532C81.7096 80.7282 81.2865 80.2464 80.7266 79.9079C80.1797 79.5693 79.5026 79.4001 78.6953 79.4001C77.8359 79.4001 77.0937 79.6084 76.4687 80.0251C75.8568 80.4417 75.388 81.0212 75.0625 81.7633C74.75 82.5055 74.5937 83.3454 74.5937 84.2829L68.9492 84.2829C68.9492 82.5902 69.3529 81.0407 70.1602 79.6344C70.9674 78.2152 72.1068 77.0889 73.5781 76.2555C75.0495 75.4092 76.7943 74.986 78.8125 74.986C80.8047 74.986 82.4844 75.3115 83.8516 75.9626C85.2318 76.6006 86.2734 77.5251 86.9766 78.736C87.6927 79.9339 88.0508 81.3662 88.0508 83.0329C88.0508 83.9704 87.901 84.8883 87.6016 85.7868C87.3021 86.6722 86.8724 87.5576 86.3125 88.443C85.7656 89.3154 85.1016 90.2008 84.3203 91.0993C83.5391 91.9977 82.6732 92.9287 81.7227 93.8923L76.7812 99.4391L88.9687 99.4391ZM111.117 87.9938L111.117 92.8962L91.625 92.8962L91.625 87.9938L111.117 87.9938ZM104.047 80.279L104.047 100.982L98.7148 100.982L98.7148 80.279L104.047 80.279Z"
 												fill="#9D3D97" />
@@ -555,37 +563,75 @@
 					<div class="triple-block">
 						<h2 class="h2 triple__title white">Тройное действие левоцетиризина против аллергенов</h2>
 						<div class="triple-content">
-							<img src="./assets/images/triple-img.png" alt="Тройное действие левоцетиризина" class="triple-content__img">
+							<img src="./assets/images/triple-img.png" alt="Тройное действие левоцетиризина"
+								class="triple-content__img">
 							<div class="triple-content-cards">
 								<div class="triple-content-card">
 									<img src="./assets/icons/triple-1.svg" class="triple-content-card__icon">
 									<div class="triple-content-card__content">
 										<h3 class="triple-content-card__title">Снижает проявление аллергии</h3>
-										<p class="triple-content-card__text">Блокирует рецепторы гистамина, запускающего симптомы аллергии<sup><a href="#link-3">3</a></sup></p>
+										<p class="triple-content-card__text">Блокирует рецепторы гистамина, запускающего
+											симптомы аллергии<sup><a href="#link-3">3</a></sup></p>
 									</div>
 								</div>
 								<div class="triple-content-card">
 									<img src="./assets/icons/triple-2.svg" class="triple-content-card__icon">
 									<div class="triple-content-card__content">
-										<h3 class="triple-content-card__title">Стабилизирует активность иммунных клеток</h3>
-										<p class="triple-content-card__text">Облегчает течение аллергии<sup><a href="#link-3">3</a></sup></p>
+										<h3 class="triple-content-card__title">Стабилизирует активность иммунных клеток
+										</h3>
+										<p class="triple-content-card__text">Облегчает течение аллергии<sup><a
+													href="#link-3">3</a></sup></p>
 									</div>
 								</div>
 								<div class="triple-content-card">
 									<img src="./assets/icons/triple-3.svg" class="triple-content-card__icon">
 									<div class="triple-content-card__content">
 										<h3 class="triple-content-card__title">Снижает воспаление </h3>
-										<p class="triple-content-card__text">Уменьшает отёк и зуд<sup><a href="#link-3">3</a></sup></p>
+										<p class="triple-content-card__text">Уменьшает отёк и зуд<sup><a
+													href="#link-3">3</a></sup></p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="triple-video section">
+						<h2 class="h2 triple-video__title white">Узнайте больше о препарате Супрастинекс®</h2>
+						<div class="triple-video-block">
+							<div class="triple-video__item js-video">
+								<img src="./assets/images/video-cover-1.png" alt="Преимущества Супрастинекса®" class="triple-video__item-img">
+								<button class="triple-video__item-play">
+									<svg width="69" height="70" viewBox="0 0 69 70" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<circle cx="34.5" cy="35.3848" r="34.5" fill="#DF544E" />
+										<path
+											d="M50.9885 34.4965L26.3735 21.7646C25.7079 21.4204 24.9141 21.9035 24.9141 22.6529V48.1167C24.9141 48.8661 25.7079 49.3492 26.3735 49.0049L50.9885 36.273C51.7093 35.9002 51.7093 34.8694 50.9885 34.4965Z"
+											fill="white" />
+									</svg>
+
+								</button>
+							</div>
+							<div class="triple-video__item js-video">
+								<img src="./assets/images/video-cover-2.png" alt="Применение Супрастинекса® у детей" class="triple-video__item-img">
+								<button class="triple-video__item-play">
+									<svg width="69" height="70" viewBox="0 0 69 70" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<circle cx="34.5" cy="35.3848" r="34.5" fill="#DF544E" />
+										<path
+											d="M50.9885 34.4965L26.3735 21.7646C25.7079 21.4204 24.9141 21.9035 24.9141 22.6529V48.1167C24.9141 48.8661 25.7079 49.3492 26.3735 49.0049L50.9885 36.273C51.7093 35.9002 51.7093 34.8694 50.9885 34.4965Z"
+											fill="white" />
+									</svg>
+
+								</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="pharms scroll section" id="pharms">
+				<div class="pharms scroll" id="pharms">
 					<h2 class="h2 pharms__title">Где купить?</h2>
 					<div class="pharms-items">
-						<a class="pharms-items-hex" href="https://uteka.ru/search/?query=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81&aq=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81&ac=text" target="_blank">
+						<a class="pharms-items-hex"
+							href="https://uteka.ru/search/?query=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81&aq=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81&ac=text"
+							target="_blank">
 							<span>Найти ближайшую аптеку</span>
 							<svg class="pharms-items-hex__search" width="29" height="30" viewBox="0 0 29 30" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -594,33 +640,49 @@
 									stroke-linecap="round" />
 							</svg>
 						</a>
-						<a class="pharms-items-hex" href="https://zdravcity.ru/search/?what=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+						<a class="pharms-items-hex"
+							href="https://zdravcity.ru/search/?what=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81"
+							target="_blank">
 							<img src="./assets/images/pharm-1.png" alt="Здравсити" class="pharms-items-hex__img">
 						</a>
-						<a class="pharms-items-hex" href="https://www.rigla.ru/search?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+						<a class="pharms-items-hex"
+							href="https://www.rigla.ru/search?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81"
+							target="_blank">
 							<img clas src="./assets/images/pharm-2.png" alt="Ригла" class="pharms-items-hex__img">
 						</a>
-						<a class="pharms-items-hex" href="https://apteka.ru/search/?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+						<a class="pharms-items-hex"
+							href="https://apteka.ru/search/?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81"
+							target="_blank">
 							<img src="./assets/images/pharm-3.png" alt="apteka.ru" class="pharms-items-hex__img">
 						</a>
 						<div v-if="!showMore" @click="showMore = true" class="pharms-items-hex more">
 							<span>Показать еще</span>
 						</div>
 						<transition-group name="slide-fade-down" mode="out-in">
-							<a v-if="showMore" class="pharms-items-hex" href="https://www.eapteka.ru/search/?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+							<a v-if="showMore" class="pharms-items-hex"
+								href="https://www.eapteka.ru/search/?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81"
+								target="_blank">
 								<img src="./assets/images/pharm-4.png" alt="eapteka.ru" class="pharms-items-hex__img">
 							</a>
-							<a v-if="showMore" class="pharms-items-hex" href="https://planetazdorovo.ru/search/?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+							<a v-if="showMore" class="pharms-items-hex"
+								href="https://planetazdorovo.ru/search/?q=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81"
+								target="_blank">
 								<img src="./assets/images/pharm-5.png" alt="Планета здоровья"
 									class="pharms-items-hex__img">
 							</a>
-							<a v-if="showMore" class="pharms-items-hex" href="https://apteka-april.ru/search/%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+							<a v-if="showMore" class="pharms-items-hex"
+								href="https://apteka-april.ru/search/%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81"
+								target="_blank">
 								<img src="./assets/images/pharm-6.png" alt="Апрель" class="pharms-items-hex__img">
 							</a>
-							<a v-if="showMore" class="pharms-items-hex" href="https://366.ru/search/?text=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+							<a v-if="showMore" class="pharms-items-hex"
+								href="https://366.ru/search/?text=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81"
+								target="_blank">
 								<img src="./assets/images/pharm-7.png" alt="Аптека 36.6" class="pharms-items-hex__img">
 							</a>
-							<a v-if="showMore" class="pharms-items-hex" href="https://stolichki.ru/search?name=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81" target="_blank">
+							<a v-if="showMore" class="pharms-items-hex"
+								href="https://stolichki.ru/search?name=%D1%81%D1%83%D0%BF%D1%80%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B5%D0%BA%D1%81"
+								target="_blank">
 								<img src="./assets/images/pharm-8.png" alt="Аптеки Столички"
 									class="pharms-items-hex__img">
 							</a>
@@ -641,8 +703,8 @@
 									Можно ли применять Супрастинекс® во время беременности и при грудном
 									вскармливании?
 								</h3>
-								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 									<path class="bg"
 										d="M13.5374 6.5C14.4306 4.95299 16.0812 4 17.8675 4L42.094 4C43.8803 4 45.531 4.95299 46.4241 6.5L58.5374 27.4808C59.4306 29.0278 59.4306 30.9338 58.5374 32.4808L46.4241 53.4615C45.531 55.0085 43.8803 55.9615 42.094 55.9615L17.8675 55.9615C16.0812 55.9615 14.4306 55.0085 13.5374 53.4615L1.42414 32.4808C0.530973 30.9338 0.530973 29.0278 1.42414 27.4808L13.5374 6.5Z" />
 									<path class="arrow" d="M39.5312 34.4062L30.0146 24.8896L20.4979 34.4063"
@@ -660,8 +722,8 @@
 								<h3 class="faq-list__item-title">
 									Какая максимальная доза Супрастинекс® в сутки?
 								</h3>
-								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 									<path class="bg"
 										d="M13.5374 6.5C14.4306 4.95299 16.0812 4 17.8675 4L42.094 4C43.8803 4 45.531 4.95299 46.4241 6.5L58.5374 27.4808C59.4306 29.0278 59.4306 30.9338 58.5374 32.4808L46.4241 53.4615C45.531 55.0085 43.8803 55.9615 42.094 55.9615L17.8675 55.9615C16.0812 55.9615 14.4306 55.0085 13.5374 53.4615L1.42414 32.4808C0.530973 30.9338 0.530973 29.0278 1.42414 27.4808L13.5374 6.5Z" />
 									<path class="arrow" d="M39.5312 34.4062L30.0146 24.8896L20.4979 34.4063"
@@ -680,8 +742,8 @@
 								<h3 class="faq-list__item-title">
 									Лучше принимать Супрастинекс® утром или вечером?
 								</h3>
-								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 									<path class="bg"
 										d="M13.5374 6.5C14.4306 4.95299 16.0812 4 17.8675 4L42.094 4C43.8803 4 45.531 4.95299 46.4241 6.5L58.5374 27.4808C59.4306 29.0278 59.4306 30.9338 58.5374 32.4808L46.4241 53.4615C45.531 55.0085 43.8803 55.9615 42.094 55.9615L17.8675 55.9615C16.0812 55.9615 14.4306 55.0085 13.5374 53.4615L1.42414 32.4808C0.530973 30.9338 0.530973 29.0278 1.42414 27.4808L13.5374 6.5Z" />
 									<path class="arrow" d="M39.5312 34.4062L30.0146 24.8896L20.4979 34.4063"
@@ -697,8 +759,8 @@
 								<h3 class="faq-list__item-title">
 									Как долго можно принимать Супрастинекс®?
 								</h3>
-								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 									<path class="bg"
 										d="M13.5374 6.5C14.4306 4.95299 16.0812 4 17.8675 4L42.094 4C43.8803 4 45.531 4.95299 46.4241 6.5L58.5374 27.4808C59.4306 29.0278 59.4306 30.9338 58.5374 32.4808L46.4241 53.4615C45.531 55.0085 43.8803 55.9615 42.094 55.9615L17.8675 55.9615C16.0812 55.9615 14.4306 55.0085 13.5374 53.4615L1.42414 32.4808C0.530973 30.9338 0.530973 29.0278 1.42414 27.4808L13.5374 6.5Z" />
 									<path class="arrow" d="M39.5312 34.4062L30.0146 24.8896L20.4979 34.4063"
@@ -714,8 +776,8 @@
 								<h3 class="faq-list__item-title">
 									Можно ли принимать Супрастинекс® с другими препаратами?
 								</h3>
-								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 									<path class="bg"
 										d="M13.5374 6.5C14.4306 4.95299 16.0812 4 17.8675 4L42.094 4C43.8803 4 45.531 4.95299 46.4241 6.5L58.5374 27.4808C59.4306 29.0278 59.4306 30.9338 58.5374 32.4808L46.4241 53.4615C45.531 55.0085 43.8803 55.9615 42.094 55.9615L17.8675 55.9615C16.0812 55.9615 14.4306 55.0085 13.5374 53.4615L1.42414 32.4808C0.530973 30.9338 0.530973 29.0278 1.42414 27.4808L13.5374 6.5Z" />
 									<path class="arrow" d="M39.5312 34.4062L30.0146 24.8896L20.4979 34.4063"
@@ -733,8 +795,8 @@
 								<h3 class="faq-list__item-title">
 									Можно ли совмещать Супрастинекс® с Супрастином?
 								</h3>
-								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 									<path class="bg"
 										d="M13.5374 6.5C14.4306 4.95299 16.0812 4 17.8675 4L42.094 4C43.8803 4 45.531 4.95299 46.4241 6.5L58.5374 27.4808C59.4306 29.0278 59.4306 30.9338 58.5374 32.4808L46.4241 53.4615C45.531 55.0085 43.8803 55.9615 42.094 55.9615L17.8675 55.9615C16.0812 55.9615 14.4306 55.0085 13.5374 53.4615L1.42414 32.4808C0.530973 30.9338 0.530973 29.0278 1.42414 27.4808L13.5374 6.5Z" />
 									<path class="arrow" d="M39.5312 34.4062L30.0146 24.8896L20.4979 34.4063"
@@ -751,8 +813,8 @@
 								<h3 class="faq-list__item-title">
 									Можно ли делить таблетку Супрастинекс®?
 								</h3>
-								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 									<path class="bg"
 										d="M13.5374 6.5C14.4306 4.95299 16.0812 4 17.8675 4L42.094 4C43.8803 4 45.531 4.95299 46.4241 6.5L58.5374 27.4808C59.4306 29.0278 59.4306 30.9338 58.5374 32.4808L46.4241 53.4615C45.531 55.0085 43.8803 55.9615 42.094 55.9615L17.8675 55.9615C16.0812 55.9615 14.4306 55.0085 13.5374 53.4615L1.42414 32.4808C0.530973 30.9338 0.530973 29.0278 1.42414 27.4808L13.5374 6.5Z" />
 									<path class="arrow" d="M39.5312 34.4062L30.0146 24.8896L20.4979 34.4063"
@@ -769,8 +831,8 @@
 								<h3 class="faq-list__item-title">
 									Есть ли глютен в составе Супрастинекс®?
 								</h3>
-								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="faq-list__item-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 									<path class="bg"
 										d="M13.5374 6.5C14.4306 4.95299 16.0812 4 17.8675 4L42.094 4C43.8803 4 45.531 4.95299 46.4241 6.5L58.5374 27.4808C59.4306 29.0278 59.4306 30.9338 58.5374 32.4808L46.4241 53.4615C45.531 55.0085 43.8803 55.9615 42.094 55.9615L17.8675 55.9615C16.0812 55.9615 14.4306 55.0085 13.5374 53.4615L1.42414 32.4808C0.530973 30.9338 0.530973 29.0278 1.42414 27.4808L13.5374 6.5Z" />
 									<path class="arrow" d="M39.5312 34.4062L30.0146 24.8896L20.4979 34.4063"
@@ -819,7 +881,8 @@
 									class="button footer-info-card-buttons__item">pharmacovigilance@egis.ru</a>
 								<a href="tel:+74953633966" class="button footer-info-card-buttons__item">+7
 									(495) 363-39-66</a>
-								<a href="https://pharmacovigilance.egis.ru/" target="_blank" class="button footer-info-card-buttons__item">Заполнить форму на сайте</a>
+								<a href="https://pharmacovigilance.egis.ru/" target="_blank"
+									class="button footer-info-card-buttons__item">Заполнить форму на сайте</a>
 							</div>
 						</div>
 					</div>
@@ -856,7 +919,8 @@
 							На основании инструкции по медицинскому применению препарата Супрастинекс® (рег. №:
 							ЛСР-008568/10, ЛП-000225), Martin LB et al. Eosinophils in allergy: role in disease,
 							degranulation, and cytokines. Int Arch Allergy Immunol. 1996 Mar;109(3):207-15. doi:
-							10.1159/000237239. Адаптировано: на основании блокирования гистаминовых рецепторов, снижающие
+							10.1159/000237239. Адаптировано: на основании блокирования гистаминовых рецепторов,
+							снижающие
 							активность гистамина как медиатора воспаления, а также на основании уменьшения активации
 							эозинофилов, активных участников патофизиологических осложнений различных аллергических
 							заболеваний
@@ -866,7 +930,8 @@
 							https://www.nobelprize.org/prizes/chemistry/2001/summary/
 						</li>
 					</ol>
-					<div class="links-creator">Страница разработана <a href="https://sokratus.com/" target="_blank">SOKRATUS.COM</a></div>
+					<div class="links-creator">Страница разработана <a href="https://sokratus.com/"
+							target="_blank">SOKRATUS.COM</a></div>
 				</div>
 			</div>
 		</div>
