@@ -1,0 +1,73 @@
+.legal
+    &-block
+        display: flex
+        justify-content: space-between
+    &-card 
+        background: $background
+        border-radius: 15px
+        padding: 40px
+        display: flex
+        flex-direction: column
+        &:first-child
+            width: calc(60% - 15px)
+        &:last-child
+            width: calc(40% - 15px)
+            
+    &__img
+        height: 31px
+        width: 62px
+        margin-bottom: 30px
+    &__title
+        font-size: 20px
+        margin-bottom: 12px
+        line-height: 1.2
+        &.second
+            margin-top: 30px
+    &__text
+        font-size: 16px
+        margin-top: 8px
+        color: $text-secondary
+        line-height: 1.4
+    &__phone
+       margin-bottom: 0
+       margin-top: auto
+       font-size: 28px
+       color: $accent
+       font-weight: bold
+    
+    @media (max-width: $xl)
+        &__title
+            font-size: 18px
+        &__text
+            font-size: 16px
+    @media (max-width: $lg)
+        &-block
+            flex-direction: column
+        &-card 
+            &:first-child
+                width: 100%
+                margin-bottom: 30px
+            &:last-child
+                width: 100%
+        &__phone
+            margin-top: 30px
+    @media (max-width: $md)
+        &-card 
+            padding: 30px 40px
+        &__img
+            margin-bottom: 20px
+        &__title
+            &.second
+                margin-top: 20px
+        &__phone
+            margin-top: 20px
+    @media (max-width: $sm)
+        &-card 
+            padding: 20px
+        &__title
+            font-size: 16px
+        &__text
+            font-size: 14px
+        &__phone
+            font-size: 20px
+        
