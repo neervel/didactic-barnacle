@@ -1,14 +1,16 @@
 .menu
-    padding-top: 70px
+    padding-top: 50px
     &-list 
         list-style: none
-        padding: 0 10px
+        padding: 0 125px
         display: flex
         align-items: center
         flex-wrap: wrap
         justify-content: center
         &__item
             margin: 5px
+            & .button, &:last-child
+                font-size: 14px
             & span 
                 font-size: 20px
                 color: $accent
@@ -16,3 +18,8 @@
             &:hover
                 & span 
                     color: $base-white
+
+    @media (max-width: $xl)
+        padding-top: 20px
+        &-list 
+            padding: 0

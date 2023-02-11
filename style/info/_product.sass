@@ -68,12 +68,15 @@
     &-buttons
         display: flex
         align-items: center
+        &.mobile
+            display: none
         & .button
             &:first-child
                 margin-right: 10px
             &:last-child
                 display: flex
                 align-items: center
+                justify-content: center
                 &:hover 
                     & svg 
                         & path 
@@ -84,3 +87,138 @@
                 & svg 
                     margin-left: 10px
                 
+    @media (max-width: $xl)
+        &-block 
+            padding-left: 0
+            margin-top: -10px
+        &-left
+            height: 417px
+            width: 534px
+        &__img
+            height: 250px
+            width: 193px
+            margin-right: 0
+            margin-bottom: 40px
+            margin-left: 10px
+        &__name
+            left: 20px
+            top: 40px
+            height: 130px
+            width: 150px
+    @media ( max-width: $lg )
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        height: 340px
+        width: 753px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-image: url('./assets/info/product-bg-full.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        & .container
+            width: 100%
+        &-block
+            justify-content: center
+        &__name
+            display: none
+        &__img
+            height: 238px
+            width: 184px
+            margin-left: 70px
+            &.tablets
+                margin-left: 0
+                width: 80%
+        &-left
+            background: none
+            height: auto
+            width: 40%
+        &-right
+            width: 330px
+        &-links
+            display: none
+        &__title
+            color: $base-white
+            text-align: center
+        &-buttons
+            &.desktop
+                display: none
+            &.mobile
+                display: flex
+                flex-direction: column
+                align-items: center
+                & a.button
+                    width: 250px
+                    &.border
+                        padding: 14px 0
+                        text-align: center
+                    &:first-child
+                        margin-bottom: 10px
+    @media (max-width: $md)
+        background-image: url('./assets/info/product-bg-full-540.png')
+        height: 530px
+        width: 460px
+        &-block 
+            height: 100%
+            width: 100%
+        &-left, &-right
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        &-left
+            width: 100%
+        &-right
+            height: 100%
+            width: 100%
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            padding-bottom: 30px
+        &__title
+            text-align: center
+            margin-bottom: 210px
+            max-width: 280px
+            font-size: 24px
+        &__img
+            height: 205px
+            width: 159px
+            margin-left: 0
+            &.tablets
+                width: 50%
+        &-buttons
+            &.mobile
+                flex-direction: row
+                & a.button
+                    width: auto
+                    &.border
+                        padding: 14px 20px
+                    &:first-child
+                        margin-bottom: 0
+                        margin-right: 10px
+    @media ( max-width: $sm )
+        background-image: url('./assets/info/product-bg-full-320.png')
+        height: 531px
+        width: 320px
+        &-buttons
+            &.mobile
+                flex-direction: column
+                & a.button
+                    width: 224px
+                    &:first-child
+                        margin-bottom: 10px
+                        margin-right: 0
+        &__img
+            margin-bottom: 80px
+            &.tablets
+                width: 80%
+                margin-bottom: 60px
+                margin-right: 30px
+        &__title
+            font-size: 18px
+            margin-bottom: 230px
+        &-right
+            padding-bottom: 0
