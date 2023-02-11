@@ -1,0 +1,149 @@
+.info
+    &-block
+        padding: 0 200px
+    &-h2 
+        font-size: 24px
+        line-height: 1.3
+    &-h3
+        color: $accent
+        font-size: 22px
+        line-height: 1.3
+        margin-bottom: 14px
+        &.black 
+            color: $base-black
+    &-h4
+        font-size: 20px
+        line-height: 1.2
+        margin-bottom: 8px
+    &-h5
+        font-size: 17px
+        line-height: 1.5
+    &-text
+        font-size: 17px
+        line-height: 1.5
+        margin-bottom: 10px
+
+        & a 
+            color: $accent 
+            text-decoration: underline
+            text-underline-offset: 3px
+
+        &.formula 
+            display: flex
+            align-items: center
+            & .formula-block
+                display: flex
+                flex-direction: column
+                align-items: center
+                margin-left: 10px
+
+                & .formula-item 
+                    &:first-child
+                        border-bottom: 1px solid $base-black
+    &-item 
+        padding: 16px 0
+        border-bottom: 1px solid $text-secondary
+        scroll-margin-top: 150px
+        &.open 
+            & .info-content
+                display: block 
+            & .info__icon
+                transform: rotate(-180deg)
+            & .info__title
+                color: $base-black
+    &__title
+        color: $text-secondary 
+        transition: .2s
+    &-header 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+
+        &:hover 
+            & .info__title
+                color: $base-black
+    &__icon
+        height: 50px
+        width: 50px
+        transition: .2s
+    &-content
+        padding: 16px 5px
+        display: none
+        & .info-h3
+            &:not(:first-child)
+                margin-top: 50px
+        & .info-h4
+            &:not(:first-child)
+                margin-top: 30px
+    &-row 
+        display: flex
+        padding: 14px 0
+        border-bottom: 1px solid rgba($text-secondary, .4)
+
+        &__title 
+            width: 280px
+            margin-right: 50px
+        &__text 
+            width: 550px
+
+    &-table
+        padding: 20px 0
+        font-size: 17px
+        line-height: 1.5
+        & table 
+            border-collapse: collapse
+        & th 
+            text-align: left
+            border: 2px solid $base-black
+            padding: 12px 20px
+        & td 
+            border: 1px solid rgba($base-black, .4)
+            padding: 12px 20px
+            max-width: 355px
+
+    @media (max-width: $xl)
+        &-block 
+            padding: 0
+    @media ( max-width: $lg )
+        &-h2 
+            font-size: 22px
+        &-h3 
+            font-size: 18px
+        &-h4
+            font-size: 22px
+        &-h5
+            font-size: 16px
+        &-text
+            font-size: 16px
+        &-table 
+            font-size: 16px
+        &-row 
+            &__title
+                width: 240px
+            &__text
+                width: 370px
+    @media ( max-width: $md )
+        &-item 
+            scroll-margin-top: 100px
+        &-row
+            flex-direction: column 
+            &__title
+                width: 100%
+                margin-right: 0
+                margin-bottom: 10px
+            &__text
+                width: 100%
+    @media  ( max-width: $sm )
+        &-h2 
+            font-size: 16px
+        &-h3, &-h4, &-h5, &-text
+            font-size: 14px
+        &-content
+            overflow: scroll
+        &-table 
+            font-size: 16px
+            overflow: scroll
+
+            & table
+                min-width: 450px

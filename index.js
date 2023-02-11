@@ -25,19 +25,10 @@ document.querySelector('#toggle-droprown').addEventListener('click', () => {
   document.querySelector('#toggle-droprown').classList.toggle('open')
 })
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
-});
-
 const videoPopup = document.querySelector('.video-popup')
 const videoPopupIframe = document.querySelector('#video-frame')
 const video = document.querySelectorAll('.js-video')
+
 video.forEach((el, i) => {
   el.addEventListener('click', () => {
     const link = el.getAttribute('data-video') + '?controls=0&autoplay=1'
