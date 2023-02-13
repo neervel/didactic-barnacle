@@ -88,6 +88,8 @@
     @media ( max-width: $xl )
         &-container
             width: 904px
+        &-block 
+            margin-bottom: 47px
 
     @media ( max-width: $lg )
         &-container 
@@ -105,7 +107,7 @@
                         margin-right: 0
     @media (max-width: $md)
         &-container 
-            width: 460px
+            width: 90%
         &-block 
             flex-direction: column
 
@@ -130,8 +132,9 @@
                     &.has-margin
                         margin-bottom: 30px
 
-                &:last-child
+                &.last
                     display: block
+                    padding: 30px
 
                 &__img
                     margin-bottom: 0
@@ -145,14 +148,15 @@
                         flex-basis: 60%
         
     @media (max-width: $sm)
-        &-container 
-            width: 90%
         &__title
             max-width: 250px
         &-block 
             &-card 
                 flex-direction: column
                 padding: 30px 20px
+                
+                &.last 
+                    padding: 30px 20px
 
                 &__img
                     margin-right: 0

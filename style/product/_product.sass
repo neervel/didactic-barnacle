@@ -1,4 +1,5 @@
 .product
+    position: relative
     &-container
         position: relative
         width: 1252px
@@ -73,7 +74,8 @@
     &__animated 
         position: absolute
         top: 150px
-        right: 350px
+        right: 50%
+        transform: translateX(280px)
         & path 
             fill: $base-white
         & circle 
@@ -104,7 +106,7 @@
 
         &__animated 
             top: 95px
-            right: 245px
+            transform: translateX(280px)
             height: 150px
             width: 150px
 
@@ -172,7 +174,7 @@
                 right: auto
                 left: 350px
             &.b &__text
-                max-width: 220px
+                max-width: 260px
             &.c
                 bottom: 5px
                 left: 300px
@@ -193,6 +195,7 @@
         &__animated 
             top: -30px
             right: 25px
+            transform: none
             height: 140px
             width: 140px
             & path

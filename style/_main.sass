@@ -213,6 +213,28 @@ sup
     &:active
       color: $extra-1
 
+.brcrumbs 
+  margin: 20px 0
+  &-items 
+    display: flex
+    align-items: center
+    font-size: 14px
+    line-height: 1.5
+    flex-wrap: wrap
+  & a 
+    color: $text-secondary
+  & span 
+    color: $text-light
+    margin: 0 5px
+
+    &:last-child
+      margin: 0
+
+  @media (max-width: $md)
+    &-items 
+      font-size: 12px
+      
+
 picture 
   img 
     height: 100%
