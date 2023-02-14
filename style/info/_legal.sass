@@ -2,6 +2,7 @@
     &-block
         display: flex
         justify-content: space-between
+        padding: 0 35px
     &-card 
         background: $background
         border-radius: 15px
@@ -9,9 +10,9 @@
         display: flex
         flex-direction: column
         &:first-child
-            width: calc(60% - 15px)
+            width: 727px
         &:last-child
-            width: calc(40% - 15px)
+            width: 463px
             
     &__img
         height: 31px
@@ -43,6 +44,7 @@
     @media (max-width: $lg)
         &-block
             flex-direction: column
+            padding: 0
         &-card 
             &:first-child
                 width: 100%
