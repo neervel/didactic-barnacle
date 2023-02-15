@@ -165,6 +165,7 @@
             transition: .3s
             height: 80px
             width: 94px 
+            z-index: 1
             & svg 
                 height: 100%
                 width: 100%
@@ -214,6 +215,17 @@
             transform-box: fill-box
             transform-origin: center
             animation: round 20s infinite linear
+
+    &-elem 
+        position: absolute
+        left: 80px
+        top: -20px
+        z-index: -1
+        height: 111px
+        width: 303px
+        & svg 
+            height: 100%
+            width: 100%
 
     @media ( max-width: $xl )
         top: -60px
@@ -302,7 +314,14 @@
             top: 15px
             right: 75px
 
+        &-elem 
+            left: 50px
+            top: -15px
+            height: 76px
+            width: 207px
+
     @media (max-width: $lg)
+        top: -50px
         height: 373px
         width: 808px
 
@@ -361,6 +380,12 @@
         &-range
             width: calc(100% - 60px)
             left: 30px
+        
+        &-elem 
+            left: 60px
+            top: -10px
+            height: 61px
+            width: 166px
     
     @media (max-width: $md)
         top: -40px
@@ -442,6 +467,8 @@
             right: 15px
             height: 130px
             width: 130px
+        &-elem 
+            display: none
 
     @media (max-width: $sm)
         width: 329px
@@ -523,6 +550,19 @@
     left: 13px
     display: flex
     transition: .3s
+
+    &:after 
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 754px
+        background-image: url('./assets/images/bg-slider-figure.png')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        z-index: 0
     
     & svg 
         height: 100%
@@ -531,18 +571,22 @@
     & .right 
         height: 100%
         width: auto
-        margin-left: -1px
+        position: relative
+        z-index: 1
     
     & .left
         height: 100%
         width: auto
+        position: relative
+        z-index: 1
 
     & .center
         width: 380px
         height: 100%
-        background: linear-gradient(90deg, #9C549C 0%, #DD6DA5 100%)
+        background: linear-gradient(90deg, rgba(#924292, .9) 0%, rgba(#DA5D9C, .9) 100%)
         transition: .3s
-        margin-left: -1px
+        position: relative
+        z-index: 1
 
     &.left        
         & .center
@@ -558,6 +602,8 @@
         height: 380px
         top: 10px
         left: 8px
+        &:after 
+            width: 480px
 
         & .center
             width: 270px
@@ -570,6 +616,8 @@
         height: 360px
         top: 7px
         left: 4px
+        &:after 
+            width: 457px
 
         & .center
             width: 200px
@@ -580,9 +628,13 @@
 
     @media ( max-width: $md )
         height: 460px
-        transform: rotate(90deg)
+        transform: rotate(-90deg)
         top: 135px
         left: -128px
+
+        &:after 
+            height: 100%
+            width: 628px
 
         & .center 
             width: 415px
@@ -591,6 +643,9 @@
         height: 321px
         top: 159px
         left: -162px
+
+        &:after 
+            width: 428px
 
         & .center
             width: 435px
