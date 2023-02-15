@@ -122,9 +122,12 @@
             position: relative
         &-items 
             width: 630px
+            &-row 
+                &:not(:first-child)
+                    margin-top: -35px
             &-hex 
-                height: 210px
-                width: 210px
+                height: 220px
+                width: 220px
 
                 &__title, &__text
                     max-width: 170px
@@ -152,6 +155,7 @@
             position: static
             height: 256px
             width: 425px
+            margin-right: 50px
 
     @media ( max-width: $md )
         &__title
@@ -162,6 +166,10 @@
         &-items 
             margin-bottom: 30px
 
+            &-row 
+                &:not(:first-child)
+                    margin-top: -15px
+
             &-hex
                 height: 160px
                 width: 160px
@@ -171,6 +179,7 @@
         &__img
             height: 237px
             width: 398px
+            margin-right: 0
     
     @media ( max-width: $sm )
         &-container

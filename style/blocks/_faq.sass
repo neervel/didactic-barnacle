@@ -39,6 +39,10 @@
                 line-height: 1.35
                 max-width: 700px
                 margin-top: 10px
+                margin-bottom: 10px
+
+            & p:not(:last-child)
+                margin-bottom: 10px
                     
             &-arrow 
                 transition: .3s
@@ -65,7 +69,8 @@
                     font-size: 20px
     @media ( max-width: $lg )
         &-container
-            width: 650px
+            min-width: 650px
+            width: 90%
         &-block 
             padding-bottom: 90px
         &-list 
@@ -74,7 +79,8 @@
 
     @media ( max-width: $md )
         &-container
-            width: 90%
+            width: 95%
+            min-width: 0
         &-list 
             &__item 
                 padding: 20px 30px
@@ -90,6 +96,8 @@
                     width: 40px
     
     @media ( max-width: $sm )
+        &-container
+            width: 95%
         &-list 
             &__item 
                 padding: 20px

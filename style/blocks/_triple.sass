@@ -76,11 +76,12 @@
     
     @media ( max-width: $xl )
         &__title 
-            max-width: 100%
+            max-width: 750px
         &-content
             flex-direction: column
             align-items: center
-
+            &-cards 
+                padding: 0 40px
             &__img
                 height: 253px
                 width: 427px
@@ -88,12 +89,15 @@
                 margin-bottom: 40px
                 border-radius: 25px
         &-video
+            &-block 
+                padding: 0 40px
             &__item
                 width: calc(50% - 10px)
 
     @media (max-width: $lg)
         &__title 
             margin-bottom: 55px
+            max-width: 600px
         &-content 
             &__img
                 width: 100%
@@ -101,6 +105,8 @@
                 margin-bottom: 20px
             &-cards
                 flex-direction: column
+                padding: 0
+                width: 100%
 
             &-card
                 display: flex
@@ -114,12 +120,18 @@
 
                 &__icon
                     margin-bottom: 0
-                    margin-right: 15px
+                    margin-right: 25px
         &-video
+            &__title
+                max-width: 600px
+            &-block 
+                padding: 0
             &__item
                 width: calc(50% - 5px)
 
     @media (max-width: $md)
+        &__title
+            max-width: 100%
         &-content
             &__img
                 border-radius: 15px

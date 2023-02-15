@@ -95,7 +95,7 @@
     &-legal
         display: flex
         justify-content: space-between
-        padding: 0 40px
+        padding: 0 30px
 
         &__item 
             font-size: 15px
@@ -173,7 +173,7 @@
         &-info 
             display: flex
             justify-content: space-between
-            grid-gap: 0
+            margin-bottom: 35px
             &-card
                 padding: 20px
                 height: fit-content
@@ -196,6 +196,7 @@
                 &:nth-child(1)
                     margin-right: 0
                     flex-basis: 50%
+                    max-width: 100%
                 &:nth-child(2)
                     flex-basis: 50%
                     order: 2
@@ -203,6 +204,7 @@
             &-info 
                 margin-left: 0
                 flex-basis: 50%
+                padding-left: 30px
                 & p 
                     &:not(:last-child)
                         max-width: 200px
@@ -250,7 +252,7 @@
                     width: 100%
 
                 &__title 
-                    font-size: 18px
+                    font-size: 20px
                     margin-bottom: 7px
                 &__text 
                     font-size: 14px
@@ -274,6 +276,7 @@
             &-info 
                 order: 3
                 flex-basis: 100%
+                padding-left: 0
                 & p 
                     &:not(:last-child)
                         max-width: 100%
@@ -292,3 +295,6 @@
                 &__phone
                     margin-top: 10px
                     font-size: 18px
+                &-buttons
+                    &__item 
+                        font-size: 14px
