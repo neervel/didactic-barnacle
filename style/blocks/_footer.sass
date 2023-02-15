@@ -142,7 +142,8 @@
                     max-width: 151px
     @media ( max-width: $lg )
         &-container 
-            width: 650px
+            width: 100%
+            padding: 0 60px
         &-nav 
             margin-bottom: 30px
             padding: 0 20px
@@ -180,7 +181,7 @@
 
                 &:first-child,
                 &:last-child
-                    width: 314px
+                    width: calc(50% - 10px)
                 
                 &-buttons 
                     & .button 
@@ -211,7 +212,7 @@
 
     @media ( max-width: $md)
         &-container 
-            width: 90%
+            padding: 0 40px
         &-nav 
             margin-bottom: 20px
             max-width: 100%
@@ -281,6 +282,8 @@
                     &:not(:last-child)
                         max-width: 100%
     @media ( max-width: $sm)
+        &-container
+            padding: 0 20px
         &-nav 
             margin-bottom: 30px
             &__link 
