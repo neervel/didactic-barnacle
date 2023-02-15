@@ -65,10 +65,10 @@ const swiperText = new Swiper('.slider-about-tslider', {
     crossFade: true
   },
 
-  autoplay: {
-    delay: 5000,
-    pauseOnMouseEnter: true,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   pauseOnMouseEnter: true,
+  // },
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -87,13 +87,20 @@ const swiperText = new Swiper('.slider-about-tslider', {
   }
 })
 
+
+const cards = document.querySelectorAll('.slider-about-tslider-card')
+
+cards.forEach(el => {
+  el.addEventListener('click', () => {
+    const slide = el.attributes['data-slide'].value
+    swiperText.slideTo(slide)
+  })
+})
+
 swiperText.on('slideChange', (s) => {
   swiperCards.slideTo(s.activeIndex)
 })
 
-if (window.innerWidth < 768) {
-  swiperText.mousewheel.disable()
-}
 
 createApp({
   data() {
