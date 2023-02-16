@@ -90,6 +90,7 @@
 
             & .main-image
                 margin-bottom: 50px
+                cursor: pointer
 
                 & img 
                     width: 100%
@@ -116,6 +117,10 @@
             & .main-image
                 height: 291px
                 width: 227px
+        
+        &.full 
+            & .main-image
+                cursor: default
 
         &.hide
             z-index: -1
@@ -306,6 +311,9 @@
 
             & a.button
                 margin-left: 0
+
+                &.border
+                    margin-top: 10px
 
         &__animated
             height: 120px

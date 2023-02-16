@@ -90,6 +90,8 @@
             width: 904px
         &-block 
             margin-bottom: 47px
+            &:nth-child(4)
+                margin-bottom: 55px
 
     @media ( max-width: $lg )
         &-container 
@@ -107,7 +109,8 @@
                         margin-right: 0
     @media (max-width: $md)
         &-container 
-            width: 90%
+            width: 100%
+            padding: 0 40px
         &-block 
             flex-direction: column
 
@@ -148,6 +151,8 @@
                         flex-basis: 60%
         
     @media (max-width: $sm)
+        &-container 
+            padding: 0 20px
         &__title
             max-width: 250px
         &-block 
