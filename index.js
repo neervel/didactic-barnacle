@@ -65,10 +65,10 @@ const swiperText = new Swiper('.slider-about-tslider', {
     crossFade: true
   },
 
-  // autoplay: {
-  //   delay: 5000,
-  //   pauseOnMouseEnter: true,
-  // },
+  autoplay: {
+    delay: 5000,
+    pauseOnMouseEnter: true,
+  },
 
   navigation: {
     nextEl: '.swiper-button-next',

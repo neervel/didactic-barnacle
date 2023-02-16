@@ -102,12 +102,15 @@
             line-height: 1.35
             color: $base-white
 
-            &:nth-child(1)
+            &:first-child
                 margin-right: 80px
 
         &-info 
             margin-right: 0
             margin-left: auto
+
+            & .footer-legal__item:first-child
+                margin-right: 0
             & p 
                 line-height: 1.4
                 &:not(:last-child)
@@ -129,7 +132,9 @@
                 &-buttons 
                     margin-top: 30px
                 &__title
-                    font-size: 18px
+                    font-size: 20px
+                    line-height: 1.1
+
                     margin-bottom: 10px
                 &__phone
                     font-size: 26px
@@ -208,7 +213,7 @@
                 padding-left: 30px
                 & p 
                     &:not(:last-child)
-                        max-width: 200px
+                        max-width: 100%
 
     @media ( max-width: $md)
         &-container 
@@ -256,7 +261,7 @@
                     font-size: 20px
                     margin-bottom: 7px
                 &__text 
-                    font-size: 14px
+                    font-size: 16px
                 &__phone
                     margin-top: 30px
                     font-size: 20px
@@ -294,7 +299,7 @@
                     margin-bottom: 30px
 
                 &__title 
-                    font-size: 16px
+                    font-size: 18px
                 &__phone
                     margin-top: 10px
                     font-size: 18px

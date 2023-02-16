@@ -66,7 +66,9 @@
                 padding: 20px 30px
 
                 &-title 
-                    font-size: 20px
+                    font-size: 22px
+                &__text 
+                    line-height: 1.25
     @media ( max-width: $lg )
         &-container
             width: 100%
@@ -76,19 +78,25 @@
         &-list 
             &__item 
                 padding: 24px 30px
+                &__title 
+                    font-size: 20px
+                &-arrow 
+                    & .bg
+                        stroke-width: 3px
 
     @media ( max-width: $md )
         &-container
-            padding: 0 40px
+            padding: 0 20px
         &-list 
             &__item 
                 padding: 20px 30px
 
                 &-title 
-                    font-size: 18px
+                    font-size: 20px
                     max-width: calc(100% - 60px)
                 &-text 
-                    font-size: 16px
+                    font-size: 18px
+                    line-height: 1.25
 
                 &-arrow
                     height: 40px
@@ -96,7 +104,7 @@
     
     @media ( max-width: $sm )
         &-container
-            padding: 0 20px
+            padding: 0
         &-list 
             &__item 
                 padding: 20px

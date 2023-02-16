@@ -68,6 +68,10 @@
 
         &__text
             font-size: 22px
+
+            & p
+                &:not(:last-child)
+                    margin-bottom: 10px
     
     &-button 
         display: none
@@ -188,7 +192,7 @@
             padding: 30px
 
             &__title 
-                font-size: 24px
+                font-size: 26мpx
             
             &__text
                 font-size: 18px
@@ -220,6 +224,8 @@
                     margin-right: 15px
                 &.medium &__img 
                     margin-right: 20px
+                &.medium &__title
+                    font-size: 22px
 
         &__mouse
             display: none
@@ -252,10 +258,10 @@
             padding: 20px 25px
 
             &__title 
-                font-size: 20px
+                font-size: 22px
                 margin-bottom: 6px
             &__text
-                font-size: 16px
+                font-size: 18px
         
 
         &-tslider 
@@ -283,16 +289,16 @@
                     left:139px
 
                 &.small &__title 
-                    font-size: 16px
+                    font-size: 18px
                 &.small &__img 
                     margin-right: 10px
                 &.medium &__title
-                    font-size: 20px
+                    font-size: 22px
                     opacity: .7
 
     @media ( max-width: $md )
         &__title
-            max-width: 500px
+            max-width: 450px
             margin: 0 auto
         &-container
             width: 100%
@@ -303,8 +309,8 @@
             transform: translateX(-50%)
             &__img 
                 left: 50%
-                top: 29px
-                transform: translateX(-50%)
+                top: 9px
+                transform: translateX(-160px)
                 width: 278px
                 height: 206px
             &__bar
@@ -321,6 +327,10 @@
         &-slide 
             text-align: center
             padding: 20px 30px
+            &__title 
+                font-size: 22px
+            &__text 
+                font-size: 18px
         &-tslider
             left: 50%
             transform: translateX(-50%)
@@ -426,6 +436,10 @@
 
         &-slide 
             padding: 20px
+            &__title
+                font-size: 22px
+            &__text
+                font-size: 18px
         
         &-button 
             width: 15px
