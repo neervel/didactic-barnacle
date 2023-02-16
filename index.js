@@ -21,8 +21,11 @@ document.querySelectorAll('.header-nav__list-item').forEach(el => {
   })
 })
 
-document.querySelector('#toggle-droprown').addEventListener('click', () => {
-  document.querySelector('#toggle-droprown').classList.toggle('open')
+document.querySelector('#toggle-droprown-1').addEventListener('click', () => {
+  document.querySelector('#toggle-droprown-1').classList.toggle('open')
+})
+document.querySelector('#toggle-droprown-2').addEventListener('click', () => {
+  document.querySelector('#toggle-droprown-2').classList.toggle('open')
 })
 
 const videoPopup = document.querySelector('.video-popup')
