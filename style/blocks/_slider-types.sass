@@ -352,10 +352,12 @@
 
             &__info
                 &.left
-                    padding-top: 80px
+                    padding-top: 0
+                    padding-bottom: 0
                     padding-left: 15px
                 &.right
                     padding-top: 80px
+                    padding-bottom: 0
 
                 &-img
                     height: 53px
@@ -385,6 +387,9 @@
             top: -10px
             height: 61px
             width: 166px
+        &-buttons 
+            & .border
+                margin-top: 10px
     
     @media (max-width: $md)
         top: -40px
@@ -505,7 +510,7 @@
             &__info
                 &-text 
                     font-size: 18px
-                    max-width: 212px
+                    max-width: 218px
 
                 &-img 
                     height: 51px
@@ -517,6 +522,7 @@
                         width: 64px
 
                 &.left
+                    padding-top: 10px
                     & .slider-types-card__info-item:last-child
                         & .slider-types-card__info-text
                             max-width: 200px

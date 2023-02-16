@@ -146,7 +146,7 @@
       flex-direction: row
 
     &-logo 
-      width: 185px
+      width: 220px
       margin-bottom: 0
 
     &-nav
@@ -224,15 +224,18 @@
                 background: $bg-gradient
                 & * 
                   color: $base-white
+                & .button:hover span 
+                  color: $base-white
               & a
                 color: $base-black
               & .button 
-                background: none
                 display: flex
                 align-items: center
                 justify-content: center
-                &:hover, &:active
+                &:hover 
                   background: none
+                  & span
+                    color: $base-black
 
           &:not(:last-child)
             margin-right: 0
