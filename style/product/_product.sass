@@ -30,7 +30,7 @@
         width: 290px
         margin-left: 20px
     &__description 
-        font-size: 16px
+        font-size: 18px
         margin-bottom: 30px
     &-label 
         position: absolute
@@ -63,7 +63,7 @@
             margin-right: 0
         &__text 
             text-align: right
-            font-size: 20px
+            font-size: 22px
             font-weight: bold
         &.left &__img 
             margin-right: 30px
@@ -155,6 +155,8 @@
             top: -110px
             margin-left: 40px
         &-label 
+            &__text
+                font-size: 20px
             &__img 
                 height: 64px
                 width: 69px
@@ -245,13 +247,15 @@
             &__text 
                 max-width: 100% !important
                 width: 290px
-                font-size: 16px
+                font-size: 18px
 
     @media ( max-width: $sm )
         &-container 
             width: 100%
             overflow: hidden
             margin-bottom: -15px
+        &__description
+            font-size: 16px
         &-card 
             height: 257px
             width: 367px
