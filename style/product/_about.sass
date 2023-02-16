@@ -58,6 +58,9 @@
 
                 &.has-margin
                     margin-bottom: 40px
+                
+                &.mb-0
+                    margin-bottom: 0
 
                 &.small
                     font-size: 18px
@@ -95,7 +98,8 @@
 
     @media ( max-width: $lg )
         &-container 
-            width: 648px
+            width: 100%
+            padding: 0 60px
         &-block 
             margin-bottom: 40px
             &:nth-child(4)
@@ -109,7 +113,6 @@
                         margin-right: 0
     @media (max-width: $md)
         &-container 
-            width: 100%
             padding: 0 40px
         &-block 
             flex-direction: column
@@ -128,7 +131,7 @@
                 flex-basis: 100%
                 padding: 20px
                 display: flex
-                align-items: flex-start
+                align-items: center
 
                 &__title
                     font-size: 20px

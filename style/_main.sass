@@ -31,7 +31,9 @@ html
 
 
 .button
-  display: inline-block
+  display: flex
+  align-items: center
+  justify-content: center
   border: none
   border-radius: 30px
   font-size: 18px
@@ -105,7 +107,7 @@ html
       background: $extra-1
     
   &.border
-    padding: 17px 45px
+    padding: 15px 45px
     border: 1px solid $accent
     background-color: transparent
     color: $accent
@@ -118,7 +120,7 @@ html
 
     @media ( max-width: $lg )
       padding: 14px 81px
-      height: 48px
+      height: 46px
     
     @media ( max-width: $md )
       padding: 14px 20px
