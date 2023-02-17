@@ -21,6 +21,12 @@ document.querySelectorAll('.header-nav__list-item').forEach(el => {
   })
 })
 
+document.querySelectorAll('.simptoms-items-hex:not(.no-hover)').forEach(el => {
+  el.addEventListener('click', () => {
+    el.classList.toggle('open')
+  })
+})
+
 document.querySelector('#toggle-droprown-1').addEventListener('click', () => {
   document.querySelector('#toggle-droprown-1').classList.toggle('open')
 })
@@ -159,14 +165,22 @@ createApp({
     handleSlideClick(side) {
       if (this.innerWidth < 768) return;
 
-      if (side === "left" && this.currentPosition !== 2) {
+      if (side === "left" && this.currentPosition === 1) {
         this.sliderPosition = this.maxRange
         this.currentPosition++;
         this.lastRangePosition = this.maxRange;
-      } else if (side === "right" && this.currentPosition !== 0) {
+      } else if (side === "right" && this.currentPosition === 1) {
         this.sliderPosition = 0
         this.currentPosition--;
         this.lastRangePosition = 0;
+      } else if (side === "left" && this.currentPosition === 2) {
+        this.sliderPosition = this.midRange
+        this.currentPosition--;
+        this.lastRangePosition = this.midRange;
+      } else if (side === "right" && this.currentPosition === 0) {
+        this.sliderPosition = this.midRange
+        this.currentPosition++;
+        this.lastRangePosition = this.midRange;
       }
     },
 

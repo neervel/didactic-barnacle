@@ -70,7 +70,7 @@
                 opacity: 0
                 z-index: -1
 
-            &:hover 
+            &:hover, &.open
                 &:before 
                     opacity: 0
                 &::after
@@ -81,9 +81,9 @@
                 &::after
                     opacity: 0
 
-            &:hover &__title
+            &:hover &__title, &.open &__title
                 opacity: 0
-            &:hover &__text 
+            &:hover &__text, &.open &__text 
                 opacity: 1
             &.no-hover:hover &__title
                 opacity: 1
