@@ -118,6 +118,11 @@
                 max-width: 200px
                 transition: .3s
                 cursor: default
+
+                &.sm 
+                    font-size: 21px
+                    &.m
+                        display: none
     &__img 
         position: absolute
         height: 160px
@@ -141,6 +146,14 @@
                 &__title, &__text
                     font-size: 20px
                     max-width: 170px
+
+                &__text
+                    &.sm 
+                        width: 190px
+                        &.d
+                            display: none
+                        &.m
+                            display: block
             &-row 
                 &.b
                     margin-top: -25px
@@ -167,6 +180,26 @@
                 &__title, &__text
                     font-size: 20px
                     max-width: 170px
+                &:hover
+                    &:before 
+                        opacity: 1
+                    &::after
+                        opacity: 0
+                
+                &.open:hover
+                    &:before 
+                        opacity: 0
+                    &::after
+                        opacity: 1
+            
+                &:hover &__title
+                    opacity: 1
+                &:hover &__text
+                    opacity: 0
+                &.open:hover &__title
+                    opacity: 0
+                &.open:hover &__text
+                    opacity: 1
             &-row 
                 &.a
                     & .simptoms-items-hex
@@ -215,6 +248,11 @@
                 &__title, &__text
                     font-size: 14px
                     max-width: 130px
+
+                &__text
+                    &.sm 
+                        width: auto
+                        font-size: 16px
         &__img
             height: 77px
             width: 141px

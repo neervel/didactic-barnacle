@@ -184,6 +184,7 @@
             width: 648px
         &-content 
             flex-direction: column
+            margin-bottom: -25px
         &-items 
             margin-bottom: 19px
             width: 100%
@@ -193,6 +194,26 @@
                     font-size: 18px
                 &:nth-child(4)
                     margin-left: 0
+                &:hover
+                    &:before 
+                        opacity: 1
+                    &::after
+                        opacity: 0
+                
+                &.open:hover
+                    &:before 
+                        opacity: 0
+                    &::after
+                        opacity: 1
+            
+                &:hover &__title
+                    opacity: 1
+                &:hover &__text
+                    opacity: 0
+                &.open:hover &__title
+                    opacity: 0
+                &.open:hover &__text
+                    opacity: 1
 
         &__img 
             display: none
