@@ -125,7 +125,7 @@ const swiperText = new Swiper('.slider-about-tslider', {
     768: {
       navigation: false,
       mousewheel: {
-        thresholdDelta: 0,
+        thresholdDelta: 1,
       },
     }
   }
