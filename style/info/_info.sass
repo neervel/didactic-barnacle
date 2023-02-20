@@ -24,6 +24,9 @@
         line-height: 1.37
         margin-bottom: 10px
 
+        &:last-child
+            margin-bottom: 0
+
         & a 
             color: $accent 
             text-decoration: underline
@@ -70,14 +73,16 @@
         transition: .2s
     &-content
         padding: 16px 0
-        padding-bottom: 56px
+        padding-bottom: 40px
         display: none
         & .info-h3
             &:not(:first-child)
                 margin-top: 50px
+        & .info-h4 + .info-h4
+            margin-top: 24px
         & .info-h4
             &:not(:first-child)
-                margin-top: 24px
+                margin-top: 30px
     &-row 
         display: flex
         padding: 10px 0
@@ -115,7 +120,7 @@
         &-h3 
             font-size: 22px
         &-h4
-            font-size: 20px
+            font-size: 22px
         &-h5
             font-size: 18px
             line-height: 1.24
@@ -130,14 +135,18 @@
             &__text
                 width: 370px
     @media ( max-width: $md )
+        &-h4 
+            font-size: 20px
         &-item 
             scroll-margin-top: 100px
         
         &-content
-            padding-bottom: 46px
+            padding-bottom: 30px
+            & .info-h4 + .info-h4
+                margin-top: 18px
             & .info-h4
                 &:not(:first-child)
-                    margin-top: 18px
+                    margin-top: 24px
         &-row
             flex-direction: column 
             &__title
@@ -149,16 +158,16 @@
     @media  ( max-width: $sm )
         &-h2 
             font-size: 20px
-        &-h3, &-h4, &-h5, &-text
-            font-size: 14px
-        &-h3 
+        &-h4
             font-size: 18px
+        &-h3 
+            font-size: 20px
         &-h5, &-text 
-            font-size: 16px
+            font-size: 18px
             line-height: 1.24
         &-content
             overflow: scroll
-            padding-bottom: 36px
+            padding-bottom: 20px
         &-table 
             font-size: 16px
             overflow: scroll
