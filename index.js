@@ -254,7 +254,16 @@ createApp({
     if (window.innerWidth < 768) {
       this.showMore = false;
     }
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth < 768) {
+        this.showMore = false;
+      } else {
+        this.showMore = true
+      }
+    })
   },
+
 }).mount("#pharms");
 
 const faqElems = document.querySelectorAll('.faq-list__item-sum')
