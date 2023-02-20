@@ -101,6 +101,7 @@ const swiperText = new Swiper('.slider-about-tslider', {
   effect: 'fade',
   spaceBetween: 50,
   speed: 500,
+  swipeHandler: '.slider-about-slider',
   
   fadeEffect: {
     crossFade: true
@@ -116,10 +117,10 @@ const swiperText = new Swiper('.slider-about-tslider', {
     prevEl: '.swiper-button-prev',
   },
 
-    mousewheel: {
-      thresholdDelta: 20,
-      eventsTarget: '.slider-about-slider'
-    },
+  mousewheel: {
+    thresholdDelta: 20,
+    eventsTarget: '.slider-about-slider'
+  },
 
   breakpoints: {
     768: {
