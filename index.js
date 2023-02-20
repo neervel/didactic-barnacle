@@ -101,7 +101,6 @@ const swiperText = new Swiper('.slider-about-tslider', {
   effect: 'fade',
   spaceBetween: 50,
   speed: 500,
-  swipeHandler: '.slider-about-slider',
   
   fadeEffect: {
     crossFade: true
