@@ -21,11 +21,43 @@ document.querySelectorAll('.header-nav__list-item').forEach(el => {
   })
 })
 
-document.querySelectorAll('.simptoms-items-hex:not(.no-hover)').forEach(el => {
+const hexs = document.querySelectorAll('.simptoms-items-hex:not(.no-hover)')
+const visibleHexs = []
+
+hexs.forEach(el => {
+  if (window.getComputedStyle(el).display !== 'none') {
+    visibleHexs.push(el)
+  }
+})
+
+let counter = 0
+let isClicked = false
+
+hexs.forEach(el => {
   el.addEventListener('click', () => {
+    if (el.classList.contains('open')) {
+      isClicked = false
+    } else {
+      isClicked = true
+      visibleHexs.forEach(el => el.classList.remove('open'))
+      counter = 0
+    }
     el.classList.toggle('open')
   })
 })
+
+setInterval(() => {
+  if (!isClicked) {
+    if (counter === visibleHexs.length) counter = 0
+    visibleHexs[counter === 0 ? visibleHexs.length - 1 : counter - 1].classList.remove('open')
+    visibleHexs[counter].classList.add('open')
+    setTimeout(() => {
+      counter++
+    }, 3000)
+  }
+}, 3000)
+
+
 
 document.querySelector('#toggle-droprown-1').addEventListener('click', () => {
   document.querySelector('#toggle-droprown-1').classList.toggle('open')
