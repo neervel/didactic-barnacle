@@ -176,8 +176,8 @@
                 top: 24px
         
         &-slider 
-            width: 325px
-            left: 525px
+            width: 360px
+            left: 500px
 
             &:after 
                 left: -4px
@@ -188,6 +188,7 @@
         
         &-slide 
             padding: 30px
+            padding-right: 70px
 
             &__title 
                 font-size: 26мpx
@@ -224,9 +225,8 @@
                     margin-right: 20px
                 &.medium &__title
                     font-size: 22px
-
         &__mouse
-            display: none
+            right: 20px
 
     @media ( max-width: $lg )
         &__title
@@ -251,12 +251,13 @@
 
         &-slider
             top: 54%
-            width: 303px
+            width: 350px
             left: 330px
             outline-width: 3px
 
         &-slide 
             padding: 20px 25px
+            padding-right: 60px
 
             &__title 
                 font-size: 22px
@@ -296,6 +297,9 @@
                 &.medium &__title
                     font-size: 22px
                     opacity: .7
+        &__mouse
+            right: -20px
+            margin-top: 20px
 
     @media ( max-width: $md )
         &__title
@@ -385,6 +389,8 @@
                 right: 15px
             &.swiper-button-prev
                 left: 15px
+        &__mouse
+            display: none
 
     @media ( max-width: $sm )
         &-container 
