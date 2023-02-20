@@ -38,9 +38,9 @@
     &-slider
         position: absolute
         top: 50%
-        right: 100px
+        right: 20px
         transform: translateY(-50%)
-        width: 520px
+        width: 600px
         background-color: $base-white
         border-radius: 10px
         box-shadow: $box-shadow-box
@@ -59,6 +59,7 @@
     &-slide
         position: relative
         padding: 35px
+        padding-right: 100px
         height: auto
 
         &__title 
@@ -149,11 +150,11 @@
     &__mouse 
         position: absolute
         top: 50%
-        right: 0
+        right: 40px
         transform: translateY(-50%)
         height: 64px
         width: 30px
-        
+        z-index: 10
         & svg 
             height: 100%
             width: 100%
@@ -230,6 +231,9 @@
             display: none
 
     @media ( max-width: $lg )
+        &__title
+            max-width: 100%
+            padding: 0 60px
         &-container 
             height: 483px
             width: 645px
@@ -297,8 +301,7 @@
 
     @media ( max-width: $md )
         &__title
-            max-width: 450px
-            margin: 0 auto
+            padding: 0 40px
         &-container
             width: 100%
             height: 460px
@@ -388,7 +391,7 @@
             width: 100%
             height: 400px
         &__title
-            max-width: 300px
+            padding: 0 20px
         &-circle 
             width: 284px
             &__img 

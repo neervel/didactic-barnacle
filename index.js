@@ -124,6 +124,9 @@ const swiperText = new Swiper('.slider-about-tslider', {
   breakpoints: {
     768: {
       navigation: false,
+      mousewheel: {
+        thresholdDelta: 0,
+      },
     }
   }
 })
