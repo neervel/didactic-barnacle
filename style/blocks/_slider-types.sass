@@ -406,7 +406,7 @@
             &.right
                 position: static
                 flex-direction: column-reverse
-                margin-top: 180px
+                margin-top: 160px
             &__main
                 width: auto
                 margin-bottom: 40px
@@ -621,41 +621,5 @@
                 width: 682px
 
     @media (max-width: $lg)
-        height: 360px
-        top: 7px
-        left: 4px
-        &:after 
-            width: 457px
-
-        & .center
-            width: 210px
-
-        &.left
-            & .center
-                width: 555px
-
-    @media ( max-width: $md )
-        height: 460px
-        transform: rotate(-90deg)
-        top: 135px
-        left: -128px
-
-        &:after 
-            height: 100%
-            width: 628px
-
-        & .center 
-            width: 415px
-            margin: 0 -1px
-
-    @media ( max-width: $sm )
-        height: 321px
-        top: 159px
-        left: -162px
-
-        &:after 
-            width: 428px
-
-        & .center
-            width: 435px
+        display: none
         

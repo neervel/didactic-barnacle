@@ -14038,17 +14038,17 @@ var Vue = (function (exports) {
                       ? node.children[0] // api-extractor somehow fails to infer this
                       : null;
               if (slotOutlet) {
-                  // <slot v-for="..."> or <template v-for="..."><slot/></template>
+                  // <slot v-for="...html"> or <template v-for="...html"><slot/></template>
                   childBlock = slotOutlet.codegenNode;
                   if (isTemplate && keyProperty) {
-                      // <template v-for="..." :key="..."><slot/></template>
+                      // <template v-for="..." :key="...html"><slot/></template>
                       // we need to inject the key to the renderSlot() call.
                       // the props for renderSlot is passed as the 3rd argument.
                       injectProp(childBlock, keyProperty, context);
                   }
               }
               else if (needFragmentWrapper) {
-                  // <template v-for="..."> with text or multi-elements
+                  // <template v-for="...html"> with text or multi-elements
                   // should generate a fragment block for each loop
                   childBlock = createVNodeCall(context, helper(FRAGMENT), keyProperty ? createObjectExpression([keyProperty]) : undefined, node.children, 64 /* PatchFlags.STABLE_FRAGMENT */ +
                       (` /* ${PatchFlagNames[64 /* PatchFlags.STABLE_FRAGMENT */]} */`

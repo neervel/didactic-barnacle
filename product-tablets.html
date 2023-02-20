@@ -98,7 +98,7 @@
 			</div>
 		</div>
 		<article>
-			<div class="hero" id="hero">
+			<div class="hero scroll" id="hero">
 				<h1 class="h1 hero-title t">
 					<span class="color"> Супрастинекс® Таблетки</span> от аллергии
 				</h1>
@@ -172,14 +172,16 @@
 									<h3 class="simptoms-items-hex__title">Поллиноз</h3>
 									<p class="simptoms-items-hex__text">Сенная лихорадка</p>
 								</div>
-								<div class="simptoms-items-hex c no-hover">
+								<div class="simptoms-items-hex c">
 									<h3 class="simptoms-items-hex__title">Аллергический конъюнктивит</h3>
+									<p class="simptoms-items-hex__text">Слезоточение, покраснение и зуд глаз</p>
 								</div>
 							</div>
 							<div class="simptoms-items-row b">
 								<div class="simptoms-items-hex extra"></div>
-								<div class="simptoms-items-hex d no-hover">
+								<div class="simptoms-items-hex d">
 									<h3 class="simptoms-items-hex__title">Аллергический конъюнктивит</h3>
+									<p class="simptoms-items-hex__text">Слезоточение, покраснение и зуд глаз</p>
 								</div>
 								<div class="simptoms-items-hex a no-hover">
 									<h3 class="simptoms-items-hex__title">Экзема</h3>
@@ -209,7 +211,7 @@
 							<div class="simptoms-items-row d">
 								<div class="simptoms-items-hex">
 									<h3 class="simptoms-items-hex__title">Аллергические дерматозы</h3>
-									<p class="simptoms-items-hex__text">Cопровождающиеся зудом и высыпаниями</p>
+									<p class="simptoms-items-hex__text sm m">Сопровождаю-щиеся зудом и высыпаниями</p>
 								</div>
 								<div class="simptoms-items-hex extra"></div>
 							</div>
@@ -629,7 +631,9 @@
 	<script src="./assets/script/vue.global.js"></script>
 	<script src="./index.js" type="module"></script>
 	<script>
-		window.scroll(0, 70)
+		setTimeout(() => {
+			window.scroll(0, 70)
+		}, 0)
 	</script>
 </body>
 

@@ -8,8 +8,8 @@
     
     &-title 
         max-width: 870px
-        margin: 0 auto
-        margin-bottom: 0 !important
+        &:not(.info)
+            margin-bottom: 0 !important
 
     
     @media ( max-width: $xl )
@@ -37,4 +37,4 @@
         padding-bottom: 75px
 
         &-title
-            max-width: 280px
+            max-width: 95%

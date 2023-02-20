@@ -208,10 +208,6 @@
 
           &.sub 
             display: none
-            &:hover 
-              & .header-nav__list-arrow 
-                stroke: $base-black
-                transform: rotate(0deg)
             &.open
               & .header-nav__list-arrow 
                 stroke: $base-white
@@ -234,15 +230,11 @@
                 display: flex
                 align-items: center
                 justify-content: center
-                &:hover 
-                  background: none
-                  & span
-                    color: $base-black
 
           &:not(:last-child)
             margin-right: 0
           
-          &:last-child
+          &:nth-child(7)
             margin-top: 17px
             margin-bottom: 48px
 

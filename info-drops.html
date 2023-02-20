@@ -96,9 +96,9 @@
 			</div>
 		</div>
         <article>
-            <div class="hero info">
+            <div class="hero info scroll" id="hero">
                 <div class="container">
-                    <h1 class="h1 hero__title info">ИНСТРУКЦИЯ ПО МЕДИЦИНСКОМУ ПРИМЕНЕНИЮ ЛЕКАРСТВЕННОГО ПРЕПАРАТА <span
+                    <h1 class="h1 hero-title info">ИНСТРУКЦИЯ ПО МЕДИЦИНСКОМУ ПРИМЕНЕНИЮ ЛЕКАРСТВЕННОГО ПРЕПАРАТА <span
                             class="color">Супрастинекс®</span></h1>
                     <div class="product">
                         <div class="container product-block">
@@ -740,7 +740,7 @@
                         <div class="legal-card">
                             <img src="./assets/icons/egis.svg" alt="ЕГИС" class="legal__img">
                             <h3 class="legal__title">Держатель регистрационного удостоверения</h3>
-                            <p class="legal__text">ЗАО «Фармацевтический завод ЭГИС», Венгрия 1106 Будапешт, ул.
+                            <p class="legal__text mb-8">ЗАО «Фармацевтический завод ЭГИС», Венгрия 1106 Будапешт, ул.
                                 Керестури 30-38, Венгрия</p>
                             <p class="legal__text">Телефон: (36-1)803-5555, Факс: (36-1)803-5529</p>
                             <h3 class="legal__title second">Наименование и фактический адрес организации-производителя лекарственного препарата</h3>
@@ -821,7 +821,9 @@
     <script src="./assets/script/vue.global.js"></script>
     <script src="./info.js"></script>
 	<script>
-		window.scroll(0, 70)
+		setTimeout(() => {
+			window.scroll(0, 70)
+		}, 0)
 	</script>
 </body>
 

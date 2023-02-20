@@ -3,25 +3,25 @@
         padding: 0 200px
         padding-top: 40px
     &-h2 
-        font-size: 24px
+        font-size: 26px
         line-height: 1.3
     &-h3
         color: $accent
-        font-size: 22px
+        font-size: 24px
         line-height: 1.3
         margin-bottom: 14px
         &.black 
             color: $base-black
     &-h4
-        font-size: 20px
+        font-size: 22px
         line-height: 1.2
         margin-bottom: 8px
     &-h5
-        font-size: 17px
-        line-height: 1.5
+        font-size: 19px
+        line-height: 1.37
     &-text
-        font-size: 17px
-        line-height: 1.5
+        font-size: 19px
+        line-height: 1.37
         margin-bottom: 10px
 
         & a 
@@ -70,13 +70,14 @@
         transition: .2s
     &-content
         padding: 16px 0
+        padding-bottom: 56px
         display: none
         & .info-h3
             &:not(:first-child)
                 margin-top: 50px
         & .info-h4
             &:not(:first-child)
-                margin-top: 30px
+                margin-top: 24px
     &-row 
         display: flex
         padding: 10px 0
@@ -110,15 +111,17 @@
             padding: 0
     @media ( max-width: $lg )
         &-h2 
-            font-size: 22px
+            font-size: 24px
         &-h3 
-            font-size: 18px
-        &-h4
             font-size: 22px
+        &-h4
+            font-size: 20px
         &-h5
-            font-size: 16px
+            font-size: 18px
+            line-height: 1.24
         &-text
-            font-size: 16px
+            font-size: 18px
+            line-height: 1.24
         &-table 
             font-size: 16px
         &-row 
@@ -129,6 +132,12 @@
     @media ( max-width: $md )
         &-item 
             scroll-margin-top: 100px
+        
+        &-content
+            padding-bottom: 46px
+            & .info-h4
+                &:not(:first-child)
+                    margin-top: 18px
         &-row
             flex-direction: column 
             &__title
@@ -139,11 +148,17 @@
                 width: 100%
     @media  ( max-width: $sm )
         &-h2 
-            font-size: 16px
+            font-size: 20px
         &-h3, &-h4, &-h5, &-text
             font-size: 14px
+        &-h3 
+            font-size: 18px
+        &-h5, &-text 
+            font-size: 16px
+            line-height: 1.24
         &-content
             overflow: scroll
+            padding-bottom: 36px
         &-table 
             font-size: 16px
             overflow: scroll

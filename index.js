@@ -86,7 +86,7 @@ const swiperText = new Swiper('.slider-about-tslider', {
 
     mousewheel: {
       thresholdDelta: 20,
-      eventsTarget: '.slider-about-tslider-slide'
+      eventsTarget: '.slider-about-slider'
     },
 
   breakpoints: {
