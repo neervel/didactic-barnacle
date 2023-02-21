@@ -114,14 +114,17 @@
 					</div>
 					<div class="slider-types-elem">
 						<svg width="303" height="111" viewBox="0 0 303 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path opacity="0.4" d="M242.317 0.349223L81.6221 4.14498C71.4116 4.38616 62.0253 9.80536 56.7112 18.5273L0.674141 110.5L271.985 110.5C295.079 110.5 309.513 85.4999 297.966 65.4999L269.006 15.3409C263.521 5.83926 253.286 0.0901405 242.317 0.349223Z" fill="url(#paint0_linear_673_166)"/>
+							<path opacity="0.4"
+								d="M242.317 0.349223L81.6221 4.14498C71.4116 4.38616 62.0253 9.80536 56.7112 18.5273L0.674141 110.5L271.985 110.5C295.079 110.5 309.513 85.4999 297.966 65.4999L269.006 15.3409C263.521 5.83926 253.286 0.0901405 242.317 0.349223Z"
+								fill="url(#paint0_linear_673_166)" />
 							<defs>
-							<linearGradient id="paint0_linear_673_166" x1="92.1568" y1="-11.0095" x2="202.719" y2="180.491" gradientUnits="userSpaceOnUse">
-							<stop stop-color="#DA5DB0"/>
-							<stop offset="1" stop-color="#924292"/>
-							</linearGradient>
+								<linearGradient id="paint0_linear_673_166" x1="92.1568" y1="-11.0095" x2="202.719" y2="180.491"
+									gradientUnits="userSpaceOnUse">
+									<stop stop-color="#DA5DB0" />
+									<stop offset="1" stop-color="#924292" />
+								</linearGradient>
 							</defs>
-						</svg>							
+						</svg>
 					</div>
 					<input @change="handleRangeChange" @click="handleThumbClick" class="slider-types-range"
 						v-model.number="sliderPosition" type="range" min="0" :max="maxRange">
@@ -320,11 +323,11 @@
 						</div>
 						<div class="slider-about__mouse">
 							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="51" viewBox="0 0 30 51" fill="none">
-								<rect x="1" y="1" width="28" height="49" rx="13" fill="#E898C0"/>
-								<rect x="0.5" y="0.5" width="29" height="50" rx="13.5" stroke="white" stroke-opacity="0.5"/>
-								<rect x="11" y="6" width="8" height="19" rx="4" fill="white" fill-opacity="0.9"/>
-								<path d="M13 14.5L15 12L17 14.5" stroke="#EC519E" stroke-linecap="round"/>
-								<path d="M17 17L15 19.5L13 17" stroke="#EC519E" stroke-linecap="round"/>
+								<rect x="1" y="1" width="28" height="49" rx="13" fill="#E898C0" />
+								<rect x="0.5" y="0.5" width="29" height="50" rx="13.5" stroke="white" stroke-opacity="0.5" />
+								<rect x="11" y="6" width="8" height="19" rx="4" fill="white" fill-opacity="0.9" />
+								<path d="M13 14.5L15 12L17 14.5" stroke="#EC519E" stroke-linecap="round" />
+								<path d="M17 17L15 19.5L13 17" stroke="#EC519E" stroke-linecap="round" />
 							</svg>
 						</div>
 						<div class="swiper slider-about-tslider">
@@ -339,7 +342,7 @@
 											class="slider-about-tslider-card__img">
 										<h3 class="slider-about-tslider-card__title">Про эффективность</h3>
 									</div>
-									<div class="slider-about-tslider-card active"  data-slide="1">
+									<div class="slider-about-tslider-card active" data-slide="1">
 										<img src="./assets/icons/effective.svg" alt="Про инновационность"
 											class="slider-about-tslider-card__img">
 										<h3 class="slider-about-tslider-card__title">Про инновационность</h3>
@@ -481,7 +484,7 @@
 										<p>
 											Не взаимодействует с другими лекарствами и подходит для длительного
 											приема<sup><a href="#link-1">1</a></sup>
-										</p> 
+										</p>
 									</div>
 								</div>
 								<div class="slider-about-slide swiper-slide">
@@ -568,8 +571,19 @@
 					<div class="triple-block">
 						<h2 class="h2 triple__title white">Тройное действие левоцетиризина против аллергенов</h2>
 						<div class="triple-content">
-							<img src="./assets/images/triple-img.png" alt="Тройное действие левоцетиризина"
-								class="triple-content__img">
+							<div class="triple-content-video js-video" data-video="https://www.youtube.com/embed/Cm6Y4VpZshA">
+								<img src="./assets/images/video-cover-1.jpg" alt="Тройное действие левоцетиризина против аллергии"
+									class="triple-content-video__img">
+								<button class="triple-content-video__play">
+									<svg width="69" height="70" viewBox="0 0 69 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="34.5" cy="35.3848" r="34.5" fill="#DF544E" />
+										<path
+											d="M50.9885 34.4965L26.3735 21.7646C25.7079 21.4204 24.9141 21.9035 24.9141 22.6529V48.1167C24.9141 48.8661 25.7079 49.3492 26.3735 49.0049L50.9885 36.273C51.7093 35.9002 51.7093 34.8694 50.9885 34.4965Z"
+											fill="white" />
+									</svg>
+
+								</button>
+							</div>
 							<div class="triple-content-cards">
 								<div class="triple-content-card">
 									<img src="./assets/icons/triple-1.svg" class="triple-content-card__icon">
@@ -598,11 +612,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="triple-video section">
+					<div class="triple-video section">
 						<h2 class="h2 triple-video__title white">Узнайте больше о препарате Супрастинекс®</h2>
 						<div class="triple-video-block">
-							<div class="triple-video__item js-video" data-video="https://www.youtube.com/embed/40RJriYztG8">
-								<img src="./assets/images/video-cover-1.png" alt="Преимущества Супрастинекса®"
+							<div class="triple-video__item js-video" data-video="https://www.youtube.com/embed/3Swz08sGU6E">
+								<img src="./assets/images/video-cover-2.jpg" alt="Преимущества Супрастинекса®"
 									class="triple-video__item-img">
 								<button class="triple-video__item-play">
 									<svg width="69" height="70" viewBox="0 0 69 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -614,8 +628,8 @@
 
 								</button>
 							</div>
-							<div class="triple-video__item js-video" data-video="https://www.youtube.com/embed/40RJriYztG8">
-								<img src="./assets/images/video-cover-2.png" alt="Применение Супрастинекса® у детей"
+							<div class="triple-video__item js-video" data-video="https://www.youtube.com/embed/0mTHbvNpqBA">
+								<img src="./assets/images/video-cover-3.jpg" alt="Применение Супрастинекса® у детей"
 									class="triple-video__item-img">
 								<button class="triple-video__item-play">
 									<svg width="69" height="70" viewBox="0 0 69 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -628,9 +642,9 @@
 								</button>
 							</div>
 						</div>
-					</div> -->
+					</div>
 				</div>
-				<div class="pharms scroll section" id="pharms">
+				<div class="pharms scroll" id="pharms">
 					<h2 class="h2 pharms__title">Где купить?</h2>
 					<div class="pharms-items">
 						<a class="pharms-items-hex"
