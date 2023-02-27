@@ -621,5 +621,18 @@
                 width: 682px
 
     @media (max-width: $lg)
+        height: 360px
+        top: 7px
+        left: 4px
+        &:after 
+            width: 457px
+
+        & .center
+            width: 210px
+
+        &.left
+            & .center
+                width: 555px
+    @media ( max-width: $md )
         display: none
         
